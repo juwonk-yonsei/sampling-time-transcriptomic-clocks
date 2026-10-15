@@ -1,0 +1,13 @@
+dataset	condition	period	light_group	n_subjects	n_samples
+GSE39445	control	extended_wakefulness	NA	24	221
+GSE39445	sleep_restriction	extended_wakefulness	NA	24	217
+GSE56931	control	baseline	NA	14	130
+GSE56931	recovery	recovery	NA	14	40
+GSE56931	sleep_deprivation	deprivation	NA	14	79
+GSE48113	control	D1	NA	22	148
+GSE48113	out_of_phase	D1	NA	1	1
+GSE48113	out_of_phase	D4	NA	21	138
+GSE122725	control	period1	bright	3	18
+GSE122725	control	period1	dim	8	52
+GSE122725	night_oriented	period2	bright	3	20
+GSE122725	night_oriented	period2	dim	8	51

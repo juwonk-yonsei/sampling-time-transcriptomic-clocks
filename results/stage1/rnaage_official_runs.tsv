@@ -1,0 +1,29 @@
+dataset	clock	signature	elapsed_sec	user_sec	sys_sec	n_genes_imputed	messages
+GSE39445	RA_GTEx	GTExAge	5.17	5.127	0.701	83	26.6026% genes in the gene signature are not included in the supplied
+                gene expression.
+ || performing imputation...
+
+GSE39445	RA_Peters	Peters	2.448	2.957	0.737	9	3.1142% genes in the gene signature are not included in the supplied
+                gene expression.
+ || performing imputation...
+
+GSE39445	RA_default	DESeq2	2.139	2.635	0.542	65	signature is not provided, using DESeq2 signature
+automatically.
+ || 23.2975% genes in the gene signature are not included in the supplied
+                gene expression.
+ || performing imputation...
+
+GSE56931	RA_GTEx	GTExAge	1.705	2.187	0.297	57	18.2692% genes in the gene signature are not included in the supplied
+                gene expression.
+ || performing imputation...
+
+GSE56931	RA_Peters	Peters	0.890000000000001	1.675	0.291	11	3.8062% genes in the gene signature are not included in the supplied
+                gene expression.
+ || performing imputation...
+
+GSE56931	RA_default	DESeq2	0.957000000000001	1.765	0.298	44	signature is not provided, using DESeq2 signature
+automatically.
+ || 15.7706% genes in the gene signature are not included in the supplied
+                gene expression.
+ || performing imputation...
+

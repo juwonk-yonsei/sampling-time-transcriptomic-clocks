@@ -1,0 +1,14 @@
+mcpcounter_package	MCPcounter
+mcpcounter_version	1.2.0
+mcpcounter_license	GPL-3
+mcpcounter_description_sha256	a6c57cc11cce22b43d2d1fb2592bb86fa3348a0aa50ea452ce0cde0c190e8f8d
+mcpcounter_description_bytes	538
+mcpcounter_genes_path	data/processed/ref/MCPcounter_genes.txt
+mcpcounter_genes_sha256	408f6c5d02c8f9bd2f1599c598367881853520934f8ce398a4886a8b296922bb
+mcpcounter_genes_bytes	5342
+mcpcounter_signature_license	CC0 1.0
+mcpcounter_n_markers	111
+mcpcounter_n_populations	10
+epic	not_downloaded
+epic_reason	LICENSE is academic non-commercial and forbids redistribution
+gpl24324	no gene-symbol column; coverage not computed

@@ -1,0 +1,6 @@
+sample	imputed_missing_gene	column_mean_of_observed_genes	abs_diff
+s1	0	1.5	1.5
+s2	0	2.5	2.5
+s3	0	3.5	3.5
+s4	0	4.5	4.5
+s5	0	5.5	5.5

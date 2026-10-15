@@ -1,0 +1,7 @@
+dataset	clock	n_signature	n_used_lin
+GSE39445	RA_GTEx	312	229
+GSE39445	RA_Peters	289	280
+GSE39445	RA_default	279	214
+GSE56931	RA_GTEx	312	255
+GSE56931	RA_Peters	289	278
+GSE56931	RA_default	279	235

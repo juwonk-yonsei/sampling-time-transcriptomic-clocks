@@ -1,0 +1,10 @@
+reference	platform	n_reference_genes	n_on_platform	fraction	note
+RA_GTEx	GPL15331	312	229	0.733974359	column GENE_SYMBOL; symbol present if it is a /// token
+RA_GTEx	GPL10379	312	261	0.8365384615	column Gene symbol; symbol present if it is a /// token
+RA_GTEx	GPL24324	312	NA	NA	no gene-symbol column; second SPOT_ID holds free text; coverage not computed
+RA_Peters	GPL15331	289	280	0.9688581315	column GENE_SYMBOL; symbol present if it is a /// token
+RA_Peters	GPL10379	289	278	0.9619377163	column Gene symbol; symbol present if it is a /// token
+RA_Peters	GPL24324	289	NA	NA	no gene-symbol column; second SPOT_ID holds free text; coverage not computed
+RA_default	GPL15331	279	214	0.7670250896	column GENE_SYMBOL; symbol present if it is a /// token
+RA_default	GPL10379	279	236	0.8458781362	column Gene symbol; symbol present if it is a /// token
+RA_default	GPL24324	279	NA	NA	no gene-symbol column; second SPOT_ID holds free text; coverage not computed

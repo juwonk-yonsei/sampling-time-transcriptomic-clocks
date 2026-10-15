@@ -1,0 +1,4 @@
+clock	tissue	stype	object	signature	intercept_name	intercept	n_genes	documented_n_genes	count_matches_document	pass_to_next_stage
+RA_GTEx	blood	all	genelist_all$blood	GTExAge	(Intercept)	64.2016047245696	312	NA	NA	TRUE
+RA_Peters	blood	all	genelist_all$blood	Peters	(Intercept)	59.6846198087602	289	1497	FALSE	FALSE
+RA_default	blood	all	genelist_all$blood	DESeq2	(Intercept)	65.5365453354773	279	NA	NA	TRUE
