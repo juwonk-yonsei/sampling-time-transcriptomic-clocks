@@ -1,0 +1,15 @@
+date	id	content	reason	timing
+2026-10-16	1	GSE56931 condition stays the sample field biological group. Sensitivity S4 uses only the design-text baseline times: day 1 hours 8, 12, 16, 20 and day 2 hours 0, 4.	Instruction 2 §1.1 item 1.	prior
+2026-10-16	2	GSE122725 wake_ref_h = relclocktime, source given. clock_time_h and hours_awake stay NA. The time axis for this dataset is set at preregistration.	Instruction 2 §1.1 item 2. relclocktime was present for 141/141 samples (min 0.2, median 20.3, max 42.3). Column written to results/stage2/GSE122725_wake_ref.tsv. data/processed was not edited.	prior
+2026-10-16	3	GSE122725 light_group stays Control to dim.	Instruction 2 §1.1 item 3.	prior
+2026-10-16	4	GSE39445 period stays extended_wakefulness.	Instruction 2 §1.1 item 4.	prior
+2026-10-16	5	GSE48113 elapsed_h rule stays the forward clock difference within subject_id and period.	Instruction 2 §1.1 item 5.	prior
+2026-10-16	6	GPL family SOFT stays not downloaded.	Instruction 2 §1.1 item 6.	prior
+2026-10-16	7	GPL24324 symbols are mapped by instruction 2 §2.2.	Instruction 2 §1.1 item 7.	prior
+2026-10-16	8	RA_Peters pass or fail follows the Part B audit in instruction 2 §2.1.	Instruction 2 §1.1 item 8.	prior
+2026-10-16	9	EPIC is not used.	Instruction 2 §1.1 item 9.	prior
+2026-10-16	10	ulimit is not set. Heavy steps record maximum RSS. Stop and report if RSS exceeds 40 GB.	Instruction 2 §1.1 item 10.	prior
+2026-10-16	11	The impute.knn record from report 1 stays. Whether it affects within-person analysis is checked in Part C §3.1.	Instruction 2 §1.1 item 11.	prior
+2026-10-16	12	Instruction 1 Part F, which was not run, is run in this stage as Part C after the §1.2 criterion change.	Instruction 2 §1.1 item 12.	posthoc
+2026-10-16	1.2	Corrected positive-control criterion (a'): PER1 and PER3 peak hours are inside 04-12. Criterion (b) is unchanged. Both development datasets are pass. No refit.	Post-hoc correction. Instruction 1 §7 criterion (a) put NR1D1 and NR1D2 in the same 04-12 window as PER genes. Stage-1 peaks: GSE39445 PER1 6.90324597433964, PER3 6.08583286807854, circular distance 8.77605464525298. GSE56931 PER1 5.79155389251083, PER3 4.8945603273957, circular distance 9.86874754997058. Locked-dataset criterion is left to preregistration.	posthoc
+2026-10-16	1.3	Confirmation analysis will drop GSM1168837 and GSM1168735.	Set from metadata before reading expression values. GSM1168837 time sample taken is the literal NA. GSM1168735 is D1 with sleep timing Out of phase with respect to melatonin. In-phase samples with a clock time: 147. Reference count 147. Match: true.	prior

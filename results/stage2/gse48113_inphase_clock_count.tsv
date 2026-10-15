@@ -1,0 +1,2 @@
+n_samples	n_in_phase	n_in_phase_with_clock	reference_n	matches_reference	n_clock_na_in_phase	gsm1168837_in_table	gsm1168735_in_table
+287	148	147	147	True	1	True	True

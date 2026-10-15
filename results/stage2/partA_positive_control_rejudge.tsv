@@ -1,0 +1,3 @@
+dataset	PER1_peak_h	PER3_peak_h	criterion_a_prime	criterion_b	per3_arntl_circ_dist_h	decision	refit	source
+GSE39445	6.90324597433964	6.08583286807854	True	True	8.77605464525298	pass	False	results/stage1/positive_control.tsv
+GSE56931	5.79155389251083	4.8945603273957	True	True	9.86874754997058	pass	False	results/stage1/positive_control.tsv
