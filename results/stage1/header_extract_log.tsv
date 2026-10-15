@@ -1,0 +1,5 @@
+path	out	meta_lines	blank_lines	stopped_at_table	non_bang_before_stop
+data/raw/GSE39445_series_matrix.txt.gz	data/processed/geo_headers/GSE39445_header.txt	74	1	True	0
+data/raw/GSE56931_series_matrix.txt.gz	data/processed/geo_headers/GSE56931_header.txt	61	1	True	0
+data/locked/GSE48113_series_matrix.txt.gz	data/processed/geo_headers/GSE48113_header.txt	75	1	True	0
+data/locked/GSE122725_series_matrix.txt.gz	data/processed/geo_headers/GSE122725_header.txt	65	1	True	0

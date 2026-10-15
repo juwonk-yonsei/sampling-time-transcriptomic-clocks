@@ -1,0 +1,53 @@
+dataset	GSE39445
+n_samples	438
+n_subjects	26
+n_missing_subject	0
+samples_per_subject	min=6 median=18.5 max=20
+condition_period_light_counts
+	control	extended_wakefulness	NA	221
+	sleep_restriction	extended_wakefulness	NA	217
+clock_time_h	n=438 min=0 max=23.8333
+consecutive_elapsed_interval_h	n=390 min=3 q25=3 median=3 q75=3 max=12
+note_subject_from_title	11
+note_title_subject_mismatch	0
+note_clock_parse_fail	0
+
+dataset	GSE56931
+n_samples	249
+n_subjects	14
+n_missing_subject	0
+samples_per_subject	min=15 median=18 max=19
+condition_period_light_counts
+	control	baseline	NA	130
+	recovery	recovery	NA	40
+	sleep_deprivation	deprivation	NA	79
+clock_time_h	n=249 min=0 max=20
+consecutive_elapsed_interval_h	n=207 min=4 q25=4 median=4 q75=4 max=8
+note_clock_parse_fail	0
+
+dataset	GSE48113
+n_samples	287
+n_subjects	22
+n_missing_subject	0
+samples_per_subject	min=6 median=14 max=14
+condition_period_light_counts
+	control	D1	NA	148
+	out_of_phase	D1	NA	1
+	out_of_phase	D4	NA	138
+clock_time_h	n=286 min=0 max=23.9167
+consecutive_elapsed_interval_h	n=242 min=3.33333 q25=3.98333 median=4 q75=4.02917 max=8.65
+note_clock_parse_fail	0
+
+dataset	GSE122725
+n_samples	141
+n_subjects	11
+n_missing_subject	0
+samples_per_subject	min=10 median=13 max=14
+condition_period_light_counts
+	control	period1	bright	18
+	control	period1	dim	52
+	night_oriented	period2	bright	20
+	night_oriented	period2	dim	51
+clock_time_h	NA
+consecutive_elapsed_interval_h	n=119 min=1.9 q25=3.9 median=4 q75=4.1 max=8.1
+

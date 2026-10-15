@@ -1,0 +1,5 @@
+dataset	name	bytes	downloaded	reason
+GSE39445	GSE39445_RAW.tar	3938027520	no	series matrix contains the processed expression table
+GSE39445	filelist.txt	28859	no	series matrix contains the processed expression table
+GSE56931	GSE56931_RAW.tar	1337272320	no	series matrix contains the processed expression table
+GSE56931	filelist.txt	23402	no	series matrix contains the processed expression table
