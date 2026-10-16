@@ -1,0 +1,5 @@
+dataset	id	reason	primary_analysis
+L1	GSM1168837	missing sampling time	excluded
+L1	GSM1168735	Day 1 sample labelled out of phase	excluded
+L3	subject8	batch-2 pair	batch-2 technical-replicate check only
+L3	subject16	batch-2 pair	batch-2 technical-replicate check only

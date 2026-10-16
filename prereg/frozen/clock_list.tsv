@@ -1,0 +1,14 @@
+clock	role	family
+TAms_chrono	primary	clock
+TAms_mort	primary	clock
+RA_default	primary	clock
+RA_Peters	secondary	clock
+RA_GTEx	secondary	clock
+TM_turquoise_mortality	module	TM
+CMP_TAms_chrono_turquoise	module	CMP
+CMP_TAms_chrono_yellow	module	CMP
+CMP_TAms_chrono_orange	module	CMP
+CMP_TAms_chrono_brown	module	CMP
+CMP_TAms_chrono_red	module	CMP
+CMP_TAms_mort_turquoise	module	CMP
+CMP_TAms_mort_darkred	module	CMP

@@ -1,0 +1,47 @@
+문서 절	항목	파일	함수
+4	TAms_chrono and TAms_mort weight score	scripts/confirm/score_clocks.py	score_weights
+4	array_to_diff microarray preprocessing	scripts/confirm/score_clocks.py	main
+4	counts_to_diff RNA-seq preprocessing	scripts/confirm/score_clocks.py	main
+4	reference = all analysed samples	scripts/confirm/score_clocks.py	main
+4	symbol to human Entrez	scripts/confirm/score_clocks.py	symbols_to_human_entrez
+4	RA_default RA_Peters RA_GTEx linear score	scripts/confirm/run_pipeline.R	ra_linear_scores
+4	module clocks TM_	scripts/confirm/score_clocks.py	main
+4	component partial sums	scripts/confirm/score_clocks.py	partial_sums
+4	rodent module gene sets	scripts/confirm/score_clocks.py	module_gene_sets
+5	L1 series matrix read	scripts/confirm/preprocess_array.py	read_series_matrix
+5	L1 GEO2R log judgement	scripts/confirm/preprocess_array.py	geo2r_scale
+5	L1 GENE_SYMBOL single-symbol highest-mean collapse	scripts/confirm/preprocess_array.py	collapse_highest_mean
+5	L2 GEO2R log judgement	scripts/confirm/preprocess_l2.R	geo2r_scale_matrix
+5	L2 Clariom SYMBOL highest-mean collapse	scripts/confirm/preprocess_l2.R	collapse_clariom
+5	L3 header branch	scripts/confirm/lib_lock.R	l3_layout_from_header
+5	L3 gene-column or transcript-to-gene counts	scripts/confirm/preprocess_l3.R	read_l3_counts
+5	L3 GENCODE version-stripped join	scripts/confirm/preprocess_l3.R	base_id
+5	L3 log2(FPKM+1)	scripts/confirm/run_pipeline.R	counts_to_log2_fpkm
+5	L3 gate log2(CPM+1)	scripts/confirm/run_pipeline.R	log2_cpm
+5	MCPcounter composition	scripts/confirm/run_pipeline.R	mcp_scores
+5	3 MAD flag	scripts/confirm/lib_tests.R	flag_3mad
+6	L1 and L2 PER1 PER3 cosinor gate	scripts/confirm/lib_tests.R	gate_cosinor
+6	L2 peak window 18-26 modulo 24	scripts/confirm/lib_tests.R	peak_in_window
+6	L3 PER1 paired gate	scripts/confirm/lib_tests.R	gate_l3
+6	gate fail stops tests	scripts/confirm/run_pipeline.R	run_gate_or_stop
+7	model M	scripts/confirm/lib_tests.R	model_m
+7	family P and S1 cosinor	scripts/confirm/run_pipeline.R	family_tables
+7	family P and S1 paired t	scripts/confirm/lib_tests.R	paired_delta
+7	Holm	scripts/confirm/lib_tests.R	holm_family
+7	participant bootstrap seed 20261015	scripts/confirm/lib_tests.R	participant_draws
+7	H2 L1 L2 projection	scripts/confirm/lib_tests.R	h2_l1l2
+7	H2 L3 composition regression	scripts/confirm/lib_tests.R	h2_l3
+7	H2 L3 bootstrap	scripts/confirm/lib_tests.R	h2_l3_bootstrap
+7	H3 age slope	scripts/confirm/lib_tests.R	h3_age
+7	H4 interaction LRT	scripts/confirm/lib_tests.R	h4_interaction
+7	H5 mean(delta)-c	scripts/confirm/lib_tests.R	h5_transfer
+7	S4 and exploratory module tests	scripts/confirm/run_pipeline.R	analyse_cosinor_dataset
+8	sensitivity drop 3 MAD flags	scripts/confirm/run_pipeline.R	analyse_cosinor_dataset
+8	sensitivity random slopes	scripts/confirm/run_pipeline.R	analyse_cosinor_dataset
+8	sensitivity intercept	scripts/confirm/lib_tests.R	sensitivity_intercept
+8	L3 combat path left closed when absent	scripts/confirm/run_pipeline.R	analyse_paired_dataset
+8	L3 batch-2 comparison slot	scripts/confirm/run_pipeline.R	analyse_paired_dataset
+3.3	locked expression open	scripts/confirm/lib_lock.R	load_locked_expression
+3.3	manifest hash	scripts/confirm/run_pipeline.R	check_manifest
+3.5	L3 supplement download, not called	scripts/confirm/download_l3.R	download_l3_supplements
+3.1	entry point	scripts/confirm/run_confirm.sh	run_confirm.sh
