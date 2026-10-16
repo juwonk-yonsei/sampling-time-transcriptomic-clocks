@@ -1,0 +1,3 @@
+dataset	positive_control	sections_3_2_to_3_5	reason
+GSE113883	fail	not_run	criterion_b false; per3_arntl_circ_dist_h 2.04939962890015 < 6
+GSE196728	fail	not_run	ARNTL log2(FPKM+1) all non-finite; criterion_b not evaluated
