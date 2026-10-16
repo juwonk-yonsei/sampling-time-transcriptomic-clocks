@@ -1,0 +1,4 @@
+dataset	n_genes_tested	n_rhythmic_q_lt_0_05	gene_filter
+GSE39445	19541	10041	all finite genes
+GSE56931	20755	4087	all finite genes
+GSE113883	12390	8755	mean TPM >= 1 and finite log2
