@@ -1,0 +1,4 @@
+dataset	outcome	outcome_type	model	n_samples	n_subjects	mean_diff_deprivation_minus_baseline	lrt_period_df	lrt_period_stat	lrt_period_p	lrt_period_full_converged	lrt_period_reduced_converged	lrt_interaction_df	lrt_interaction_stat	lrt_interaction_p	lrt_interaction_full_converged	lrt_interaction_reduced_converged
+GSE56931	RA_GTEx	clock_lin	model1	209	14	1.03664014830376	1	0.265890184884256	0.606102091094096	TRUE	TRUE	2	2.95350343131031	0.228378322567274	TRUE	TRUE
+GSE56931	RA_Peters	clock_lin	model1	209	14	0.361179241794387	1	0.163736247635825	0.685739682537868	TRUE	TRUE	2	3.81234162850615	0.148648500914668	TRUE	TRUE
+GSE56931	RA_default	clock_lin	model1	209	14	-0.479127633605237	1	0.251613851826505	0.615941000310065	TRUE	TRUE	2	4.03581186897645	0.132933545372051	TRUE	TRUE
