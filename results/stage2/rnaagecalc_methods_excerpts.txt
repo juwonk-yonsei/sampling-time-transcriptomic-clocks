@@ -1,0 +1,13 @@
+source: Europe PMC full text XML, PMC7402472, Ren and Kuan, PLoS ONE, PMID 32750074. Retrieved 2026-10-16. Excerpts only.
+
+For each tissue, signature and sample type, we pre-trained the calculator using elastic net based on the GTEx samples. In the within-tissue age prediction section, we have demonstrated that elastic net model outperforms the other prediction algorithms. We saved the pre-trained model coefficients as internal data in the software.
+
+In all these models, chronological age was the response variable whereas the logarithm transformed FPKM were the predictors. The samples were first randomly split into 50%-50% training-test set, where the prediction algorithms were constructed on the training data and evaluated on the test data. The optimal parameters, namely alpha and lambda in elastic net, number of trees in GBM, cost and gamma in SVR, and bin size in ensemble LDA were selected by 10 fold cross validation in the training set. This 50%-50% training-test split and model evaluation were repeated 10 times.
+
+(iv) The 1,497 age-related genes of [18] (denoted by Peters).
+
+(vi) The 1,616 common age-related genes discussed in the meta-analysis section (denoted by GTExAge).
+
+differentially expressed genes ranked by the p-values from differential expression analysis.
+
+To reduce the computation cost, we considered the top 1,000 genes.
