@@ -1,0 +1,9 @@
+gsm	subject_id	sample_title	raw_characteristics	age	sex	char_opioids	char_timepoint
+GSM8956774	subject8	subject8_batch1_timeD_Homosapiens_RNAseq	tissue: Whole peripheral blood || age: 44 || Sex: male || timepoint: D || batch: 1 || opioids: 0 || timepoint: D	44	male	0	D
+GSM8956782	subject16	subject16_batch1_timeD_Homosapiens_RNAseq	tissue: Whole peripheral blood || age: 73 || Sex: male || timepoint: D || batch: 1 || opioids: 0 || timepoint: D	73	male	0	D
+GSM8956806	subject8	subject8_batch1_timeN_Homosapiens_RNAseq	tissue: Whole peripheral blood || age: 44 || Sex: male || timepoint: N || batch: 1 || opioids: 0 || timepoint: N	44	male	0	N
+GSM8956814	subject16	subject16_batch1_timeN_Homosapiens_RNAseq	tissue: Whole peripheral blood || age: 73 || Sex: male || timepoint: N || batch: 1 || opioids: 0 || timepoint: N	73	male	0	N
+GSM8956835	subject8	subject8_batch2_timeD_Homosapiens_RNAseq	tissue: Whole peripheral blood || age: 44 || Sex: male || timepoint: D || batch: 2 || opioids: 0 || timepoint: D	44	male	0	D
+GSM8956843	subject16	subject16_batch2_timeD_Homosapiens_RNAseq	tissue: Whole peripheral blood || age: 73 || Sex: male || timepoint: D || batch: 2 || opioids: 0 || timepoint: D	73	male	0	D
+GSM8956863	subject8	subject8_batch2_timeN_Homosapiens_RNAseq	tissue: Whole peripheral blood || age: 44 || Sex: male || timepoint: N || batch: 2 || opioids: 0 || timepoint: N	44	male	0	N
+GSM8956871	subject16	subject16_batch2_timeN_Homosapiens_RNAseq	tissue: Whole peripheral blood || age: 73 || Sex: male || timepoint: N || batch: 2 || opioids: 0 || timepoint: N	73	male	0	N
