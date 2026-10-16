@@ -1,0 +1,29 @@
+dataset	population_a	population_b	pearson_r	abs_r_gt_0_9
+GSE113883	T cells	CD8 T cells	0.317190619089936	FALSE
+GSE113883	T cells	Cytotoxic lymphocytes	0.322017128370196	FALSE
+GSE113883	T cells	NK cells	0.163744385411754	FALSE
+GSE113883	T cells	B lineage	0.376145222159579	FALSE
+GSE113883	T cells	Monocytic lineage	0.146144446365591	FALSE
+GSE113883	T cells	Myeloid dendritic cells	0.0645149159924547	FALSE
+GSE113883	T cells	Neutrophils	-0.173207815354377	FALSE
+GSE113883	CD8 T cells	Cytotoxic lymphocytes	0.16805375608272	FALSE
+GSE113883	CD8 T cells	NK cells	-0.184267790579194	FALSE
+GSE113883	CD8 T cells	B lineage	-0.364852743332035	FALSE
+GSE113883	CD8 T cells	Monocytic lineage	-0.584891072200442	FALSE
+GSE113883	CD8 T cells	Myeloid dendritic cells	-0.147964009862876	FALSE
+GSE113883	CD8 T cells	Neutrophils	-0.402062300321167	FALSE
+GSE113883	Cytotoxic lymphocytes	NK cells	0.77296535386469	FALSE
+GSE113883	Cytotoxic lymphocytes	B lineage	0.0614215992175894	FALSE
+GSE113883	Cytotoxic lymphocytes	Monocytic lineage	0.333996068952386	FALSE
+GSE113883	Cytotoxic lymphocytes	Myeloid dendritic cells	0.231904733979738	FALSE
+GSE113883	Cytotoxic lymphocytes	Neutrophils	-0.0347638759237555	FALSE
+GSE113883	NK cells	B lineage	0.0485187033371649	FALSE
+GSE113883	NK cells	Monocytic lineage	0.31674252202641	FALSE
+GSE113883	NK cells	Myeloid dendritic cells	-0.00863176666879634	FALSE
+GSE113883	NK cells	Neutrophils	0.311434222537657	FALSE
+GSE113883	B lineage	Monocytic lineage	0.693843644466909	FALSE
+GSE113883	B lineage	Myeloid dendritic cells	0.518189045351404	FALSE
+GSE113883	B lineage	Neutrophils	0.017634516440665	FALSE
+GSE113883	Monocytic lineage	Myeloid dendritic cells	0.661693224105589	FALSE
+GSE113883	Monocytic lineage	Neutrophils	0.23833440337456	FALSE
+GSE113883	Myeloid dendritic cells	Neutrophils	-0.0443538904508809	FALSE

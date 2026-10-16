@@ -1,0 +1,11 @@
+dataset	population	n_marker	n_marker_in_matrix
+GSE113883	T cells	16	15
+GSE113883	CD8 T cells	1	1
+GSE113883	Cytotoxic lymphocytes	7	7
+GSE113883	B lineage	9	9
+GSE113883	NK cells	9	8
+GSE113883	Monocytic lineage	7	7
+GSE113883	Myeloid dendritic cells	6	5
+GSE113883	Neutrophils	15	13
+GSE113883	Endothelial cells	33	32
+GSE113883	Fibroblasts	8	8

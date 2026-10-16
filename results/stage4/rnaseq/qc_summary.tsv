@@ -1,0 +1,2 @@
+dataset	value_scale	gene_filter	n_genes	n_samples	median_of_sample_medians	mad_of_sample_medians	mad_constant	n_flagged_3mad	flagged_gsm
+GSE113883	log2(TPM+1)	mean TPM >= 1	12390	153	3.69376571221778	0.18397853773122	none	6	GSM3122552,GSM3122587,GSM3122617,GSM3122624,GSM3122625,GSM3122643
