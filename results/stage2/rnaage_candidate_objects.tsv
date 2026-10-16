@@ -1,0 +1,4 @@
+signature	separate_candidate_object_in_package	namespace_objects	stored_object	n_coef_genes_excluding_intercept
+GTExAge	False	count2FPKM,genelist_all,genelist_cau,lengthDB,makeplot,predict_age,predict_age_fromse	genelist_all$blood[[signature]] numeric coefficients, including (Intercept)	312
+DESeq2	False	count2FPKM,genelist_all,genelist_cau,lengthDB,makeplot,predict_age,predict_age_fromse	genelist_all$blood[[signature]] numeric coefficients, including (Intercept)	279
+Peters	False	count2FPKM,genelist_all,genelist_cau,lengthDB,makeplot,predict_age,predict_age_fromse	genelist_all$blood[[signature]] numeric coefficients, including (Intercept)	289

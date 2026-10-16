@@ -1,0 +1,2 @@
+path	source_url	paper	sheet	header_row_excel	symbol_column	filter_column	filter_value	n_rows_in_sheet	n_sign_repl_y	n_unique_symbols	used_as_coefficients
+data/raw/peters2015/ncomms9570-s2.xlsx	https://pmc.ncbi.nlm.nih.gov/articles/instance/4639797/bin/ncomms9570-s2.xlsx	Peters et al. 2015 Nature Communications Supplementary Data 1	Data.1	3	NEW-Gene-ID	sign-REPL	y	11908	1497	1497	False

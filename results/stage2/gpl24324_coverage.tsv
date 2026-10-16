@@ -1,0 +1,15 @@
+reference	platform	n_reference_genes	n_on_platform	fraction	note
+RA_GTEx	GPL24324	312	255	0.8173076923076923	clariomshumanhttranscriptcluster.db 8.8.0 PROBEID to SYMBOL
+RA_Peters	GPL24324	289	276	0.9550173010380623	clariomshumanhttranscriptcluster.db 8.8.0 PROBEID to SYMBOL
+RA_default	GPL24324	279	240	0.8602150537634409	clariomshumanhttranscriptcluster.db 8.8.0 PROBEID to SYMBOL
+MCPcounter:T cells	GPL24324	16	14	0.875	clariomshumanhttranscriptcluster.db 8.8.0 PROBEID to SYMBOL
+MCPcounter:CD8 T cells	GPL24324	1	1	1.0	clariomshumanhttranscriptcluster.db 8.8.0 PROBEID to SYMBOL
+MCPcounter:Cytotoxic lymphocytes	GPL24324	7	7	1.0	clariomshumanhttranscriptcluster.db 8.8.0 PROBEID to SYMBOL
+MCPcounter:B lineage	GPL24324	9	8	0.8888888888888888	clariomshumanhttranscriptcluster.db 8.8.0 PROBEID to SYMBOL
+MCPcounter:NK cells	GPL24324	9	9	1.0	clariomshumanhttranscriptcluster.db 8.8.0 PROBEID to SYMBOL
+MCPcounter:Monocytic lineage	GPL24324	7	7	1.0	clariomshumanhttranscriptcluster.db 8.8.0 PROBEID to SYMBOL
+MCPcounter:Myeloid dendritic cells	GPL24324	6	5	0.8333333333333334	clariomshumanhttranscriptcluster.db 8.8.0 PROBEID to SYMBOL
+MCPcounter:Neutrophils	GPL24324	15	14	0.9333333333333333	clariomshumanhttranscriptcluster.db 8.8.0 PROBEID to SYMBOL
+MCPcounter:Endothelial cells	GPL24324	33	31	0.9393939393939394	clariomshumanhttranscriptcluster.db 8.8.0 PROBEID to SYMBOL
+MCPcounter:Fibroblasts	GPL24324	8	8	1.0	clariomshumanhttranscriptcluster.db 8.8.0 PROBEID to SYMBOL
+MCPcounter:ALL	GPL24324	111	104	0.9369369369369369	clariomshumanhttranscriptcluster.db 8.8.0 PROBEID to SYMBOL

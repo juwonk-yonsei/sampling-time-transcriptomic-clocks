@@ -1,0 +1,2 @@
+signature	n_coef_genes	candidate_source	n_candidate_symbols	candidate_filter	candidate_column	n_in_candidate	is_subset	n_not_in_candidate	not_in_candidate	pass_to_next_stage
+Peters	289	Peters 2015 Supplementary Data 1	1497	sign-REPL == y	NEW-Gene-ID	289	True	0		True

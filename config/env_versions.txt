@@ -32,3 +32,4 @@ data.table 1.18.6.1
 circular 0.5-2 
   LibPath /ssd240/anaconda3/envs/r_env/lib/R/library 
   License GPL-2 
+clariomshumanhttranscriptcluster.db 8.8.0 Artistic-2.0

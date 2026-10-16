@@ -1,0 +1,2 @@
+package	version	license	description_path	n_platform_rows	n_db_keys	n_rows_key_in_db	n_rows_with_symbol	n_unique_probesets_with_symbol	n_mapping_rows	n_mapping_rows_with_symbol	n_unique_symbols
+clariomshumanhttranscriptcluster.db	8.8.0	Artistic-2.0	/ssd240/anaconda3/envs/r_env/lib/R/library/clariomshumanhttranscriptcluster.db/DESCRIPTION	27189	24351	21448	19483	19483	22903	20938	20179

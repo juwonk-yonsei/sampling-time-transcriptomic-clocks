@@ -1,0 +1,22 @@
+!Platform_title = [Clariom_S_Human_HT] Affymetrix Clariom S Assay HT, Human (Includes Pico Assay)
+!Platform_technology = in situ oligonucleotide
+!Platform_manufacturer = Affymetrix
+!Platform_description = This platform supports submissions for:
+!Platform_description = Clariom S Assay HT:
+!Platform_description = https://www.thermofisher.com/order/catalog/product/902969
+!Platform_description = Clariom S Pico Assay HT:
+!Platform_description = https://www.thermofisher.com/order/catalog/product/902964
+!Platform_description = 
+!Platform_description = Annotations:
+!Platform_description = #%lib_set_version=r1
+!Platform_description = #%genome-species=Homo sapiens
+!Platform_description = #%genome-version=hg38
+!Platform_description = #%genome-version-ucsc=hg38
+!Platform_description = #%genome-version-ncbi=GRCh38
+!Platform_description = #%genome-version-create_date=2013-12-00
+!Platform_description = #%genome-lifted-method=psl-map.pl
+!Platform_description = #%genome-lifted_from-species=Homo sapiens
+!Platform_description = #%genome-lifted_from-version-ucsc=hg38
+!Platform_description = #%genome-lifted_from-version-ncbi=GRCh38
+!Platform_description = #%netaffx-annotation-date=2016-06-03
+!Platform_description = #%netaffx-annotation-netaffx-build=36
