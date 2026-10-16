@@ -1,0 +1,5 @@
+location	what	result
+/HDD8T1/WORK/GeroSci/clock-specificity	repository tree	no Zenodo clock pkl or module zip
+/HDD8T1/WORK/GeroSci/sc-module-aging	data/external	EN multitissue scaleddiff pkl files and renamed module zips; see local_md5.tsv
+/home/jkang/.cache	name search for 22166800, scaleddiff, module clock	no match
+tAge download_clocks	default destination in the package	dest_dir is an argument; vignette uses tempdir(); no fixed cache path

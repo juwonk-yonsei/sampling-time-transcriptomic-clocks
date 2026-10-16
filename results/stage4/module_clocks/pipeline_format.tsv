@@ -1,0 +1,2 @@
+example_file	pipeline_class	steps	feature_id_pattern	feature_id_species	feature_id_kind
+EN_Moduleclock_Chronoage_Rodents_Multitissue_allmodulegenes_scaleddiff.pkl	Pipeline	imputation:SimpleImputer;scaler:StandardScaler;featureselection:SelectKBest;estimator:ElasticNet	decimal_string	mouse	Entrez

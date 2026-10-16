@@ -1,0 +1,12 @@
+zenodo_name	local_path	exists	size	md5	name_match	size_match	md5_match	accepted
+EN_Chronoage_Rodents_Multitissue_scaleddiff.pkl	/HDD8T1/WORK/GeroSci/sc-module-aging/data/external/tage_small/EN_Chronoage_Rodents_Multitissue_scaleddiff.pkl	True	921296	19fee9e782b4eda36ab13a459fcdb3db	True	True	True	True
+EN_Chronoage_Rodents_Multitissue_scaleddiff.pkl	/HDD8T1/WORK/GeroSci/sc-module-aging/data/external/tage_zenodo/EN_Chronoage_Rodents_Multitissue_scaleddiff.pkl	True	921296	19fee9e782b4eda36ab13a459fcdb3db	True	True	True	True
+EN_Mortality_Rodents_Multitissue_scaleddiff.pkl	/HDD8T1/WORK/GeroSci/sc-module-aging/data/external/tage_small/EN_Mortality_Rodents_Multitissue_scaleddiff.pkl	True	934823	26cc9e089e45bf978205738e56f190fb	True	True	True	True
+EN_Mortality_Rodents_Multitissue_scaleddiff.pkl	/HDD8T1/WORK/GeroSci/sc-module-aging/data/external/tage_zenodo/EN_Mortality_Rodents_Multitissue_scaleddiff.pkl	True	934823	26cc9e089e45bf978205738e56f190fb	True	True	True	True
+EN_NormalizedAge_Rodents_Multitissue_scaleddiff.pkl	/HDD8T1/WORK/GeroSci/sc-module-aging/data/external/tage_small/EN_NormalizedAge_Rodents_Multitissue_scaleddiff.pkl	True	934823	bbf2b0f8feecaafb29456e3403616144	True	True	True	True
+EN_NormalizedAge_Rodents_Multitissue_scaleddiff.pkl	/HDD8T1/WORK/GeroSci/sc-module-aging/data/external/tage_zenodo/EN_NormalizedAge_Rodents_Multitissue_scaleddiff.pkl	True	934823	bbf2b0f8feecaafb29456e3403616144	True	True	True	True
+EN_Chronoage_Multispecies_Multitissue_scaleddiff.pkl	/HDD8T1/WORK/GeroSci/sc-module-aging/data/external/tage_small/EN_Chronoage_Multispecies_Multitissue_scaleddiff.pkl	True	584873	7dc8a470f5db20a75d7052829efbd37a	True	True	True	True
+EN_Mortality_Multispecies_Multitissue_scaleddiff.pkl	/HDD8T1/WORK/GeroSci/sc-module-aging/data/external/tage_small/EN_Mortality_Multispecies_Multitissue_scaleddiff.pkl	True	584873	87307d7f5572d9932382912d3fd9571c	True	True	True	True
+EN_Mortality_Multispecies_Multitissue_scaleddiff.pkl	/HDD8T1/WORK/GeroSci/sc-module-aging/data/external/tage_zenodo/EN_Mortality_Multispecies_Multitissue_scaleddiff.pkl	True	584873	87307d7f5572d9932382912d3fd9571c	True	True	True	True
+Rodent module clocks.zip	/HDD8T1/WORK/GeroSci/sc-module-aging/data/external/tage_modules/rodent_modules.zip	True	394795	be9234547aacfbb2e83f0f1c5e44b3bd	False	True	True	False
+Multispecies module clocks.zip	/HDD8T1/WORK/GeroSci/sc-module-aging/data/external/tage_modules/multispecies_modules.zip	True	252009	f2a01d5d0fc07745f78cf704e2dd3e98	False	True	True	False

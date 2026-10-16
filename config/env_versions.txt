@@ -122,5 +122,11 @@ loaded via a namespace (and not attached):
 [113] doRNG_1.8.6.3               bitops_1.1-0               
 [115] VariantAnnotation_1.56.0    scales_1.4.0               
 [117] purrr_1.2.2                 crayon_1.5.3               
-[119] rlang_1.3.0                 KEGGREST_1.50.0            
+[119] rlang_1.3.0                 KEGGREST_1.50.0
 
+stage4 2026-10-16 clock reader environment
+path: /HDD8T1/WORK/GeroSci/tod4_clock_env
+base_python: /home/jkang/anaconda3/bin/python3 3.12.7
+pin_file: /HDD8T1/WORK/GeroSci/sc-module-aging/requirements.txt
+installed: joblib 1.6.0, numpy 1.26.4, pandas 2.2.3, scikit-learn 1.3.2, scipy 1.13.1, scmodage 0.2.0, clockspec 0.1.0
+version_warnings: none
