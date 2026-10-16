@@ -1,0 +1,31 @@
+clock	population	n_marker	n_clock_coef	n_overlap
+RA_GTEx	T cells	16	312	1
+RA_GTEx	CD8 T cells	1	312	0
+RA_GTEx	Cytotoxic lymphocytes	7	312	1
+RA_GTEx	B lineage	9	312	0
+RA_GTEx	NK cells	9	312	0
+RA_GTEx	Monocytic lineage	7	312	0
+RA_GTEx	Myeloid dendritic cells	6	312	0
+RA_GTEx	Neutrophils	15	312	0
+RA_GTEx	Endothelial cells	33	312	0
+RA_GTEx	Fibroblasts	8	312	1
+RA_Peters	T cells	16	289	1
+RA_Peters	CD8 T cells	1	289	1
+RA_Peters	Cytotoxic lymphocytes	7	289	0
+RA_Peters	B lineage	9	289	0
+RA_Peters	NK cells	9	289	0
+RA_Peters	Monocytic lineage	7	289	2
+RA_Peters	Myeloid dendritic cells	6	289	0
+RA_Peters	Neutrophils	15	289	0
+RA_Peters	Endothelial cells	33	289	0
+RA_Peters	Fibroblasts	8	289	0
+RA_default	T cells	16	279	2
+RA_default	CD8 T cells	1	279	0
+RA_default	Cytotoxic lymphocytes	7	279	1
+RA_default	B lineage	9	279	0
+RA_default	NK cells	9	279	0
+RA_default	Monocytic lineage	7	279	0
+RA_default	Myeloid dendritic cells	6	279	0
+RA_default	Neutrophils	15	279	0
+RA_default	Endothelial cells	33	279	0
+RA_default	Fibroblasts	8	279	1

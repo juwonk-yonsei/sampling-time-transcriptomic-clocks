@@ -1,0 +1,57 @@
+dataset	sample_set	n	population_a	population_b	pearson_r	abs_r_gt_0.9
+GSE39445	control_nonmissing_clock_time_h	221	T cells	CD8 T cells	0.532509638419219	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	T cells	Cytotoxic lymphocytes	0.150515250583754	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	T cells	NK cells	-0.540411711711575	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	T cells	B lineage	0.054830710914848	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	T cells	Monocytic lineage	-0.191241916433077	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	T cells	Myeloid dendritic cells	0.0375515467213085	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	T cells	Neutrophils	-0.504951439383702	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	CD8 T cells	Cytotoxic lymphocytes	0.0513253012207275	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	CD8 T cells	NK cells	-0.277082783624289	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	CD8 T cells	B lineage	-0.137298499929027	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	CD8 T cells	Monocytic lineage	0.0291180428783653	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	CD8 T cells	Myeloid dendritic cells	0.131896777156951	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	CD8 T cells	Neutrophils	-0.262826871956441	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	Cytotoxic lymphocytes	NK cells	0.300621564406031	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	Cytotoxic lymphocytes	B lineage	0.0859479021638406	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	Cytotoxic lymphocytes	Monocytic lineage	-0.214928719268955	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	Cytotoxic lymphocytes	Myeloid dendritic cells	0.0817836105191512	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	Cytotoxic lymphocytes	Neutrophils	-0.14666467279279	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	NK cells	B lineage	0.286916681024605	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	NK cells	Monocytic lineage	-0.0152628840728304	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	NK cells	Myeloid dendritic cells	0.0479430089249483	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	NK cells	Neutrophils	0.223979394604751	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	B lineage	Monocytic lineage	-0.485157520544076	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	B lineage	Myeloid dendritic cells	-0.117130612952828	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	B lineage	Neutrophils	-0.378327080236113	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	Monocytic lineage	Myeloid dendritic cells	0.208900439331844	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	Monocytic lineage	Neutrophils	0.0931305289861237	FALSE
+GSE39445	control_nonmissing_clock_time_h	221	Myeloid dendritic cells	Neutrophils	0.0687896726161006	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	T cells	CD8 T cells	0.615925650529836	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	T cells	Cytotoxic lymphocytes	0.175350768475895	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	T cells	NK cells	-0.246136840150093	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	T cells	B lineage	0.625206425459584	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	T cells	Monocytic lineage	-0.479416885161991	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	T cells	Myeloid dendritic cells	0.0571752450562888	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	T cells	Neutrophils	-0.739963619808647	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	CD8 T cells	Cytotoxic lymphocytes	0.240390433716925	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	CD8 T cells	NK cells	-0.14339612682985	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	CD8 T cells	B lineage	0.519431575413191	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	CD8 T cells	Monocytic lineage	-0.330824935087416	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	CD8 T cells	Myeloid dendritic cells	0.134357306575336	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	CD8 T cells	Neutrophils	-0.514625287757291	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	Cytotoxic lymphocytes	NK cells	0.611965907142203	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	Cytotoxic lymphocytes	B lineage	0.179785009181592	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	Cytotoxic lymphocytes	Monocytic lineage	-0.0728769980357254	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	Cytotoxic lymphocytes	Myeloid dendritic cells	0.164287306173738	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	Cytotoxic lymphocytes	Neutrophils	-0.546558686586686	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	NK cells	B lineage	-0.0571602779665993	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	NK cells	Monocytic lineage	-0.0204442857814668	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	NK cells	Myeloid dendritic cells	0.0983837844114862	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	NK cells	Neutrophils	-0.115560327070753	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	B lineage	Monocytic lineage	-0.570549711974669	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	B lineage	Myeloid dendritic cells	-0.0470655022673325	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	B lineage	Neutrophils	-0.580655555007302	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	Monocytic lineage	Myeloid dendritic cells	-0.0212518407394334	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	Monocytic lineage	Neutrophils	0.370123841235532	FALSE
+GSE56931	control_nonmissing_clock_time_h	130	Myeloid dendritic cells	Neutrophils	-0.115012799563778	FALSE

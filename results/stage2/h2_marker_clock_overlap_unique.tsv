@@ -1,0 +1,4 @@
+clock	signature	n_clock_coef	n_marker	n_overlap_unique	genes
+RA_GTEx	GTExAge	312	111	3	DCN,FLT3LG,KLRD1
+RA_Peters	Peters	289	111	4	ADAP2,CD8B,RASSF4,TRAT1
+RA_default	DESeq2	279	111	4	CD8A,COL6A2,FLT3LG,PBX4
