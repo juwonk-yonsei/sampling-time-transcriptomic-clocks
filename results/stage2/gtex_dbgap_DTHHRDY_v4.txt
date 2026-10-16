@@ -1,0 +1,532 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/xhtml1-strict.dtd">
+<html>
+<head>
+	<script type="text/javascript" src="/core/jig/1.15.11/js/jig.min.js"></script>
+	<meta name="ncbi_db" content="gap"/>
+	<meta name="ncbi_app" content="gap"/>
+	<meta name="ncbi_pdid" content="variable"/>
+	<meta name="ncbi_phid" content="0C425689AD177C5D00000000000177C6"/>
+	<meta name="ncbi_uid" content="phv00169092.v4.p1"/>
+	<meta name="ncbi_op" content="view"/>
+	
+	<link rel="stylesheet" type="text/css" media="all" href="/projects/gap/css/ReportStyle.css"/>
+	<link rel="stylesheet" type="text/css" media="all" href="/projects/gap/css/VariableReportStyle.css"/>
+	<link rel="stylesheet" type="text/css" media="all" href="/projects/gap/css/folder.css"/>
+	<link rel="stylesheet" type="text/css" media="all" href="/projects/gap/css/tree.css"/>
+	<link rel="stylesheet" type="text/css" media="all" href="/projects/gap/css/Toggle.css"/>	
+	<link rel="stylesheet" type="text/css" media="all" href="/projects/gap/css/navigationBarTab.css"/>	
+	<link rel="stylesheet" type="text/css" media="all" href="/projects/gap/css/ValueDistribution.css"/>	
+	<script type="text/javascript" src="/projects/gap/jscript/tree.js"></script>
+	<script type="text/javascript" src="/projects/gap/jscript/folder.js"></script>
+	<script type="text/javascript" src="/projects/gap/jscript/expandCollapse.js"></script>
+	<script type="text/javascript" src="/projects/gap/jscript/replaceText.js"></script>
+	<script type="text/javascript" src="/projects/gap/jscript/manageState.js"></script>
+	<script type="text/javascript" src="/projects/gap/jscript/getPage.js"></script>
+	<script type="text/javascript" src="/projects/gap/jscript/variableSummary.js"></script>	
+	<script type="text/javascript" src="/projects/gap/jscript/DivFuncs.js"></script>
+	<script type="text/javascript" src="/projects/gap/jscript/curatorInfo.js"></script>
+	<script type="text/javascript" src="/projects/gap/jscript/globalAlert.js"></script>
+	<script type="text/javascript" src="/projects/gap/jscript/requestAccessButton.js"></script>	
+	<script type="text/javascript"> 
+		window.ncbi_startTime = new Date();
+  	</script>
+
+	<title>
+	</title>
+</head>
+
+
+	
+<!--=================================================================================
+=====================================================================================
+
+	JAVASCRIPT CODE THAT IS LOADED UPON PAGE LOAD
+
+=====================================================================================
+===================================================================================-->
+
+
+
+
+
+
+
+
+
+<body onload="requestAccessButton('phs000424.v4.p1');initializeVariableSummary('phv00169092.v4.p1', 'phs424.v4');">
+
+
+
+<div id="page">
+<!--=================================================================================
+=====================================================================================
+
+	LOAD HIDDEN FORM WHICH IS USED TO MAINTAIN STATE
+
+=====================================================================================
+===================================================================================-->
+
+
+<form name="HistoryFormPersist" id="HistoryFormPersist" action="" method="get">
+
+	<input type="hidden" name="consent" value=""/>
+
+	<input type="hidden" name="dssp" value="1"/>
+
+	<input type="hidden" name="pha" value=""/>
+
+	<input type="hidden" name="phaf" value=""/>
+
+	<input type="hidden" name="phd" value="3910"/>
+
+	<input type="hidden" name="phdf" value=""/>
+
+	<input type="hidden" name="phsf" value=""/>
+
+	<input type="hidden" name="pht" value="2742"/>
+
+	<input type="hidden" name="phtf" value=""/>
+
+	<input type="hidden" name="phv" value="169092"/>
+
+	<input type="hidden" name="phvf" value=""/>
+
+	<input type="hidden" name="study_id" value="phs000424.v4.p1"/>
+
+</form>
+
+	
+<form name="HistoryFormSubmit" id="HistoryFormSubmit" action="" method="get">
+
+	<input type="hidden" name="consent" value=""/>
+
+	<input type="hidden" name="dssp" value="1"/>
+
+	<input type="hidden" name="pha" value=""/>
+
+	<input type="hidden" name="phaf" value=""/>
+
+	<input type="hidden" name="phd" value="3910"/>
+
+	<input type="hidden" name="phdf" value=""/>
+
+	<input type="hidden" name="phsf" value=""/>
+
+	<input type="hidden" name="pht" value="2742"/>
+
+	<input type="hidden" name="phtf" value=""/>
+
+	<input type="hidden" name="phv" value="169092"/>
+
+	<input type="hidden" name="phvf" value=""/>
+
+	<input type="hidden" name="study_id" value="phs000424.v4.p1"/>
+
+</form>
+
+<form name="EnvironmentSettings" id="EnvironmentSettings" action="" method="get">
+<input type="hidden" name="basePathCgiBin" value="/projects/gap/cgi-bin/"/>
+</form>
+
+
+<div id="header">
+
+<!--=================================================================================
+=====================================================================================
+ 
+	LOGO-HEADER DIV
+	
+=====================================================================================
+===================================================================================-->
+
+<div id="logo-header">
+<table width="100%">
+<tr><td><div id="global-alert"></div></td></tr>
+<tr id="banner-row">
+<td class="left">
+<a href="https://www.ncbi.nlm.nih.gov/gap">
+<img src="/projects/gap/images/dbGaP_logo_final.jpg" id="gap-logo" alt="dbGaP-logo" border="0"/>
+</a>
+</td>
+</tr>
+</table>
+
+</div>  <!-- id="logo-header" -->
+
+<!--=================================================================================
+=====================================================================================
+
+	IF DEV SITE, OUTPUT TABLE OF USEFUL INFORMATION FOR CURATORS
+	
+=====================================================================================
+===================================================================================-->
+
+
+
+<!--=================================================================================
+=====================================================================================
+
+	DISPLAY IF DEV, PREVIEW, OR PRE-PRODUCTION SITE. IF PRODUCTION, NOTHING IS DISPLAYED
+	
+=====================================================================================
+==================================================================================-->
+
+<!--=================================================================================
+=====================================================================================
+
+	SPECIAL COMMENTS FOR PREVIEW SITE
+	
+=====================================================================================
+==================================================================================-->
+
+
+
+	
+
+
+<h1 class="report">
+	
+
+
+
+
+
+
+
+<!--=================================================================================
+=====================================================================================
+
+	DISPLAY NAME OF STUDY, AND, IF NECESSARY, NAME OF PARENT STUDY
+	
+=====================================================================================
+==================================================================================-->
+
+
+<span id="study-name" name="study-name">Common Fund (CF) Genotype-Tissue Expression Project (GTEx)</span><br/>
+
+</h1>
+
+
+
+
+
+	
+	<b>dbGaP Study Accession:</b>
+	<span id="study-id" name="study-id">phs000424.v4.p1</span><br/><br/>	
+
+	
+		<font color="red">Note: This version of the study has been superseded.</font>
+		<a href="/projects/gap/cgi-bin/study.cgi?study_id=phs000424.v11.p2">
+		See most recent version </a><br/>
+	
+
+
+<div id="requestAccessButton"></div><br/>
+
+
+<!--=================================================================================
+=====================================================================================
+
+	LINK TO SSTR
+	
+=====================================================================================
+==================================================================================-->
+
+	<a href="https://www.ncbi.nlm.nih.gov/gap/sstr/report/phs000424.v4.p1" target="_blank">Subject Sample Telemetry Report (SSTR)</a><br/><br/>
+
+	
+
+
+
+<!--=================================================================================
+=====================================================================================
+
+	STUDY VERSION HISTORY
+	
+=====================================================================================
+==================================================================================-->
+<a href="#studyHistoryTable" data-jig="ncbitoggler">Study version history</a>
+<div class="ui-widget" id="studyHistoryTable">
+
+<table border="1" width="20%">
+<tr><th align="left">Study</th></tr>
+
+
+	<tr><td>
+	<a href="/projects/gap/cgi-bin/study.cgi?study_id=phs000424.v1.p1">phs000424.v1.p1</a>
+	</td></tr>
+
+	<tr><td>
+	<a href="/projects/gap/cgi-bin/study.cgi?study_id=phs000424.v2.p1">phs000424.v2.p1</a>
+	</td></tr>
+
+	<tr><td>
+	<a href="/projects/gap/cgi-bin/study.cgi?study_id=phs000424.v3.p1">phs000424.v3.p1</a>
+	</td></tr>
+
+	<tr><td>
+	<a href="/projects/gap/cgi-bin/study.cgi?study_id=phs000424.v4.p1">phs000424.v4.p1</a>
+	</td></tr>
+
+	<tr><td>
+	<a href="/projects/gap/cgi-bin/study.cgi?study_id=phs000424.v5.p1">phs000424.v5.p1</a>
+	</td></tr>
+
+	<tr><td>
+	<a href="/projects/gap/cgi-bin/study.cgi?study_id=phs000424.v6.p1">phs000424.v6.p1</a>
+	</td></tr>
+
+	<tr><td>
+	<a href="/projects/gap/cgi-bin/study.cgi?study_id=phs000424.v7.p2">phs000424.v7.p2</a>
+	</td></tr>
+
+	<tr><td>
+	<a href="/projects/gap/cgi-bin/study.cgi?study_id=phs000424.v8.p2">phs000424.v8.p2</a>
+	</td></tr>
+
+	<tr><td>
+	<a href="/projects/gap/cgi-bin/study.cgi?study_id=phs000424.v9.p2">phs000424.v9.p2</a>
+	</td></tr>
+
+	<tr><td>
+	<a href="/projects/gap/cgi-bin/study.cgi?study_id=phs000424.v10.p2">phs000424.v10.p2</a>
+	</td></tr>
+
+	<tr><td>
+	<a href="/projects/gap/cgi-bin/study.cgi?study_id=phs000424.v11.p2">phs000424.v11.p2</a>
+	</td></tr>
+
+
+</table>
+</div>
+
+<!--=================================================================================
+=====================================================================================
+
+	OUTPUT NAVIGATION BAR
+	
+=====================================================================================
+==================================================================================-->
+
+</div> <!-- id="header" -->
+
+
+<div id="navigationBarTab">
+<ul>
+
+
+
+
+
+
+
+
+
+
+	<li><a class="selectableTab"  href="#" onclick="javascript:getPage(this,'study.cgi', 'phs000424.v4.p1');return true;" oncontextmenu="javascript:getPage(this,'study.cgi', 'phs000424.v4.p1');return true;">Study</a></li>
+
+
+
+
+	<li><a class="selectableTab" href="#" onclick="javascript:getPage(this,'dataset.cgi', '2742');return true;" oncontextmenu="javascript:getPage(this,'dataset.cgi', '2742');return true;">Phenotype Datasets</a></li>
+
+
+
+	<li><a href="#" id="current">Variables</a></li>
+
+
+
+
+	<li><a class="selectableTab" href="#" onclick="javascript:getPage(this, 'molecular.cgi', '0');return true;" oncontextmenu="javascript:getPage(this, 'molecular.cgi', '0');return true;">Molecular Datasets</a></li>
+
+
+
+
+
+	<li><a class="nonSelectableTab">Analyses</a></li>
+
+
+
+
+	<li><a class="selectableTab" href="#" onclick="javascript:getPage(this,'document.cgi', '3910');return true;" oncontextmenu="javascript:getPage(this,'document.cgi', '3910');return true;">Documents</a></li>
+
+
+
+</ul>
+</div> <!-- id="navigationBarTab" -->
+
+
+
+
+
+
+
+<!--=================================================================================
+=====================================================================================
+
+	HEADER DIV
+
+=====================================================================================
+===================================================================================-->
+
+
+
+<!--=================================================================================
+=====================================================================================
+
+	CONTAINER DIV
+
+=====================================================================================
+==================================================================================-->
+
+
+<div id="container">
+
+<!--=================================================================================
+=====================================================================================
+
+	MAIN DIV
+
+=====================================================================================
+==================================================================================-->
+
+
+<div id="main">
+
+
+
+<!--=================================================================================
+=====================================================================================
+
+	REPORT DIV
+
+=====================================================================================
+==================================================================================-->
+
+<dl class="report">
+
+
+<p>
+
+    <!-- == 3 prod display advanced search link by [  variableURL  ] 
+	<a href="https://www.ncbi.nlm.nih.gov/gap/advanced_search/?OBJ=variable&amp;COND=%7B%22study_accession%22:%5B%22phs000424.v4.p1%22%5D%7D" target="_blank">Browse all variables within this study</a>
+ 	-->
+    <ul>
+    <li><a href="https://www.ncbi.nlm.nih.gov/gap/advanced_search/?OBJ=variable&amp;COND=%7B%22study_accession%22:%5B%22phs000424.v4.p1%22%5D%7D" target="_blank">Browse all variables within this study via Advanced Search</a></li>
+    <li><a href="/projects/gap/cgi-bin/GetListOfAllObjects.cgi?study_id=phs000424.v4.p1&object_type=variable" target="_blank">List all variables within this study</a></li>
+    </ul>
+
+</p>
+
+
+<dt>Variable Name and Accession</dt>
+<dd>
+<p>
+<b>Variable Name</b>: DTHHRDY<br/>
+<b>Variable Accession</b>: phv00169092.v4.p1<br/>
+<b>Variable belongs to dataset</b>:
+	<a href="#"
+		onclick       = "javascript:getPage(this, 'dataset.cgi', 2742, 2);return true;"
+		oncontextmenu = "javascript:getPage(this, 'dataset.cgi', 2742, 2);return true;">
+	pht002742.v4.p1
+	</a>:
+	
+		GTEx_Subject_Phenotypes: This subject phenotype data table includes demographic information (n=9 variables; gender, age, race, ethnicty, height, weight, and bmi),  study eligibiliy, general medical history (n=21 variables), autoimmune, degenerative, neurological (n=11 variables), evidence of HIV (n=9 variables), blood donation (n=2 variables), information (n=41 variables), potential exposure: physical contact (n=3 variables), potential exposure: sexual activity (n=4 variables), history at time of death (n=13 variables), tissue transplant (n=2 variables), medical history source, death circumstances (n=24 variables), tissue recovery (n=13 variables), serology results (n=14 variables), organ donor or post-mortem cohort, and total ischemic time for a donor.
+	
+<br/>
+
+
+
+	<b>Comment</b>: Death Classification: 4-point Hardy Scale
+		<p>Death classification based on the 4-point Hardy Scale: 1) Violent and fast death Deaths due to accident, blunt force trauma or suicide, terminal phase estimated at < 10 min. 2) Fast death of natural causes Sudden unexpected deaths of people who had been reasonably healthy, after a terminal phase estimated at < 1 hr (with sudden death from a myocardial infarction as a model cause of death for this category). 3) Intermediate death Death after a terminal phase of 1 to 24 hrs (not classifiable as 2 or 4); patients who were ill but death was unexpected. 4) Slow death Death after a long illness, with a terminal phase longer than 1 day (commonly cancer or chronic pulmonary disease); deaths that are not unexpected. 0) Ventilator Case All cases on a ventilator immediately before death.</p>
+
+
+</p>
+</dd>
+
+
+<dt>Variable Description</dt>
+<dd>
+<p>Hardy Scale</p>
+
+
+
+</dd>
+
+
+<!--=============== Ontology =================-->
+
+
+	
+	
+	
+	
+	
+
+
+
+
+
+<!--=============== Summary =================-->
+<dt> Statistical Summary </dt>
+<dd>
+<div style="overflow:auto;width:100%">
+<div id="variableSummary">
+</div>
+</div>
+</dd>
+
+<!--=============== Document Parts =================-->
+
+	<a name="doc-parts"/>
+	<dt> Document Parts Related to Variable </dt>
+	<dd>
+	<ul id="document-part-list">
+	
+		
+			<br/><br/>
+			<li><b>Document Name:</b> GTEx Case Report Form
+			<br/><br/>
+
+			<ul>
+			
+				<li>
+				<a href="#"
+					onclick="javascript:getPage(this, 'document.cgi', 3910,'V117');return true;"
+				 	oncontextmenu="javascript:getPage(this, 'document.cgi', 3910,'V117');return true;">
+					See document part in context
+				</a>
+				<br/>
+				<table border="1" width="90%"><tr><td height="200">
+				<object width="100%" height="100%" type="text/html"
+					data="/projects/gap/cgi-bin/GetDocumentPart.cgi?phd=3910&amp;version=1&amp;section_id=V117"/>
+				</td></tr>
+				</table>
+				<br/><br/>
+				</li>
+			
+
+			</ul>
+			</li>
+		
+	
+	</ul>
+
+
+
+</dd>
+
+
+
+</dl> <!--================= class="report" ======================-->
+</div> <!--================= id="main" ======================-->
+</div>
+</div> <!--================= id="container" ======================-->
+
+</div> <!--================= id="page" ======================-->
+
+
+<script type="text/javascript" src="/core/pinger/pinger.js"></script>
+
+</body>
+</html>

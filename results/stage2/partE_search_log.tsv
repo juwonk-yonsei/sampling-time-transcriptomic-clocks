@@ -1,0 +1,27 @@
+date	database	query	hit_count	id_list	note
+2026-10-16	GEO	"human[Organism] AND (blood[All Fields] OR PBMC[All Fields] OR leukocyte[All Fields]) AND (""RNA-seq""[All Fields] OR ""RNA sequencing""[All Fields]) AND (circadian[All Fields] OR ""time of day""[All Fields] OR ""clock time""[All Fields])"	82		
+2026-10-16	GEO	"""whole blood""[All Fields] AND (RNA-seq[All Fields] OR ""high throughput sequencing""[All Fields]) AND (circadian[All Fields] OR ""time of day""[All Fields] OR ""time-of-day""[All Fields]) AND human[Organism]"	160		
+2026-10-16	GEO	"PBMC[All Fields] AND ""RNA-seq""[All Fields] AND (circadian[All Fields] OR ""time of day""[All Fields]) AND human[Organism]"	1		
+2026-10-16	GEO	TimeSignature[All Fields] AND human[Organism]	1		
+2026-10-16	GEO	BodyTime[All Fields] AND human[Organism]	0		
+2026-10-16	PubMed	TimeSignature blood RNA-seq	0		
+2026-10-16	PubMed	TimeSignature circadian blood	2	33031153;30201705	
+2026-10-16	PubMed	Wittenbrink TimeSignature	0		
+2026-10-16	PubMed	BodyTime blood transcriptome circadian	1	29953415	
+2026-10-16	PubMed	BodyTime circadian transcriptome	1	29953415	
+2026-10-16	PubMed	"""whole blood"" RNA-seq ""time of day"" circadian"	0		
+2026-10-16	PubMed	blood RNA-seq circadian older adults	10	42589234;41902670;41285310;41112764;39097147	
+2026-10-16	BioStudies	blood AND RNA-seq AND circadian	62		
+2026-10-16	BioStudies	"""whole blood"" AND RNA-seq AND ""time of day"""	4		
+2026-10-16	BioStudies	PBMC AND RNA-seq AND circadian	0		
+2026-10-16	BioStudies	leukocyte AND RNA-seq AND circadian	19		
+2026-10-16	BioStudies	BodyTime AND blood	1		
+2026-10-16	BioStudies	TimeSignature AND blood	1		
+2026-10-16	ArrayExpress	blood RNA-seq circadian			"HTTP 200; body_start=b'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<!doctype html>\n<html lang=""en"">\n<head>\n    <meta charset=""'"
+2026-10-16	ArrayExpress	whole blood time of day			"HTTP 200; body_start=b'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<!doctype html>\n<html lang=""en"">\n<head>\n    <meta charset=""'"
+2026-10-16	EGA	https://ega-archive.org/metadata/v2/studies?query=blood RNA-seq circadian&limit=5			HTTP 404
+2026-10-16	EGA	https://www.ebi.ac.uk/ega/webservices/EgaService?wsdl			HTTP 404
+2026-10-16	PubMed-elink-gds	PMID 30201705	1	200113883	GSE113883
+2026-10-16	PubMed-elink-gds	PMID 29953415	0		BodyTime paper; no GEO link returned
+2026-10-16	PubMed-elink-gds	PMID 31473510	1	200127530	GSE127530
+2026-10-16	PubMed-elink-gds	PMID 41902670	1	200309217	GSE309217 skeletal muscle; header not read
