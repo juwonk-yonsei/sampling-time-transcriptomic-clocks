@@ -149,7 +149,7 @@ L1L2	TAms_mort	GSE122725	GSE113883				0.8635	0.6735	2000	2000
 
 ### 5.2 implementation_map 표
 
-`prereg/implementation_map.tsv`는 문서 §4–§8과 잠금·다운로드 항목 36행이다. 열은 문서 절, 항목, 파일, 함수. SHA-256 `8329d444099a2f271edbeb84afbce708199f37e033ccaac08e21fc570db359c0`.
+`prereg/implementation_map.tsv`는 헤더를 빼고 46행이다. 열은 문서 절, 항목, 파일, 함수. SHA-256 `8329d444099a2f271edbeb84afbce708199f37e033ccaac08e21fc570db359c0`.
 
 ### 5.3 잠금 장치 구현
 
