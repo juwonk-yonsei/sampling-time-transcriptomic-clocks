@@ -1,0 +1,193 @@
+dataset	clock	stage4_clock	n_control	within_pearson	paired
+GSE113883	TAms_chrono		153		False
+GSE113883	TAms_mort		153		False
+GSE113883	TArd_chrono	TA_chrono	153	0.9273743967986662	True
+GSE113883	TArd_mort	TA_mort	153	0.9648995200183595	True
+GSE113883	TM_blue_mortality		153		False
+GSE113883	TM_brown4_mortality		153		False
+GSE113883	TM_darkgreen_mortality		153		False
+GSE113883	TM_darkmagenta_mortality		153		False
+GSE113883	TM_darkred_mortality		153		False
+GSE113883	TM_darkslateblue_mortality		153		False
+GSE113883	TM_green_mortality		153		False
+GSE113883	TM_ivory_mortality		153		False
+GSE113883	TM_orange_mortality		153		False
+GSE113883	TM_pink_mortality		153		False
+GSE113883	TM_plum1_mortality		153		False
+GSE113883	TM_sienna3_mortality		153		False
+GSE113883	TM_turquoise_mortality		153		False
+GSE113883	TM_white_mortality		153		False
+GSE113883	TMrd_black_chronological	TM_black_chronological	153	0.9800600518454348	True
+GSE113883	TMrd_black_mortality	TM_black_mortality	153	0.9880241565526882	True
+GSE113883	TMrd_blue_chronological	TM_blue_chronological	153	0.9743576290533579	True
+GSE113883	TMrd_blue_mortality	TM_blue_mortality	153	0.99692298168825	True
+GSE113883	TMrd_brown_chronological	TM_brown_chronological	153	0.9942616017174875	True
+GSE113883	TMrd_brown_mortality	TM_brown_mortality	153	0.9959842938618159	True
+GSE113883	TMrd_cyan_chronological	TM_cyan_chronological	153	0.9934402760793947	True
+GSE113883	TMrd_cyan_mortality	TM_cyan_mortality	153	0.8933738227908817	True
+GSE113883	TMrd_darkgreen_chronological	TM_darkgreen_chronological	153	0.985450267290755	True
+GSE113883	TMrd_darkgreen_mortality	TM_darkgreen_mortality	153	0.9781804600952898	True
+GSE113883	TMrd_darkgrey_chronological	TM_darkgrey_chronological	153	0.9969030727147566	True
+GSE113883	TMrd_darkgrey_mortality	TM_darkgrey_mortality	153	0.9953310537614303	True
+GSE113883	TMrd_darkorange_chronological	TM_darkorange_chronological	153	0.9974253496591118	True
+GSE113883	TMrd_darkorange_mortality	TM_darkorange_mortality	153	0.9797011079915096	True
+GSE113883	TMrd_darkred_chronological	TM_darkred_chronological	153	0.9130604113958338	True
+GSE113883	TMrd_darkred_mortality	TM_darkred_mortality	153	0.9510122634068934	True
+GSE113883	TMrd_green_chronological	TM_green_chronological	153	0.9967601613881646	True
+GSE113883	TMrd_green_mortality	TM_green_mortality	153	0.9962446960459188	True
+GSE113883	TMrd_greenyellow_chronological	TM_greenyellow_chronological	153	0.9933709156128822	True
+GSE113883	TMrd_greenyellow_mortality	TM_greenyellow_mortality	153	0.9986120139141015	True
+GSE113883	TMrd_grey60_chronological	TM_grey60_chronological	153	0.9919142063350096	True
+GSE113883	TMrd_grey60_mortality	TM_grey60_mortality	153	0.9578102854157081	True
+GSE113883	TMrd_lightgreen_chronological	TM_lightgreen_chronological	153	0.8011096102752467	True
+GSE113883	TMrd_lightgreen_mortality	TM_lightgreen_mortality	153	0.7692852863271314	True
+GSE113883	TMrd_lightyellow_chronological	TM_lightyellow_chronological	153	0.9611976215928508	True
+GSE113883	TMrd_lightyellow_mortality	TM_lightyellow_mortality	153	0.9394621347438846	True
+GSE113883	TMrd_magenta_chronological	TM_magenta_chronological	153	0.9914365079239943	True
+GSE113883	TMrd_magenta_mortality	TM_magenta_mortality	153	0.9816705661586161	True
+GSE113883	TMrd_midnightblue_chronological	TM_midnightblue_chronological	153	0.9899846895662666	True
+GSE113883	TMrd_midnightblue_mortality	TM_midnightblue_mortality	153	0.9940291573792055	True
+GSE113883	TMrd_orange_chronological	TM_orange_chronological	153	0.9993880745861151	True
+GSE113883	TMrd_orange_mortality	TM_orange_mortality	153	0.9834667654535715	True
+GSE113883	TMrd_pink_chronological	TM_pink_chronological	153	0.9275087330493074	True
+GSE113883	TMrd_pink_mortality	TM_pink_mortality	153	0.9734411738395223	True
+GSE113883	TMrd_red_chronological	TM_red_chronological	153	0.9135207746329882	True
+GSE113883	TMrd_red_mortality	TM_red_mortality	153	0.9092568696572723	True
+GSE113883	TMrd_salmon_chronological	TM_salmon_chronological	153	0.7345392469299148	True
+GSE113883	TMrd_salmon_mortality	TM_salmon_mortality	153	0.7721477391522547	True
+GSE113883	TMrd_skyblue_chronological	TM_skyblue_chronological	153	0.9956094963997038	True
+GSE113883	TMrd_skyblue_mortality	TM_skyblue_mortality	153	0.9777240903103189	True
+GSE113883	TMrd_tan_chronological	TM_tan_chronological	153	0.9944919883449045	True
+GSE113883	TMrd_tan_mortality	TM_tan_mortality	153	0.9969855122124783	True
+GSE113883	TMrd_turquoise_chronological	TM_turquoise_chronological	153	0.9848767250534688	True
+GSE113883	TMrd_turquoise_mortality	TM_turquoise_mortality	153	0.709240083079747	True
+GSE113883	TMrd_yellow_chronological	TM_yellow_chronological	153	0.9915398637010883	True
+GSE113883	TMrd_yellow_mortality	TM_yellow_mortality	153	0.9864458640309185	True
+GSE39445	TAms_chrono		221		False
+GSE39445	TAms_mort		221		False
+GSE39445	TArd_chrono	TA_chrono	221	0.7168729049592001	True
+GSE39445	TArd_mort	TA_mort	221	0.604143486046446	True
+GSE39445	TM_blue_mortality		221		False
+GSE39445	TM_brown4_mortality		221		False
+GSE39445	TM_darkgreen_mortality		221		False
+GSE39445	TM_darkmagenta_mortality		221		False
+GSE39445	TM_darkred_mortality		221		False
+GSE39445	TM_darkslateblue_mortality		221		False
+GSE39445	TM_green_mortality		221		False
+GSE39445	TM_ivory_mortality		221		False
+GSE39445	TM_orange_mortality		221		False
+GSE39445	TM_pink_mortality		221		False
+GSE39445	TM_plum1_mortality		221		False
+GSE39445	TM_sienna3_mortality		221		False
+GSE39445	TM_turquoise_mortality		221		False
+GSE39445	TM_white_mortality		221		False
+GSE39445	TMrd_black_chronological	TM_black_chronological	221	0.6156716575491316	True
+GSE39445	TMrd_black_mortality	TM_black_mortality	221	0.5623415806536157	True
+GSE39445	TMrd_blue_chronological	TM_blue_chronological	221	0.9398712601679585	True
+GSE39445	TMrd_blue_mortality	TM_blue_mortality	221	0.9209845447127848	True
+GSE39445	TMrd_brown_chronological	TM_brown_chronological	221	0.9812093579975115	True
+GSE39445	TMrd_brown_mortality	TM_brown_mortality	221	0.9691094301491392	True
+GSE39445	TMrd_cyan_chronological	TM_cyan_chronological	221	0.9961761163688575	True
+GSE39445	TMrd_cyan_mortality	TM_cyan_mortality	221	0.971482364556249	True
+GSE39445	TMrd_darkgreen_chronological	TM_darkgreen_chronological	221	0.3525667717160795	True
+GSE39445	TMrd_darkgreen_mortality	TM_darkgreen_mortality	221	0.44579757341960596	True
+GSE39445	TMrd_darkgrey_chronological	TM_darkgrey_chronological	221	0.9995573550172681	True
+GSE39445	TMrd_darkgrey_mortality	TM_darkgrey_mortality	221	0.9975641967666337	True
+GSE39445	TMrd_darkorange_chronological	TM_darkorange_chronological	221	0.9119034054728778	True
+GSE39445	TMrd_darkorange_mortality	TM_darkorange_mortality	221	0.785374244844864	True
+GSE39445	TMrd_darkred_chronological	TM_darkred_chronological	221	0.9749944994817658	True
+GSE39445	TMrd_darkred_mortality	TM_darkred_mortality	221	0.9581828092551625	True
+GSE39445	TMrd_green_chronological	TM_green_chronological	221	0.4064609656658057	True
+GSE39445	TMrd_green_mortality	TM_green_mortality	221	0.4200221249991296	True
+GSE39445	TMrd_greenyellow_chronological	TM_greenyellow_chronological	221	0.4883709702082612	True
+GSE39445	TMrd_greenyellow_mortality	TM_greenyellow_mortality	221	0.49800425310188895	True
+GSE39445	TMrd_grey60_chronological	TM_grey60_chronological	221	0.9942081653164923	True
+GSE39445	TMrd_grey60_mortality	TM_grey60_mortality	221	0.9958297207707947	True
+GSE39445	TMrd_lightgreen_chronological	TM_lightgreen_chronological	221	0.8150769921274621	True
+GSE39445	TMrd_lightgreen_mortality	TM_lightgreen_mortality	221	0.8455143141744835	True
+GSE39445	TMrd_lightyellow_chronological	TM_lightyellow_chronological	221	0.9948932818724635	True
+GSE39445	TMrd_lightyellow_mortality	TM_lightyellow_mortality	221	0.9954120816615634	True
+GSE39445	TMrd_magenta_chronological	TM_magenta_chronological	221	0.8085282110073224	True
+GSE39445	TMrd_magenta_mortality	TM_magenta_mortality	221	0.6348671949227344	True
+GSE39445	TMrd_midnightblue_chronological	TM_midnightblue_chronological	221	0.9971563437854497	True
+GSE39445	TMrd_midnightblue_mortality	TM_midnightblue_mortality	221	0.9950175249212819	True
+GSE39445	TMrd_orange_chronological	TM_orange_chronological	221	0.6914705020226076	True
+GSE39445	TMrd_orange_mortality	TM_orange_mortality	221	0.8086918691824693	True
+GSE39445	TMrd_pink_chronological	TM_pink_chronological	221	0.9733867593024046	True
+GSE39445	TMrd_pink_mortality	TM_pink_mortality	221	0.9563999903879549	True
+GSE39445	TMrd_red_chronological	TM_red_chronological	221	0.9969619528313719	True
+GSE39445	TMrd_red_mortality	TM_red_mortality	221	0.9931028633816468	True
+GSE39445	TMrd_salmon_chronological	TM_salmon_chronological	221	0.8785429207204127	True
+GSE39445	TMrd_salmon_mortality	TM_salmon_mortality	221	0.8419400722125159	True
+GSE39445	TMrd_skyblue_chronological	TM_skyblue_chronological	221	0.9760309709575761	True
+GSE39445	TMrd_skyblue_mortality	TM_skyblue_mortality	221	0.98870002507293	True
+GSE39445	TMrd_tan_chronological	TM_tan_chronological	221	0.9939683871101468	True
+GSE39445	TMrd_tan_mortality	TM_tan_mortality	221	0.9979011746024823	True
+GSE39445	TMrd_turquoise_chronological	TM_turquoise_chronological	221	0.848698196093259	True
+GSE39445	TMrd_turquoise_mortality	TM_turquoise_mortality	221	0.8003235214254996	True
+GSE39445	TMrd_yellow_chronological	TM_yellow_chronological	221	0.8819165252524093	True
+GSE39445	TMrd_yellow_mortality	TM_yellow_mortality	221	0.8400942630024313	True
+GSE56931	TAms_chrono		130		False
+GSE56931	TAms_mort		130		False
+GSE56931	TArd_chrono	TA_chrono	130	0.7450980858928713	True
+GSE56931	TArd_mort	TA_mort	130	0.8050100676413562	True
+GSE56931	TM_blue_mortality		130		False
+GSE56931	TM_brown4_mortality		130		False
+GSE56931	TM_darkgreen_mortality		130		False
+GSE56931	TM_darkmagenta_mortality		130		False
+GSE56931	TM_darkred_mortality		130		False
+GSE56931	TM_darkslateblue_mortality		130		False
+GSE56931	TM_green_mortality		130		False
+GSE56931	TM_ivory_mortality		130		False
+GSE56931	TM_orange_mortality		130		False
+GSE56931	TM_pink_mortality		130		False
+GSE56931	TM_plum1_mortality		130		False
+GSE56931	TM_sienna3_mortality		130		False
+GSE56931	TM_turquoise_mortality		130		False
+GSE56931	TM_white_mortality		130		False
+GSE56931	TMrd_black_chronological	TM_black_chronological	130	0.7856103504166516	True
+GSE56931	TMrd_black_mortality	TM_black_mortality	130	0.8316839917085791	True
+GSE56931	TMrd_blue_chronological	TM_blue_chronological	130	0.9898740739221221	True
+GSE56931	TMrd_blue_mortality	TM_blue_mortality	130	0.9867674467234642	True
+GSE56931	TMrd_brown_chronological	TM_brown_chronological	130	0.9905076163970152	True
+GSE56931	TMrd_brown_mortality	TM_brown_mortality	130	0.9670686128819599	True
+GSE56931	TMrd_cyan_chronological	TM_cyan_chronological	130	0.97181714709758	True
+GSE56931	TMrd_cyan_mortality	TM_cyan_mortality	130	0.9483787348247747	True
+GSE56931	TMrd_darkgreen_chronological	TM_darkgreen_chronological	130	0.7118663952043937	True
+GSE56931	TMrd_darkgreen_mortality	TM_darkgreen_mortality	130	0.8289160087315823	True
+GSE56931	TMrd_darkgrey_chronological	TM_darkgrey_chronological	130	0.995176199108177	True
+GSE56931	TMrd_darkgrey_mortality	TM_darkgrey_mortality	130	0.9978659578592979	True
+GSE56931	TMrd_darkorange_chronological	TM_darkorange_chronological	130	0.991738309069352	True
+GSE56931	TMrd_darkorange_mortality	TM_darkorange_mortality	130	0.9492728020110949	True
+GSE56931	TMrd_darkred_chronological	TM_darkred_chronological	130	0.9788087925204904	True
+GSE56931	TMrd_darkred_mortality	TM_darkred_mortality	130	0.9894182188732517	True
+GSE56931	TMrd_green_chronological	TM_green_chronological	130	0.9483111504918079	True
+GSE56931	TMrd_green_mortality	TM_green_mortality	130	0.9567898709909836	True
+GSE56931	TMrd_greenyellow_chronological	TM_greenyellow_chronological	130	0.7596470817790817	True
+GSE56931	TMrd_greenyellow_mortality	TM_greenyellow_mortality	130	0.8423416225668665	True
+GSE56931	TMrd_grey60_chronological	TM_grey60_chronological	130	0.9984000381713707	True
+GSE56931	TMrd_grey60_mortality	TM_grey60_mortality	130	0.9957683239953156	True
+GSE56931	TMrd_lightgreen_chronological	TM_lightgreen_chronological	130	0.9573828590626116	True
+GSE56931	TMrd_lightgreen_mortality	TM_lightgreen_mortality	130	0.9532986119488821	True
+GSE56931	TMrd_lightyellow_chronological	TM_lightyellow_chronological	130	0.9926511764321824	True
+GSE56931	TMrd_lightyellow_mortality	TM_lightyellow_mortality	130	0.9920288346095986	True
+GSE56931	TMrd_magenta_chronological	TM_magenta_chronological	130	0.6504538567169743	True
+GSE56931	TMrd_magenta_mortality	TM_magenta_mortality	130	0.701119359944372	True
+GSE56931	TMrd_midnightblue_chronological	TM_midnightblue_chronological	130	0.9963127587783001	True
+GSE56931	TMrd_midnightblue_mortality	TM_midnightblue_mortality	130	0.9912427750370514	True
+GSE56931	TMrd_orange_chronological	TM_orange_chronological	130	0.8006072425594125	True
+GSE56931	TMrd_orange_mortality	TM_orange_mortality	130	0.9034585530713036	True
+GSE56931	TMrd_pink_chronological	TM_pink_chronological	130	0.9449039003333325	True
+GSE56931	TMrd_pink_mortality	TM_pink_mortality	130	0.9792063675778028	True
+GSE56931	TMrd_red_chronological	TM_red_chronological	130	0.9754819508269903	True
+GSE56931	TMrd_red_mortality	TM_red_mortality	130	0.9708538757903807	True
+GSE56931	TMrd_salmon_chronological	TM_salmon_chronological	130	0.9943032849091368	True
+GSE56931	TMrd_salmon_mortality	TM_salmon_mortality	130	0.9929822539605522	True
+GSE56931	TMrd_skyblue_chronological	TM_skyblue_chronological	130	0.9250708861289182	True
+GSE56931	TMrd_skyblue_mortality	TM_skyblue_mortality	130	0.9654663197500384	True
+GSE56931	TMrd_tan_chronological	TM_tan_chronological	130	0.9905783309282685	True
+GSE56931	TMrd_tan_mortality	TM_tan_mortality	130	0.9871237652408624	True
+GSE56931	TMrd_turquoise_chronological	TM_turquoise_chronological	130	0.9126819956345401	True
+GSE56931	TMrd_turquoise_mortality	TM_turquoise_mortality	130	0.9131844816596119	True
+GSE56931	TMrd_yellow_chronological	TM_yellow_chronological	130	0.9875160307799327	True
+GSE56931	TMrd_yellow_mortality	TM_yellow_mortality	130	0.9891394799797621	True

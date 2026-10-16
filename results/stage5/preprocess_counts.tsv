@@ -1,0 +1,4 @@
+dataset	input_scale	reference	n_samples	n_reference	n_input_rows	n_symbol_mapped	n_unique_human_entrez	n_after_quantile	n_with_mouse_ortholog	n_unique_mouse_entrez	quantile	n_clock_gene_list	n_clock_genes_finite_in_all_samples
+GSE39445	stage1_log2	all_control_samples	438	221	19541	16185	16185	12139	10775	10775	0.25	18696	10698
+GSE56931	stage1_log2	all_control_samples	249	130	20755	18432	18432	13824	12054	12054	0.25	18696	11955
+GSE113883	log2_TPM_plus_1	all_153_samples_all_control	153	153	35581	32238	32238	32238	16063	16063	0.25	18696	15681

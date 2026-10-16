@@ -1,0 +1,5 @@
+clock_set	outcome	filename	code_path_exists	n_features	n_rodent_modules	n_rodent_module_genes	n_modules_with_shared_gene	n_in_rodent_modules	n_outside_rodent_modules	paper_n_features	paper_n_in_module	paper_n_outside	all_three_match	passed_to_next_stage
+multispecies	chronological	EN_Chronoage_Multispecies_Multitissue_scaleddiff.pkl	True	10487	23	2007	0	1292	9195	10487	1292	9195	True	True
+multispecies	mortality	EN_Mortality_Multispecies_Multitissue_scaleddiff.pkl	True	10487	23	2007	0	1292	9195	10487	1292	9195	True	True
+rodent	chronological	EN_Chronoage_Rodents_Multitissue_scaleddiff.pkl	True	16517	23	2007	0	2007	14510	10487	1292	9195	False	False
+rodent	mortality	EN_Mortality_Rodents_Multitissue_scaleddiff.pkl	True	16760	23	2007	0	2007	14753	10487	1292	9195	False	False

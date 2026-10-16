@@ -1,0 +1,18 @@
+item	value
+human_script	clock-specificity/scripts/10_score_human.py
+human_composite_files	EN_Chronoage_Multispecies_Multitissue_scaleddiff.pkl;EN_Mortality_Multispecies_Multitissue_scaleddiff.pkl
+human_modules	multispecies mortality modules returned by clocks.modules
+human_module_count	14
+scoring_method	dot product of effective weights of selected nonzero genes with scaled-diff columns present in every sample
+intercept_in_weight_score	false
+module_score_definition	weights of that module clock, not a split of the composite coefficient vector
+predict_also_used_by_human_script	false
+gene_filter	drop genes whose mean is below the 0.25 quantile of gene means
+standardization_gene_set	genes remaining after the quantile filter and the ortholog map, before alignment to the clock gene list
+standardization	z-score each sample across those genes, ddof=1
+reference	subtract the per-gene median of the reference samples after alignment
+log_transform	none inside array_to_diff; the input is already on a log scale
+ortholog	human Entrez to mouse Entrez through the ortholog map; unmapped rows dropped; duplicate mouse ids keep the first row; values are not summed
+wrapper	scripts/31_partB_score.py symbols_to_human_entrez
+gse113883_input	log2(TPM+1) because counts are not stored; counts_to_diff was not used
+code_files_md5	equal to the stage-4 Zenodo copies
