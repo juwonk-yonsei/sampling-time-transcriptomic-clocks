@@ -1,0 +1,2 @@
+rule	base_seed
+set.seed(20261015 + scenario_id) at the start of each scenario; scenario_id is 1 to 16 in the order H1 L1 null, H1 L1 planted, H1 L2 null, H1 L2 planted, H1 L3 null, H1 L3 planted, H3 null, H3 planted, H4 L1 null, H4 L1 planted, H4 L2 null, H4 L2 planted, H2 null, H2 planted, H5 1c, H5 0.5c	20261015

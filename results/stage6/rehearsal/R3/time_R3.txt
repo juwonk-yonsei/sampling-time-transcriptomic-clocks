@@ -1,0 +1,40 @@
+subjects 11 genes 31637 samples 22
+
+Setting options('download.file.method.GEOquery'='auto')
+Setting options('GEOquery.inmemory.gpl'=FALSE)
+Warning: stack imbalance in 'as.environment', 22 then 24
+Warning: stack imbalance in '<-', 16 then 18
+Warning: stack imbalance in '{', 12 then 14
+clocks 16 component_rows 1056
+clocks 16 component_rows 1056
+Warning: stack imbalance in '{', 4 then 6
+Warning: stack imbalance in 'if', 2 then 4
+Warning messages:
+1: In fpkm_fun(counts, idtype = "SYMBOL") :
+  Can't find gene length for 1.081% genes when converting raw count to FPKM.
+2: In fpkm_fun(counts, idtype = "SYMBOL") :
+  Can't find gene length for 1.081% genes when converting raw count to FPKM.
+R3 pipeline rehearsal finished
+	Command being timed: "/home/jkang/anaconda3/envs/r_env/bin/Rscript /HDD8T1/WORK/GeroSci/TOD/scripts/43_partD_pipeline.R --which R3"
+	User time (seconds): 266.72
+	System time (seconds): 5.38
+	Percent of CPU this job got: 103%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:22.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1696684
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 3
+	Minor (reclaiming a frame) page faults: 571922
+	Voluntary context switches: 676
+	Involuntary context switches: 535621
+	Swaps: 0
+	File system inputs: 32
+	File system outputs: 28888
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

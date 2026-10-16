@@ -36,6 +36,8 @@ secondary_clocks <- c("RA_Peters", "RA_GTEx")
 ra_map <- c(RA_default = "DESeq2", RA_Peters = "Peters", RA_GTEx = "GTExAge")
 
 ra_linear_scores <- function(log_mat) {
+  log_mat <- as.matrix(log_mat)
+  storage.mode(log_mat) <- "double"
   genelist <- get("genelist_all", asNamespace("RNAAgeCalc"))$blood
   rows <- list()
   for (clock in names(ra_map)) {
@@ -50,7 +52,10 @@ ra_linear_scores <- function(log_mat) {
 
 counts_to_log2_fpkm <- function(counts) {
   fpkm_fun <- get("count2FPKM", asNamespace("RNAAgeCalc"))
-  fpkm <- fpkm_fun(counts, idtype = "SYMBOL")
+  counts <- as.matrix(counts)
+  storage.mode(counts) <- "double"
+  fpkm <- as.matrix(fpkm_fun(counts, idtype = "SYMBOL"))
+  storage.mode(fpkm) <- "double"
   log2(fpkm + 1)
 }
 
@@ -171,7 +176,7 @@ analyse_cosinor_dataset <- function(spec) {
     mod_tab <- rbindlist(mod_rows, fill = TRUE)
     idx <- which(!mod_tab$in_f3)
     mod_tab[, q_bh := NA_real_]
-    if (length(idx)) mod_tab$q_bh[idx] <- p.adjust(mod_tab$lrt_p[idx], method = "BH")
+    if (length(idx)) set(mod_tab, i = idx, j = "q_bh", value = p.adjust(mod_tab$lrt_p[idx], method = "BH"))
     fwrite(mod_tab, file.path(spec$out_dir, "s4_point.tsv"), sep = "\t")
   }
   sens <- list()
@@ -224,9 +229,10 @@ analyse_paired_dataset <- function(spec) {
     )
   }
   tab <- rbindlist(rows)
+  tab[, q_holm := NA_real_]
   for (fam in unique(tab$family)) {
     idx <- which(tab$family == fam)
-    tab$q_holm[idx] <- holm_family(tab$p[idx])
+    set(tab, i = idx, j = "q_holm", value = holm_family(tab$p[idx]))
   }
   fwrite(tab, file.path(spec$out_dir, "paired_tests.tsv"), sep = "\t")
   fwrite(rbindlist(delta_rows), file.path(spec$out_dir, "paired_deltas.tsv"), sep = "\t")
@@ -278,7 +284,7 @@ analyse_paired_dataset <- function(spec) {
     mod_tab <- rbindlist(mod_rows, fill = TRUE)
     idx <- which(!mod_tab$in_f3)
     mod_tab[, q_bh := NA_real_]
-    if (length(idx)) mod_tab$q_bh[idx] <- p.adjust(mod_tab$p[idx], method = "BH")
+    if (length(idx)) set(mod_tab, i = idx, j = "q_bh", value = p.adjust(mod_tab$p[idx], method = "BH"))
     fwrite(mod_tab, file.path(spec$out_dir, "s4_paired.tsv"), sep = "\t")
   }
   batch_n <- if (is.null(spec$batch2_n)) 0L else spec$batch2_n

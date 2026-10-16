@@ -1,0 +1,422 @@
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/glibc-hwcaps/x86-64-v3/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/glibc-hwcaps/x86-64-v2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/tls/x86_64/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/x86_64/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/R/lib/glibc-hwcaps/x86-64-v3/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/R/lib/glibc-hwcaps/x86-64-v2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/R/lib/tls/x86_64/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/R/lib/tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/R/lib/tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/R/lib/tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/R/lib/x86_64/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/R/lib/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/R/lib/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/R/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/bin/R", O_RDONLY) = 5
+461365 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 5
+461365 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 5
+461365 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 5
+461365 +++ exited with 0 +++
+461364 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=461365, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+461366 +++ exited with 0 +++
+461364 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=461366, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+461368 +++ exited with 0 +++
+461367 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=461368, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+461369 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/glibc-hwcaps/x86-64-v3/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461369 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/glibc-hwcaps/x86-64-v2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461369 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/tls/x86_64/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461369 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461369 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461369 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461369 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/x86_64/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461369 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461369 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461369 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461369 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 5
+461369 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 5
+461369 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 5
+461369 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY) = 5
+461369 +++ exited with 0 +++
+461367 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=461369, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+461367 +++ exited with 0 +++
+461364 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=461367, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+461371 +++ exited with 0 +++
+461370 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=461371, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+461373 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/glibc-hwcaps/x86-64-v3/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+461372 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/glibc-hwcaps/x86-64-v3/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+461373 <... openat resumed>)            = -1 ENOENT (No such file or directory)
+461372 <... openat resumed>)            = -1 ENOENT (No such file or directory)
+461373 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/glibc-hwcaps/x86-64-v2/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+461372 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/glibc-hwcaps/x86-64-v2/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+461373 <... openat resumed>)            = -1 ENOENT (No such file or directory)
+461372 <... openat resumed>)            = -1 ENOENT (No such file or directory)
+461373 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/tls/x86_64/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+461372 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/tls/x86_64/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+461373 <... openat resumed>)            = -1 ENOENT (No such file or directory)
+461372 <... openat resumed>)            = -1 ENOENT (No such file or directory)
+461373 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+461372 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+461373 <... openat resumed>)            = -1 ENOENT (No such file or directory)
+461372 <... openat resumed>)            = -1 ENOENT (No such file or directory)
+461373 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+461372 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/tls/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+461373 <... openat resumed>)            = -1 ENOENT (No such file or directory)
+461372 <... openat resumed>)            = -1 ENOENT (No such file or directory)
+461373 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461372 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461373 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/x86_64/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461372 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/x86_64/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+461373 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+461372 <... openat resumed>)            = -1 ENOENT (No such file or directory)
+461373 <... openat resumed>)            = -1 ENOENT (No such file or directory)
+461373 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+461372 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+461373 <... openat resumed>)            = -1 ENOENT (No such file or directory)
+461372 <... openat resumed>)            = -1 ENOENT (No such file or directory)
+461373 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+461372 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+461373 <... openat resumed>)            = -1 ENOENT (No such file or directory)
+461372 <... openat resumed>)            = -1 ENOENT (No such file or directory)
+461373 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+461372 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/bin/../lib/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+461373 <... openat resumed>)            = 5
+461372 <... openat resumed>)            = -1 ENOENT (No such file or directory)
+461372 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 5
+461373 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 5
+461372 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 5
+461373 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 5
+461372 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 5
+461373 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY) = 5
+461372 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY) = 5
+461372 +++ exited with 0 +++
+461370 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=461372, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+461373 +++ exited with 0 +++
+461370 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=461373, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+461370 +++ exited with 0 +++
+461364 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=461370, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/etc/ldpaths", O_RDONLY) = 5
+461374 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 5
+461374 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 5
+461374 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 5
+461374 +++ exited with 0 +++
+461364 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=461374, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../../glibc-hwcaps/x86-64-v3/libR.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../../glibc-hwcaps/x86-64-v2/libR.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../../tls/x86_64/x86_64/libR.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../../tls/x86_64/libR.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../../tls/x86_64/libR.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../../tls/libR.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../../x86_64/x86_64/libR.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../../x86_64/libR.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../../x86_64/libR.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../../libR.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/glibc-hwcaps/x86-64-v3/libR.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/glibc-hwcaps/x86-64-v2/libR.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/tls/x86_64/x86_64/libR.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/tls/x86_64/libR.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/tls/x86_64/libR.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/tls/libR.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/x86_64/x86_64/libR.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/x86_64/libR.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/x86_64/libR.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/libR.so", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../../libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../glibc-hwcaps/x86-64-v3/libblas.so.3", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../glibc-hwcaps/x86-64-v2/libblas.so.3", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../tls/x86_64/x86_64/libblas.so.3", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../tls/x86_64/libblas.so.3", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../tls/x86_64/libblas.so.3", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../tls/libblas.so.3", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../x86_64/x86_64/libblas.so.3", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../x86_64/libblas.so.3", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../x86_64/libblas.so.3", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../libblas.so.3", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/./glibc-hwcaps/x86-64-v3/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/./glibc-hwcaps/x86-64-v2/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/./tls/x86_64/x86_64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/./tls/x86_64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/./tls/x86_64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/./tls/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/./x86_64/x86_64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/./x86_64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/./x86_64/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/./libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../../libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/libm.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../libreadline.so.8", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../libpcre2-8.so.0", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../libdeflate.so.0", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../libzstd.so.1", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../liblzma.so.5", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../libbz2.so.1.0", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../libz.so.1", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/./librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../../librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/librt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/librt.so.1", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/./libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../../libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/libdl.so.2", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../libiconv.so.2", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../libicuuc.so.78", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../libicui18n.so.78", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../libgomp.so.1", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/./libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../../libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/libpthread.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../libgfortran.so.5", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../.././glibc-hwcaps/x86-64-v3/libtinfo.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../.././glibc-hwcaps/x86-64-v2/libtinfo.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../.././tls/x86_64/x86_64/libtinfo.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../.././tls/x86_64/libtinfo.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../.././tls/x86_64/libtinfo.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../.././tls/libtinfo.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../.././x86_64/x86_64/libtinfo.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../.././x86_64/libtinfo.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../.././x86_64/libtinfo.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../.././libtinfo.so.6", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../libicudata.so.78", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../../lib64/glibc-hwcaps/x86-64-v3/libquadmath.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../../lib64/glibc-hwcaps/x86-64-v2/libquadmath.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../../lib64/tls/x86_64/x86_64/libquadmath.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../../lib64/tls/x86_64/libquadmath.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../../lib64/tls/x86_64/libquadmath.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../../lib64/tls/libquadmath.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../../lib64/x86_64/x86_64/libquadmath.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../../lib64/x86_64/libquadmath.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../../lib64/x86_64/libquadmath.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../../../lib64/libquadmath.so.0", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/bin/exec/../../lib/../.././libquadmath.so.0", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/sys/devices/system/cpu", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 5
+461364 openat(AT_FDCWD, "/sys/devices/system/cpu", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 5
+461364 openat(AT_FDCWD, "/proc/self/maps", O_RDONLY) = 5
+461364 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 5
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/etc//Renviron", O_RDONLY) = 5
+461364 openat(AT_FDCWD, "/tmp/Rscript70a34.uM42B0", O_RDWR|O_CREAT|O_EXCL, 0600) = 5
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/etc/Renviron.site", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, ".Renviron.", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, ".Renviron", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/home/jkang/.Renviron.", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/home/jkang/.Renviron", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/translations/en_US.UTF-8/LC_MESSAGES/R.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/translations/en_US.utf8/LC_MESSAGES/R.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/translations/en_US/LC_MESSAGES/R.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/translations/en.UTF-8/LC_MESSAGES/R.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/translations/en.utf8/LC_MESSAGES/R.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/translations/en/LC_MESSAGES/R.mo", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/usr/share/locale-langpack/en_US.UTF-8/LC_MESSAGES/R.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/usr/share/locale-langpack/en_US.utf8/LC_MESSAGES/R.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/usr/share/locale-langpack/en_US/LC_MESSAGES/R.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/usr/share/locale-langpack/en.UTF-8/LC_MESSAGES/R.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/usr/share/locale-langpack/en.utf8/LC_MESSAGES/R.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/usr/share/locale-langpack/en/LC_MESSAGES/R.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/base/R/base", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY) = 7
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/base/R/base.rdx", O_RDONLY) = 7
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/base/R/base.rdx", O_RDONLY) = 7
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/base/R/base.rdb", O_RDONLY) = 7
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/base/R/Rprofile", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/proc/self/loginuid", O_RDONLY) = 7
+461364 openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 7
+461364 openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 7
+461364 openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 7
+461364 openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 7
+461364 openat(AT_FDCWD, "/proc/self/loginuid", O_RDONLY) = 7
+461364 openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 7
+461364 openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 7
+461364 openat(AT_FDCWD, "/etc/passwd", O_RDONLY|O_CLOEXEC) = 7
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/methods/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/methods/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/methods/Meta/nsInfo.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/methods/Meta/nsInfo.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/methods/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/methods/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/methods/Meta/features.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/methods/Meta/features.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/methods/R/methods", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/methods/R/methods", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/methods/R/methods.rdx", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/methods/R/methods.rdx", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/methods/libs/methods.so", O_RDONLY|O_CLOEXEC) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/methods/R/methods.rdb", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/etc//Rprofile.site", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/etc/Rprofile.site", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, ".Rprofile", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/home/jkang/.Rprofile", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/datasets/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/datasets/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/datasets/Meta/nsInfo.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/datasets/Meta/nsInfo.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/datasets/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/datasets/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/datasets/Meta/features.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/datasets/Meta/features.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/datasets/data/Rdata.rdx", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/datasets/data/Rdata.rdx", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/utils/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/utils/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/utils/Meta/nsInfo.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/utils/Meta/nsInfo.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/utils/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/utils/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/utils/Meta/features.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/utils/Meta/features.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/utils/R/utils", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/utils/R/utils", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/utils/R/utils.rdx", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/utils/R/utils.rdx", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/utils/R/sysdata.rdx", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/utils/R/sysdata.rdx", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/utils/R/utils.rdb", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/utils/libs/utils.so", O_RDONLY|O_CLOEXEC) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/etc/repositories", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/etc/repositories", O_RDONLY) = 6
+461386 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 6
+461386 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 6
+461386 openat(AT_FDCWD, "/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 6
+461387 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 6
+461387 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 6
+461387 openat(AT_FDCWD, "/usr/bin/which", O_RDONLY) = 6
+461387 +++ exited with 0 +++
+461386 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=461387, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+461386 +++ exited with 0 +++
+461375 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=461386, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+461388 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 6
+461388 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 6
+461389 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 6
+461389 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 6
+461389 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 6
+461389 +++ exited with 0 +++
+461388 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=461389, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+461388 +++ exited with 0 +++
+461364 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=461388, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+461364 openat(AT_FDCWD, "/etc/os-release", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/etc/os-release", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/grDevices/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/grDevices/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/grDevices/Meta/nsInfo.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/grDevices/Meta/nsInfo.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/grDevices/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/grDevices/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/grDevices/Meta/features.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/grDevices/Meta/features.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/grDevices/R/grDevices", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/grDevices/R/grDevices", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/grDevices/R/grDevices.rdx", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/grDevices/R/grDevices.rdx", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/grDevices/R/grDevices.rdb", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/grDevices/libs/grDevices.so", O_RDONLY|O_CLOEXEC) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/graphics/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/graphics/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/graphics/Meta/nsInfo.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/graphics/Meta/nsInfo.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/graphics/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/graphics/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/graphics/Meta/features.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/graphics/Meta/features.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/translations/en_US.UTF-8/LC_MESSAGES/R-base.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/translations/en_US.utf8/LC_MESSAGES/R-base.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/translations/en_US/LC_MESSAGES/R-base.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/translations/en.UTF-8/LC_MESSAGES/R-base.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/translations/en.utf8/LC_MESSAGES/R-base.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/translations/en/LC_MESSAGES/R-base.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/usr/share/locale-langpack/en_US.UTF-8/LC_MESSAGES/R-base.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/usr/share/locale-langpack/en_US.utf8/LC_MESSAGES/R-base.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/usr/share/locale-langpack/en_US/LC_MESSAGES/R-base.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/usr/share/locale-langpack/en.UTF-8/LC_MESSAGES/R-base.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/usr/share/locale-langpack/en.utf8/LC_MESSAGES/R-base.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/usr/share/locale-langpack/en/LC_MESSAGES/R-base.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/graphics/R/graphics", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/graphics/R/graphics", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/graphics/R/graphics.rdx", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/graphics/R/graphics.rdx", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/graphics/R/graphics.rdb", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/graphics/libs/graphics.so", O_RDONLY|O_CLOEXEC) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/stats/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/stats/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/stats/Meta/nsInfo.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/stats/Meta/nsInfo.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/stats/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/stats/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/stats/Meta/features.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/stats/Meta/features.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/stats/R/stats", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/stats/R/stats", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/stats/R/stats.rdx", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/stats/R/stats.rdx", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/stats/R/stats.rdb", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/stats/libs/stats.so", O_RDONLY|O_CLOEXEC) = 6
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/stats/libs/../../../../glibc-hwcaps/x86-64-v3/liblapack.so.3", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/stats/libs/../../../../glibc-hwcaps/x86-64-v2/liblapack.so.3", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/stats/libs/../../../../tls/x86_64/x86_64/liblapack.so.3", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/stats/libs/../../../../tls/x86_64/liblapack.so.3", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/stats/libs/../../../../tls/x86_64/liblapack.so.3", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/stats/libs/../../../../tls/liblapack.so.3", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/stats/libs/../../../../x86_64/x86_64/liblapack.so.3", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/stats/libs/../../../../x86_64/liblapack.so.3", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/stats/libs/../../../../x86_64/liblapack.so.3", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/stats/libs/../../../../liblapack.so.3", O_RDONLY|O_CLOEXEC) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/compiler/Meta/nsInfo.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/compiler/Meta/nsInfo.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/compiler/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/compiler/Meta/package.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/compiler/Meta/features.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/compiler/Meta/features.rds", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/compiler/R/compiler", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/compiler/R/compiler", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/compiler/R/compiler.rdx", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/compiler/R/compiler.rdx", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/home/jkang/anaconda3/envs/r_env/lib/R/library/compiler/R/compiler.rdb", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "scripts/confirm/lib_lock.R", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "scripts/confirm/lib_lock.R", O_RDONLY) = 6
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/translations/en_US.UTF-8/LC_MESSAGES/R.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/translations/en_US.utf8/LC_MESSAGES/R.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/translations/en_US/LC_MESSAGES/R.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/translations/en.UTF-8/LC_MESSAGES/R.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/translations/en.utf8/LC_MESSAGES/R.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+461364 openat(AT_FDCWD, "/ssd240/anaconda3/envs/r_env/lib/R/library/translations/en/LC_MESSAGES/R.mo", O_RDONLY) = 6
+461390 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 6
+461390 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 6
+461391 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 6
+461391 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 6
+461391 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 6
+461391 openat(AT_FDCWD, "/tmp/Rtmp2YjSqQ", O_RDONLY|O_NOCTTY|O_NONBLOCK|O_NOFOLLOW|O_DIRECTORY) = 6
+461391 +++ exited with 0 +++
+461390 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=461391, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+461390 +++ exited with 0 +++
+461375 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=461390, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+461376 +++ exited with 0 +++
+461375 +++ exited with 0 +++
+461377 +++ exited with 0 +++
+461378 +++ exited with 0 +++
+461380 +++ exited with 0 +++
+461379 +++ exited with 0 +++
+461384 +++ exited with 0 +++
+461382 +++ exited with 0 +++
+461383 +++ exited with 0 +++
+461385 +++ exited with 0 +++
+461381 +++ exited with 0 +++
+461364 +++ exited with 1 +++

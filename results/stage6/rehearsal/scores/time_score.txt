@@ -1,0 +1,75 @@
+H1 L1 TAms_chrono null 
+H1 L1 TAms_mort null 
+H1 L1 RA_default null 
+H1 L1 TAms_chrono planted 
+H1 L1 TAms_mort planted 
+H1 L1 RA_default planted 
+H1 L2 TAms_chrono null 
+H1 L2 TAms_mort null 
+boundary (singular) fit: see help('isSingular')
+H1 L2 RA_default null 
+H1 L2 TAms_chrono planted 
+H1 L2 TAms_mort planted 
+H1 L2 RA_default planted 
+H1 L3 TAms_chrono null 
+H1 L3 TAms_mort null 
+H1 L3 RA_default null 
+H1 L3 TAms_chrono planted 
+H1 L3 TAms_mort planted 
+H1 L3 RA_default planted 
+H3 TAms_chrono null 
+H3 TAms_mort null 
+H3 RA_default null 
+H3 TAms_chrono planted 
+H3 TAms_mort planted 
+H3 RA_default planted 
+H4 L1 TAms_chrono null 
+H4 L1 TAms_mort null 
+H4 L1 RA_default null 
+H4 L1 TAms_chrono planted 
+H4 L1 TAms_mort planted 
+H4 L1 RA_default planted 
+H4 L2 TAms_chrono null 
+H4 L2 TAms_mort null 
+boundary (singular) fit: see help('isSingular')
+boundary (singular) fit: see help('isSingular')
+H4 L2 RA_default null 
+H4 L2 TAms_chrono planted 
+H4 L2 TAms_mort planted 
+H4 L2 RA_default planted 
+H2 TAms_chrono null 
+H2 TAms_mort null 
+H2 RA_default null 
+H2 TAms_chrono planted 
+H2 TAms_mort planted 
+H2 RA_default planted 
+H5 TAms_chrono 1 
+H5 TAms_mort 1 
+H5 RA_default 1 
+H5 TAms_chrono 0.5 
+H5 TAms_mort 0.5 
+H5 RA_default 0.5 
+score rehearsal done 48 
+	Command being timed: "/home/jkang/anaconda3/envs/r_env/bin/Rscript /HDD8T1/WORK/GeroSci/TOD/scripts/41_partD_stat.R"
+	User time (seconds): 516.17
+	System time (seconds): 0.20
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 8:37.07
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 237344
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 56907
+	Voluntary context switches: 46
+	Involuntary context switches: 3769
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 144
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
