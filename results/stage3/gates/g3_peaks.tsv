@@ -1,0 +1,3 @@
+dataset	gate	gene	matrix_symbol	time	n_subjects	n_samples	peak_h	two_a	lrt_p	reml_converged
+GSE39445	G3	PER1	PER1	hours_awake	24	221	22.7776132062867	0.474871117706392	4.60083182863588e-21	TRUE
+GSE39445	G3	PER3	PER3	hours_awake	24	221	21.9104219255107	0.343532957703934	5.96963454018461e-08	TRUE
