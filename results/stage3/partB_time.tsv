@@ -1,0 +1,4 @@
+step	elapsed	max_rss_kB	exit
+16_partB_prepare.py	0:22.47	187944	0
+17_partB_expr.R	0:17.58	1516952	0
+18_partB_qc.py	0:04.73	233708	0

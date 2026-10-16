@@ -1,0 +1,2 @@
+n_gene_ids	n_human_ensembl	n_human_symbol_style	n_mouse_ensembl	n_mouse_symbol_style	n_mixed_or_other	fraction_human_style	fraction_mouse_symbol_style	example_10	use_for_analysis	rule
+12726	0	12559	0	160	7	0.9868772592	0.01257268584	A1BG-AS1|A2M-AS1|A4GALT|AAAS|AACS|AAGAB|AAK1|AAMDC|AAMP|AAR2	True	use only if ENSMUSG count is 0, all-cap or ENSG fraction is at least 0.8, and first-cap-rest-lower fraction is below 0.2

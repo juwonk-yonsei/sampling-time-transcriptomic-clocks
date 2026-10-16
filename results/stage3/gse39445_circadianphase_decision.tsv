@@ -1,0 +1,2 @@
+n_values	min	max	unique_sorted	all_multiples_of_3	unique_sorted_differences	max_within_subject_linear_sd_awake_minus_phase	n_subjects_awake_linear_sd_gt_0	data_matches_hour_scale	use_as_time_axis_in_section_5_1	zero_point_from_si	binning_from_si
+438	-15.0	15.0	-15,-12,-9,-6,-3,0,3,6,9,12,15	True	3	1.133893419027682	1	True	True	melatonin peak; tp = 24*t - 24*p with t and p in fractional days; tp is hours away from the melatonin peak	3-h-wide circadian bins, also described as 45 degree bins

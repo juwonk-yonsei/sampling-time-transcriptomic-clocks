@@ -1,0 +1,33 @@
+GSE39445 circadian phase. Möller-Levet et al. 2013 PNAS, PMID 23440187, SI (PMC3607048, 1217154110_pnas.201217154SI.pdf).
+
+Melatonin dim-light onset: "The melatonin dim-light onset and offset were defined as the times at which the melatonin concentration crossed the value that corresponded to the baseline + 25% of the difference between the maximum and the baseline value on the rising and falling limb of the melatonin profile, respectively. The midpoint between the onset and offset was defined as the overall circadian phase and the duration of melatonin secretion was quantified as the difference between the onset and offset."
+
+Alignment: "We referenced each participant’s sampling times (t) to their melatonin peak (p) by following the transformation tp = 24t − 24p (both, t and p in fractional day), where tp is time away from the melatonin peak in hours."
+
+Bins: "Note that Circadian-Time-bin (3-h-wide circadian bins) reflects the melatonin phase-aligned sampling times sorted in 45° bins to create categorical values. Because of the variance between subjects in circadian phase, this resulted in the 10 time points to cover 11 circadian bins."
+
+GSE113883. Braun et al. 2018 PNAS, PMID 30201705, PMC6166804, SI Appendix pnas.1800314115.sapp.pdf.
+
+Age range in the inclusion criteria: "between the ages of 18–60 years".
+
+DLMO mention: "Chronotype was determined by the timing of preferred sleep and wake times, sleep logs, and actigraphy, and confirmed by the timing of salivary dim light melatonin onset (DLMO) from samples collected at home prior to the experiment."
+
+The retrieved main text and SI do not define whether salivary_dlmo_circadian_time is hours since DLMO, clock time of DLMO, or circadian time with DLMO set to CT 14. Status: 확인 못 함.
+
+Protocol: "During these 3 days, subjects remained at rest (either seated or semi-recumbent) during the 16 waking hours, and were provided with regularly spaced isocaloric snacks. On arrival to the CRU, light intensity was 100-300 lux during 16 waking hours and dark during the 8 sleep hours. Night 1 was an adaptation night to familiarize subjects with the laboratory environment. Beginning upon awakening on Day 2, light intensity was <20 lux during the waking hours. Blood samples were taken every 2 h starting 2 h after wake on on Day 2 for 29 h, comprising a total of 15 draws per subject."
+
+GEO extract protocol: "At each timepoint for each subject, 2.5 mL of whole blood was drawn into a PAXgene RNA tube and processed according to manufacturer protocol (BD Vacutainer)."
+
+Main text: "The reference time was the clock time each sample was taken, as melatonin data are not universally available."
+
+GSE196728. Manella et al. 2022 Cell Reports, PMID 35977481, PMC9396531.
+
+"Whole-blood samples were collected from every subject at 4 h intervals throughout 24 h in each altitude."
+
+"Lifestyle conditions were controlled and standardized for all participants, especially meal times (breakfast between 7:30 and 8:00, lunch between 13:00 and 13:30, dinner between 20:00 and 20:30), bedtime (22:30) and wake-up time (5:30)."
+
+"At each altitude level (SL, PU, and RI) and time around the clock (06:00, 10:00, 14:00, 18:00, 22:00 and 02:00), a whole blood sample (2.5 mL) was collected in a dedicated blood RNA tube (PAXgene, PreAnalytiX, Qiagen, Hombrechtikon, Swizerland) from a venipuncture of the arm for each participant (144 samples in total)."
+
+Illumination intensity in lux was not found in the retrieved main text. Status: 확인 못 함.
+
+GEO processing: "Genome_build: mm10" and "Reads were mapped to genome (/shareDB/iGenomes/Mus_musculus/UCSC/mm10/Sequence/STAR_index) using STAR (default parameters)". Organism line: "Homo sapiens".

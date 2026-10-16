@@ -1,0 +1,3 @@
+condition	n_subjects	clock_offset_circ_sd_min	clock_offset_circ_sd_median	clock_offset_circ_sd_max	clock_offset_circ_mean_min	clock_offset_circ_mean_median	clock_offset_circ_mean_max	awake_offset_circ_sd_min	awake_offset_circ_sd_median	awake_offset_circ_sd_max	awake_offset_circ_mean_min	awake_offset_circ_mean_median	awake_offset_circ_mean_max	awake_linear_sd_median	awake_linear_sd_max
+control	24	0	0.005952245801	0.7134796627	2.261666478	3.875	7.170341323	0	0	1.042100947	19.5	19.5	22.09878254	0	1.133893419
+sleep_restriction	24	0	0.002500026697	0.05248817133	1.258333301	5.255832947	8.166666669	0	0	8.049455132e-08	19.5	22.5	22.5	0	0

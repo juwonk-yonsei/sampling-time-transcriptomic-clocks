@@ -1,0 +1,7 @@
+location	what_was_checked	result
+/home/jkang	home directory, depth 4 name search and depth 5 git search	no v0.3.0 repository
+/HDD8T1/WORK/GeroSci/revision	folder name revision	not a git repository; contains JAAA-D-26-02318.pdf and major_revision_1.txt only
+/HDD8T1/WORK/GeroSci/sc-module-aging	git repository; scripts/00_download.sh mentions Zenodo 22166800 and tAge	pyproject version 0.2.0; no git tag; no v0.3.0 commit message; download script does not record a checksum
+/HDD8T1/WORK/GeroSci/sc-module-aging/data/external/tAge	nested git checkout	tag 1.5.0, not the revision repository v0.3.0
+/HDD8T1/WORK/GeroSci/clock-specificity	git repository	no v0.3.0 tag
+/SSD1T /HDD6T /HDD8T2 /ssd240	git repositories to depth 5	no repository matching v0.3.0

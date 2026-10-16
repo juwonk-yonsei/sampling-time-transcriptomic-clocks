@@ -1,0 +1,2 @@
+n_samples	n_subjects	samples_per_subject_min	samples_per_subject_median	samples_per_subject_max	n_subjects_with_D_and_N	age_min	age_q1	age_median	age_q3	age_max	n_sex	sex_counts_subjects	timepoint_counts	group_counts_subjects
+120	58	2	2.0	4	58	20.0	40.0	52.0	61.0	75.0	2	{'female': 29, 'male': 29}	{'D': 60, 'N': 60}	{'0': 37, '1': 16, '2': 5}

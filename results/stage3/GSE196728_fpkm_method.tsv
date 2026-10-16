@@ -1,0 +1,2 @@
+n_genes	n_samples	n_genes_all_na_fpkm	length_source	function_name	idtype	warnings
+12726	144	858	RNAAgeCalc internal lengthDB, via org.Hs.eg.db SYMBOL to ENSEMBL, column bp_length	RNAAgeCalc::count2FPKM	SYMBOL	Can't find gene length for 6.7421% genes when converting raw count to FPKM.

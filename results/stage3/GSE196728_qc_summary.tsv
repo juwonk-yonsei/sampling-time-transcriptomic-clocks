@@ -1,0 +1,2 @@
+dataset	n_genes	n_samples	median_of_sample_medians	mad_of_sample_medians	n_flagged_3mad	flagged_gsm
+GSE196728	12726	144	1.425256153	0.204796836	2	GSM5899766,GSM5899772
