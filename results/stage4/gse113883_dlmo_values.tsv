@@ -1,0 +1,8 @@
+subject_id	salivary_dlmo_circadian_time	n_samples	n_unique	hour_decimal	in_18_26	use_as_dlmo_clock_h
+1741_001	12.5	14	1	12.5	False	False
+1741_005	13.0	13	1	13.0	False	False
+1741_006	11.0	13	1	11.0	False	False
+1741_009	15.0	14	1	15.0	False	False
+1741_010	12.0	14	1	12.0	False	False
+1741_011	12.0	14	1	12.0	False	False
+1741_014	12.5	13	1	12.5	False	False

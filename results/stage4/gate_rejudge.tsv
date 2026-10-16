@@ -1,0 +1,4 @@
+dataset	per1_peak_h	per1_lrt_p	per3_peak_h	per3_lrt_p	criterion_a_prime	both_lrt_p_lt_0.01	criterion_b	refit	pass	source
+GSE39445	6.90324597433964	9.73597605831301e-18	6.08583286807854	1.177374716677e-06	True	True	removed	False	True	results/stage3/gates/g1_gene_fits.tsv
+GSE56931	5.79155389251083	1.58787990764694e-24	4.8945603273957	3.48666322673004e-14	True	True	removed	False	True	results/stage3/gates/g1_gene_fits.tsv
+GSE113883	6.88888783794359	2.75027621424795e-09	4.3428731541087	7.582950678639909e-11	True	True	removed	False	True	results/stage3/gates/g1_gene_fits.tsv

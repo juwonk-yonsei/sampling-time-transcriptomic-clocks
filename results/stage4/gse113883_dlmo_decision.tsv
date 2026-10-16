@@ -1,0 +1,2 @@
+n_subjects_with_value	all_in_18_26	use_t_dlmo	rule	t_dlmo_definition
+7	False	False	numeric hour in [18, 26]; values at or above 24 are next-day morning labels	

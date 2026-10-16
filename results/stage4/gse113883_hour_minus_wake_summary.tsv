@@ -1,0 +1,2 @@
+n_samples	n_subjects	diff_min	diff_median	diff_max	n_unique_diff	definition
+153	11	-1.0	-1.0	-1.0	1	hours_since_wake = 2 + cumulative local_time steps within subject, ordered by hour, with a negative step wrapped by +24
