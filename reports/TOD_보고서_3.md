@@ -328,7 +328,7 @@ GSE56931. baseline과 deprivation. recovery는 빼었다. 샘플 209, 참가자 
 | RA_default | baseline | 130 | 4.61694071212563 | 9.88701727310532 | 0.0187399469939367 |
 | RA_default | deprivation | 79 | 5.9257656280342 | 13.5946406390903 | 0.0245803809626937 |
 
-모형 2: `score ~ factor(clock_time_h) * period + (1 | subject_id)`. REML. Wald 구간은 추정 ± 1.95996398454 × SE. REML 수렴 TRUE, singular FALSE. 시각별 n은 시계 행과 구성 행이 같다.
+모형 2: `score ~ factor(clock_time_h) * period + (1 | subject_id)`. REML. Wald 구간은 추정 ± `qnorm(0.975)` × SE. REML 수렴 TRUE, singular FALSE. 시각별 n은 시계 행과 구성 행이 같다.
 
 | outcome | 0시 차이 [구간] (n 13/12) | 4시 (n 11/13) | 8시 (n 28/14) | 12시 (n 25/14) | 16시 (n 27/13) | 20시 (n 26/13) |
 | --- | --- | --- | --- | --- | --- | --- |
