@@ -1,0 +1,7 @@
+dataset	clock	other	n_samples	n_subjects	pearson_within
+GSE39445	TA_chrono	RA_Peters_lin	221	24	-0.286431165735805
+GSE39445	TA_mort	RA_Peters_lin	221	24	-0.302321387372661
+GSE56931	TA_chrono	RA_Peters_lin	130	14	-0.0509675037347897
+GSE56931	TA_mort	RA_Peters_lin	130	14	-0.016011385011495
+GSE113883	TA_chrono	RA_Peters_lin	153	11	-0.0238493224772275
+GSE113883	TA_mort	RA_Peters_lin	153	11	-0.0136643443406104

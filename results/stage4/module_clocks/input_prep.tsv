@@ -1,0 +1,4 @@
+dataset	value	log_base_conversion	ortholog	relative_expression	n_control_samples	n_symbols_input	n_symbols_finite	n_mouse_entrez
+GSE39445	log2 microarray	none	scmodage.preprocess.map_to_mouse_entrez species=human	mapped value minus mean of control samples in this dataset	221	19541	19541	14120
+GSE56931	log2 microarray	none	scmodage.preprocess.map_to_mouse_entrez species=human	mapped value minus mean of control samples in this dataset	130	20755	20755	15147
+GSE113883	log2(TPM+1)	none	scmodage.preprocess.map_to_mouse_entrez species=human	mapped value minus mean of control samples in this dataset	153	35581	35581	16063
