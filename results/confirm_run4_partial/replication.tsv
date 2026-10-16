@@ -1,0 +1,4 @@
+clock	n_significant	n_gate_fail	decision
+TAms_chrono	1	1	not replicated
+TAms_mort	1	1	not replicated
+RA_default	0	1	not replicated

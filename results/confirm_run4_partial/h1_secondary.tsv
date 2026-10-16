@@ -1,0 +1,7 @@
+dataset	clock	phi_bar	peak_h	circ_dist	within_3h	predicted_sign	observed_sign	sign_agrees
+L1	TAms_chrono	12.616768998085	10.879869555482	1.736899442603	TRUE			
+L3	TAms_chrono					+	+	TRUE
+L1	TAms_mort	11.8599407935094	11.4858304321163	0.374110361393063	TRUE			
+L3	TAms_mort					+	+	TRUE
+L1	RA_default	11.2423863477089	11.5918483633937	0.349462015684843	TRUE			
+L3	RA_default					+	+	TRUE
