@@ -296,10 +296,9 @@ analyse_paired_dataset <- function(spec) {
 }
 
 run_locked <- function() {
-  check_manifest(root)
-  # Step 2. The load below returns only after the unlock file and TOD_UNLOCK match the manifest hash.
-  load_locked_expression("L1", root)
-  stop("locked confirmation steps 3-12 are instruction 7")
+  # Deviation 7.3.3. Steps 3-12 use the existing test functions.
+  source(file.path(root, "scripts", "confirm", "run_locked_analysis.R"))
+  run_confirmation()
 }
 
 check_manifest <- function(root) {
