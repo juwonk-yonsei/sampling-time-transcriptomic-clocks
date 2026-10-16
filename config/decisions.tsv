@@ -76,3 +76,16 @@ date	id	content	reason	timing
 2026-10-16	6.3.2	R2 uses every PROBEID key returned by clariomshumanhttranscriptcluster.db. That set has 24351 keys. The probe-level matrix is not stored. The seed is 20261015.	Instruction 6 section 4.2. The annotation database key set is 24351, smaller than the platform file. Storing the normal matrix is unnecessary because the seed rebuilds it.	prior
 2026-10-16	6.3.3	The independent MixedLM check uses BFGS. LBFGS returned a non-finite log likelihood for RA_default.	Instruction 6 section 4.3. BFGS matched the R likelihood-ratio statistics within the stated tolerance.	prior
 2026-10-16	6.3.4	statsmodels is not installed in the clock environment. The independent check used /home/jkang/anaconda3/bin/python3 and statsmodels 0.14.6.	The clock environment was not modified.	prior
+2026-10-16	7.1.1	OSF status is not uploaded.	Instruction 7 section 1.1. The researcher stated this with the instruction.	사전
+2026-10-16	7.1.2	Report 6 judgment 6.2.1 is approved. The L2 gate treats 18-26 h modulo 24 as peak_mod >= 18 or peak_mod <= 2.	Instruction 7 section 1.2 item 1.	사전
+2026-10-16	7.1.3	Report 6 judgment 6.2.2 is approved. GENCODE joins use the identifier text before the first dot.	Instruction 7 section 1.2 item 2.	사전
+2026-10-16	7.1.4	Report 6 judgment 6.2.3 is the withdrawn item and does not apply.	Instruction 7 section 1.2 item 3.	사전
+2026-10-16	7.1.5	Report 6 judgment 6.2.4 is approved. Holm for families P and S1-S3 uses only the tests that are performed after a dataset passes its gate. m is the number of tests performed. A dataset that fails its gate is omitted from the family and reported as gate fail. The replication rule, significance in at least two datasets, is unchanged.	Instruction 7 section 1.2 item 4. Recorded before unlock.	사전
+2026-10-16	7.1.6	Report 6 judgment 6.2.5 is approved. The L2 time axis is wake_ref_h modulo 24.	Instruction 7 section 1.2 item 5.	사전
+2026-10-16	7.1.7	Report 6 judgment 6.2.6 is approved. Components are partial sums of the weight score.	Instruction 7 section 1.2 item 6.	사전
+2026-10-16	7.1.8	Report 6 judgment 6.2.7 is approved. The scoring reference is every analysed sample of the dataset.	Instruction 7 section 1.2 item 7.	사전
+2026-10-16	7.1.9	Report 6 judgment 6.2.8 is approved. RNA-seq MCPcounter uses log2(FPKM+1). Gate genes use log2(CPM+1).	Instruction 7 section 1.2 item 8.	사전
+2026-10-16	7.1.10	Report 6 judgment 6.2.9 is approved. confirm_root walks parent directories to scripts/lib_cosinor.R.	Instruction 7 section 1.2 item 9.	사전
+2026-10-16	7.1.11	Report 6 judgment 6.2.10 is approved. An L2 probeset with more than one SYMBOL stays eligible for each of those symbols. This matches preregistration section 5.	Instruction 7 section 1.2 item 10.	사전
+2026-10-16	7.1.12	Report 6 judgments 6.3.1 through 6.3.4 are approved.	Instruction 7 section 1.2 items 11-14.	사전
+2026-10-16	7.1.13	The rehearsal null type I error for L2 H4 RA_default was 0.078. This is recorded as a known property and is not changed.	Instruction 7 section 1.2.	사전
