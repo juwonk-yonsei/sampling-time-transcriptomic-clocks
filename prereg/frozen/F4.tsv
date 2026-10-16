@@ -1,0 +1,4 @@
+clock	dataset	beta_cos	beta_sin	formula	c
+TAms_chrono	GSE113883	-0.0209097494754014	-0.00103025227051267	c = f(8) - f(20); f(t) = beta_cos*cos(2*pi*t/24) + beta_sin*sin(2*pi*t/24); c = -beta_cos + beta_sin*sqrt(3)	0.019125300198260260499475555777287663859727086340733
+TAms_mort	GSE113883	-0.0448086053054778	0.0249386275840794	c = f(8) - f(20); f(t) = beta_cos*cos(2*pi*t/24) + beta_sin*sin(2*pi*t/24); c = -beta_cos + beta_sin*sqrt(3)	0.088003575352142004086395806850464311947738779118951
+RA_default	GSE113883	-3.38101122840144	0.165981334106488	c = f(8) - f(20); f(t) = beta_cos*cos(2*pi*t/24) + beta_sin*sin(2*pi*t/24); c = -beta_cos + beta_sin*sqrt(3)	3.6684993321819421764583897146097149703131816543407
