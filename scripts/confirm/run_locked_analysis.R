@@ -45,15 +45,17 @@ say <- function(...) {
 
 verify_frozen_manifest <- function() {
   manifest <- fread(file.path(root, "prereg", "manifest.tsv"))
-  allowed <- "scripts/confirm/run_pipeline.R"
+  changed <- fread(file.path(root, "results", "stage7b", "changed_files.tsv"))
   bad <- character()
   for (i in seq_len(nrow(manifest))) {
     rel <- manifest$path[i]
     path <- file.path(root, rel)
     size <- file.info(path)$size
     hash <- strsplit(system2("sha256sum", path, stdout = TRUE), " ", fixed = TRUE)[[1]][1]
-    if (identical(rel, allowed)) {
-      say("manifest allowed change", rel, hash)
+    hit <- which(changed$path == rel)
+    if (length(hit)) {
+      if (!identical(hash, changed$sha256[hit[1]])) bad <- c(bad, paste("changed hash", rel))
+      say("manifest changed file", rel, hash)
       next
     }
     if (!identical(as.numeric(size), as.numeric(manifest$bytes[i])) || !identical(hash, manifest$sha256[i])) {
@@ -62,6 +64,33 @@ verify_frozen_manifest <- function() {
   }
   if (length(bad)) stop(paste("manifest mismatch:", paste(bad, collapse = ", ")))
   invisible(TRUE)
+}
+
+d1_impute_matrix <- function(log_mat) {
+  frac_bad <- rowMeans(!is.finite(log_mat))
+  keep <- frac_bad <= 0.5
+  mat <- log_mat[keep, , drop = FALSE]
+  n_nonfinite <- sum(!is.finite(mat))
+  mat[!is.finite(mat)] <- NA_real_
+  suppressPackageStartupMessages(library(impute))
+  imputed <- impute::impute.knn(mat, k = 10)$data
+  rownames(imputed) <- rownames(mat)
+  colnames(imputed) <- colnames(mat)
+  if (any(!is.finite(imputed))) stop("D1 imputation left a non-finite value")
+  list(
+    matrix = imputed, n_genes_in = nrow(log_mat), n_genes_dropped = sum(!keep),
+    n_genes_kept = sum(keep), n_values_imputed = n_nonfinite
+  )
+}
+
+d1_complete_matrix <- function(log_mat) {
+  keep <- rowSums(!is.finite(log_mat)) == 0
+  list(matrix = log_mat[keep, , drop = FALSE], n_genes_dropped = sum(!keep), n_genes_kept = sum(keep))
+}
+
+drop_all_nonfinite_rows <- function(log_mat) {
+  keep <- rowSums(is.finite(log_mat)) > 0
+  list(matrix = log_mat[keep, , drop = FALSE], n_genes_dropped = sum(!keep), n_genes_kept = sum(keep))
 }
 
 clean_token <- function(x) gsub('^"|"$', "", as.character(x))
@@ -363,7 +392,7 @@ run_confirmation <- function() {
   verify_frozen_manifest()
   out_root <- file.path(root, "results", "confirm")
   dir.create(out_root, recursive = TRUE, showWarnings = FALSE)
-  fwrite(data.table(run = "run3", started = format(Sys.time(), "%Y-%m-%d %H:%M:%S %z")), file.path(out_root, "run_id.tsv"), sep = "\t")
+  fwrite(data.table(run = "run4", started = format(Sys.time(), "%Y-%m-%d %H:%M:%S %z")), file.path(out_root, "run_id.tsv"), sep = "\t")
   f1 <- fread(file.path(root, "prereg", "frozen", "F1.tsv"))
   f2 <- fread(file.path(root, "prereg", "frozen", "F2.tsv"))
   f3 <- fread(file.path(root, "prereg", "frozen", "F3.tsv"))
@@ -426,8 +455,21 @@ run_confirmation <- function() {
       file.path(l1_dir, "samples_scoring.tsv"),
       "array", file.path(l1_dir, "tage_scores.tsv"), file.path(l1_dir, "tage_components.tsv")
     )
-    ra <- ra_linear_scores(l1_log[, l1_samples$gsm, drop = FALSE])
+    say("L1 D1 impute")
+    l1_for_ra <- l1_log[, l1_samples$gsm, drop = FALSE]
+    l1_d1 <- d1_impute_matrix(l1_for_ra)
+    fwrite(data.table(
+      n_genes_in = l1_d1$n_genes_in, n_genes_dropped = l1_d1$n_genes_dropped,
+      n_genes_kept = l1_d1$n_genes_kept, n_values_imputed = l1_d1$n_values_imputed, k = 10
+    ), file.path(l1_dir, "d1_impute_audit.tsv"), sep = "\t")
+    write_gene_matrix(l1_d1$matrix, file.path(l1_dir, "log2_genes_d1_imputed.tsv"))
+    ra <- ra_linear_scores(l1_d1$matrix)
+    if (any(!is.finite(ra$value))) stop("L1 RA primary scores are not finite after D1")
     fwrite(ra, file.path(l1_dir, "ra_scores.tsv"), sep = "\t")
+    l1_cc <- d1_complete_matrix(l1_for_ra)
+    fwrite(data.table(n_genes_dropped = l1_cc$n_genes_dropped, n_genes_kept = l1_cc$n_genes_kept), file.path(l1_dir, "d1_complete_audit.tsv"), sep = "\t")
+    ra_cc <- ra_linear_scores(l1_cc$matrix)
+    fwrite(ra_cc, file.path(l1_dir, "ra_scores_complete_case.tsv"), sep = "\t")
     l1_scores <- rbind(scored$scores, ra, fill = TRUE)
     l1_scores[, gsm := as.character(gsm)]
     l1_components <- scored$components
@@ -555,7 +597,10 @@ run_confirmation <- function() {
       file.path(l3_dir, "samples_scoring.tsv"),
       "counts", file.path(l3_dir, "tage_scores.tsv"), file.path(l3_dir, "tage_components.tsv")
     )
-    ra <- ra_linear_scores(l3_fpkm[, l3_primary$gsm, drop = FALSE])
+    l3_ra_prep <- drop_all_nonfinite_rows(l3_fpkm[, l3_primary$gsm, drop = FALSE])
+    fwrite(data.table(n_genes_dropped = l3_ra_prep$n_genes_dropped, n_genes_kept = l3_ra_prep$n_genes_kept), file.path(l3_dir, "d3_ra_audit.tsv"), sep = "\t")
+    ra <- ra_linear_scores(l3_ra_prep$matrix)
+    if (any(!is.finite(ra$value))) stop("L3 RA primary scores are not finite after D3")
     fwrite(ra, file.path(l3_dir, "ra_scores.tsv"), sep = "\t")
     l3_scores <- rbind(scored$scores, ra, fill = TRUE)
     l3_scores[, gsm := as.character(gsm)]
@@ -887,7 +932,7 @@ run_confirmation <- function() {
       combat_path_counts, file.path(l3_dir, "samples_scoring.tsv"),
       "counts", file.path(l3_dir, "combat_tage_scores.tsv"), file.path(l3_dir, "combat_tage_components.tsv")
     )
-    ra <- ra_linear_scores(combat_fpkm[, l3_primary$gsm, drop = FALSE])
+    ra <- ra_linear_scores(drop_all_nonfinite_rows(combat_fpkm[, l3_primary$gsm, drop = FALSE])$matrix)
     combat_scores <- rbind(scored$scores, ra, fill = TRUE)
     combat_scores[, gsm := as.character(gsm)]
     rows <- lapply(primary_clocks, function(clock) {
@@ -905,6 +950,69 @@ run_confirmation <- function() {
     conditionMessage(e)
   })
   say("combat", combat_status)
+
+  if (l1_pass) {
+    say("D1 complete-case and D2 sensitivity")
+    ra_cc <- fread(file.path(l1_dir, "ra_scores_complete_case.tsv"))
+    cc_rows <- lapply(c(primary_clocks[3], secondary_clocks), function(clock_id) {
+      dat <- prepare_score(day1, ra_cc, clock_id)
+      fit <- model_m(dat)
+      point_row("L1", clock_id, "D1_complete", fit)
+    })
+    fwrite(rbindlist(cc_rows), file.path(l1_dir, "sensitivity_d1_complete_case.tsv"), sep = "\t")
+    d2 <- score_tage(
+      file.path(l1_dir, "log2_genes_d1_imputed.tsv"),
+      file.path(l1_dir, "samples_scoring.tsv"),
+      "array", file.path(l1_dir, "tage_scores_d1_imputed.tsv"), file.path(l1_dir, "tage_components_d1_imputed.tsv")
+    )
+    d2_scores <- rbind(d2$scores, d2$components, fill = TRUE)
+    d2_scores[, gsm := as.character(gsm)]
+    d2_clocks <- c("TAms_chrono", "TAms_mort", f3$clock)
+    d2_rows <- lapply(d2_clocks, function(clock_id) {
+      dat <- prepare_score(day1, d2_scores, clock_id)
+      fit <- model_m(dat)
+      point_row("L1", clock_id, "D2_imputed", fit)
+    })
+    fwrite(rbindlist(d2_rows), file.path(l1_dir, "sensitivity_d2_imputed.tsv"), sep = "\t")
+  }
+
+  if (l3_pass) {
+    say("D6 comprehensive sensitivity")
+    comp_raw <- load_locked_expression("L3", root)
+    comp_layout <- l3_layout_last
+    comp_agg <- aggregate_loaded_l3(
+      comp_raw,
+      file.path(root, "results", "stage7b", "gencode_v38_comprehensive_transcripts.tsv"),
+      comp_layout
+    )
+    rm(comp_raw)
+    gc()
+    comp_counts <- comp_agg$counts[, l3_primary$gsm, drop = FALSE]
+    fwrite(data.table(
+      n_rows = comp_agg$n_rows, n_mapped_rows = comp_agg$n_mapped_rows, n_genes = comp_agg$n_genes
+    ), file.path(l3_dir, "d6_comprehensive_audit.tsv"), sep = "\t")
+    comp_path <- file.path(l3_dir, "gene_counts_comprehensive.tsv")
+    write_gene_matrix(comp_counts, comp_path)
+    comp_scored <- score_tage(
+      comp_path, file.path(l3_dir, "samples_scoring.tsv"), "counts",
+      file.path(l3_dir, "tage_scores_comprehensive.tsv"), file.path(l3_dir, "tage_components_comprehensive.tsv")
+    )
+    comp_fpkm <- counts_to_log2_fpkm(comp_counts)
+    colnames(comp_fpkm) <- colnames(comp_counts)
+    comp_ra <- ra_linear_scores(drop_all_nonfinite_rows(comp_fpkm)$matrix)
+    comp_scores <- rbind(comp_scored$scores, comp_ra, fill = TRUE)
+    comp_scores[, gsm := as.character(gsm)]
+    d6_rows <- lapply(primary_clocks, function(clock_id) {
+      res <- paired_delta(l3_primary, comp_scores, clock_id)
+      data.table(
+        clock = clock_id, n_subjects = res$n, n_samples = res$n * 2L,
+        mean_delta = res$mean_delta, sd_delta = res$sd_delta, d = res$mean_delta / res$sd_delta,
+        t_stat = res$t_stat, p = res$p, ci_low = res$ci_low, ci_high = res$ci_high
+      )
+    })
+    fwrite(rbindlist(d6_rows), file.path(l3_dir, "sensitivity_d6_comprehensive.tsv"), sep = "\t")
+    unlink(comp_path)
+  }
   say("confirmation finished")
   invisible(TRUE)
 }
