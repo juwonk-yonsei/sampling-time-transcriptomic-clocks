@@ -1,0 +1,7 @@
+lrt_stat	lrt_p	converged	reml_converged	dataset	clock	p	mean_difference	q_holm	decision
+7.72981589070241	0.0209648522603376	TRUE	TRUE	L1	TAms_chrono	0.0209648522603376	0.000307361838231626	0.0628945567810128	not significant
+5.68242972879443	0.0583547298006714	TRUE	TRUE	L1	TAms_mort	0.0583547298006714	0.00530602444996918	0.116709459601343	not significant
+0.126705701224637	0.938612225353535	TRUE	TRUE	L1	RA_default	0.938612225353535	1.30859604147651	0.938612225353535	not significant
+				L2	TAms_chrono				gate fail
+				L2	TAms_mort				gate fail
+				L2	RA_default				gate fail

@@ -1,0 +1,4 @@
+clock	primary_p	primary_q	primary_decision	d11_p	d11_q	d11_decision	robustness
+TAms_chrono	2.70474257565244e-08	1.62284554539147e-07	significant	2.66507897224099e-06	1.5990473833446e-05	significant	robust
+TAms_mort	2.67642593880552e-05	0.000133821296940276	significant	0.000443144628689626	0.00221572314344813	significant	robust
+RA_default	0.0125285842066838	0.0501143368267352	not significant	0.00845863851945171	0.0338345540778068	significant	primary not significant
