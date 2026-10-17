@@ -1,0 +1,7 @@
+version	clock	n_weight	stated_total	n_entered
+frozen	TAms_chrono	1839	1839	84
+frozen	TAms_mort	10487	10487	630
+D2_knn	TAms_chrono	1839	1839	915
+D2_knn	TAms_mort	10487	10487	6812
+D11_participant_mean	TAms_chrono	1839	1839	1173
+D11_participant_mean	TAms_mort	10487	10487	7751

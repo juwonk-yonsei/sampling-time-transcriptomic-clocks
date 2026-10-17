@@ -1,0 +1,3 @@
+scheme	n_masked	n_finite_before_mask	n_missing	n_filled_participant	n_filled_gene_mean	n_nonfinite_after
+random	863712	4318561	863712	863705	7	0
+low_expression	863712	4318561	863712	863568	144	0

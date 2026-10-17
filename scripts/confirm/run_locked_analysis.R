@@ -46,6 +46,8 @@ say <- function(...) {
 verify_frozen_manifest <- function() {
   manifest <- fread(file.path(root, "prereg", "manifest.tsv"))
   changed <- fread(file.path(root, "results", "stage7b", "changed_files.tsv"))
+  extra <- file.path(root, "results", "stage7c", "changed_files.tsv")
+  if (file.exists(extra)) changed <- rbind(fread(extra), changed)
   bad <- character()
   for (i in seq_len(nrow(manifest))) {
     rel <- manifest$path[i]
@@ -91,6 +93,73 @@ d1_complete_matrix <- function(log_mat) {
 drop_all_nonfinite_rows <- function(log_mat) {
   keep <- rowSums(is.finite(log_mat)) > 0
   list(matrix = log_mat[keep, , drop = FALSE], n_genes_dropped = sum(!keep), n_genes_kept = sum(keep))
+}
+
+exclusion_path <- NULL
+
+init_exclusions <- function(path) {
+  exclusion_path <<- path
+  fwrite(data.table(
+    step = character(), dataset = character(), clock = character(),
+    sample = character(), reason = character()
+  ), path, sep = "\t")
+  invisible(path)
+}
+
+record_exclusions <- function(step, dataset, clock, samples, reason) {
+  samples <- as.character(samples)
+  samples <- samples[!is.na(samples) & nzchar(samples)]
+  if (!length(samples) || is.null(exclusion_path)) return(invisible(0L))
+  fwrite(data.table(
+    step = step, dataset = dataset, clock = clock, sample = samples, reason = reason
+  ), exclusion_path, sep = "\t", append = TRUE)
+  invisible(length(samples))
+}
+
+finite_score_samples <- function(samples, scores, clock_id, step, dataset) {
+  sc <- scores[clock == clock_id, .(gsm = as.character(gsm), value)]
+  val <- sc$value[match(as.character(samples$gsm), sc$gsm)]
+  bad <- !is.finite(val)
+  if (any(bad)) record_exclusions(step, dataset, clock_id, samples$gsm[bad], "non-finite score")
+  samples[which(!bad)]
+}
+
+model_m_d10 <- function(samples, scores, clock_id, step, dataset) {
+  used <- finite_score_samples(samples, scores, clock_id, step, dataset)
+  if (nrow(used) < 2L) return(NULL)
+  model_m(prepare_score(used, scores, clock_id))
+}
+
+d11_participant_mean_matrix <- function(log_mat, subject_ids) {
+  subject_ids <- as.character(subject_ids)
+  if (length(subject_ids) != ncol(log_mat)) stop("D11 subject ids do not match the matrix columns")
+  mat <- log_mat
+  storage.mode(mat) <- "double"
+  mat[!is.finite(mat)] <- NA_real_
+  n_missing <- sum(is.na(mat))
+  gene_mean <- rowMeans(mat, na.rm = TRUE)
+  n_filled_participant <- 0L
+  n_filled_gene <- 0L
+  for (sid in unique(subject_ids)) {
+    cols <- which(subject_ids == sid)
+    block <- mat[, cols, drop = FALSE]
+    mu <- rowMeans(block, na.rm = TRUE)
+    miss <- is.na(block)
+    if (!any(miss)) next
+    use_gene <- !is.finite(mu)
+    fill <- mu
+    fill[use_gene] <- gene_mean[use_gene]
+    fill_mat <- matrix(fill, nrow = nrow(block), ncol = ncol(block))
+    n_filled_gene <- n_filled_gene + sum(miss & use_gene)
+    n_filled_participant <- n_filled_participant + sum(miss & !use_gene)
+    block[miss] <- fill_mat[miss]
+    mat[, cols] <- block
+  }
+  list(
+    matrix = mat, n_missing = n_missing,
+    n_filled_participant = n_filled_participant, n_filled_gene_mean = n_filled_gene,
+    n_genes_all_missing = sum(!is.finite(gene_mean)), n_nonfinite_after = sum(!is.finite(mat))
+  )
 }
 
 clean_token <- function(x) gsub('^"|"$', "", as.character(x))
@@ -289,8 +358,13 @@ h4_for <- function(dataset, samples, scores, clocks) {
   rows <- list()
   cond_rows <- list()
   for (clock in clocks) {
-    dat <- prepare_score(samples, scores, clock)
-    dat$day <- samples$day
+    used <- finite_score_samples(samples, scores, clock, "H4", dataset)
+    if (nrow(used) < 2L) {
+      rows[[clock]] <- data.table(dataset = dataset, clock = clock, p = NA_real_, lrt_p = NA_real_, lrt_stat = NA_real_, converged = FALSE)
+      next
+    }
+    dat <- prepare_score(used, scores, clock)
+    dat$day <- used$day
     fit <- h4_interaction(dat)
     fit$dataset <- dataset
     fit$clock <- clock
@@ -305,10 +379,15 @@ h4_for <- function(dataset, samples, scores, clocks) {
   list(tests = rbindlist(rows), conditions = rbindlist(cond_rows))
 }
 
-random_slopes <- function(samples, scores, clocks) {
+random_slopes <- function(samples, scores, clocks, dataset) {
   rows <- list()
   for (clock in clocks) {
-    dat <- prepare_score(samples, scores, clock)
+    used <- finite_score_samples(samples, scores, clock, "sensitivity_random_slopes", dataset)
+    if (nrow(used) < 2L) {
+      rows[[clock]] <- data.table(clock = clock, converged = FALSE, two_a = NA_real_, peak_h = NA_real_)
+      next
+    }
+    dat <- prepare_score(used, scores, clock)
     fit <- quiet_lmer(score ~ cos_t + sin_t + (1 + cos_t + sin_t | subject_id), dat, TRUE)
     ok <- !inherits(fit, "error") && optimizer_converged(fit)
     two_a <- NA_real_
@@ -325,14 +404,13 @@ random_slopes <- function(samples, scores, clocks) {
   rbindlist(rows)
 }
 
-drop_flag_cosinor <- function(samples, scores, flags, clocks) {
+drop_flag_cosinor <- function(samples, scores, flags, clocks, dataset) {
   keep <- samples$gsm %in% flags$gsm[!flags$flag_3mad]
   used <- samples[keep, ]
   rows <- list()
   for (clock in clocks) {
-    dat <- prepare_score(used, scores, clock)
-    fit <- model_m(dat)
-    rows[[clock]] <- point_row("sensitivity", clock, "drop_flags", fit)
+    fit <- model_m_d10(used, scores, clock, "sensitivity_drop_flags", dataset)
+    rows[[clock]] <- if (is.null(fit)) data.table(dataset = "sensitivity", clock = clock, family = "drop_flags", p = NA_real_, n_samples = 0L) else point_row("sensitivity", clock, "drop_flags", fit)
   }
   rbindlist(rows)
 }
@@ -348,7 +426,7 @@ composition_matrix <- function(log_mat, samples) {
   est[, blood_labels, drop = FALSE]
 }
 
-h2_after_holm <- function(dataset, samples, scores, composition, clocks, q_tab, draws, drop_neutrophils) {
+h2_after_holm <- function(dataset, samples, scores, composition, clocks, q_tab, draws, drop_neutrophils, step = "H2") {
   comp_cols <- blood_labels
   if (drop_neutrophils) comp_cols <- setdiff(comp_cols, "Neutrophils")
   rows <- list()
@@ -356,17 +434,37 @@ h2_after_holm <- function(dataset, samples, scores, composition, clocks, q_tab, 
     idx <- which(q_tab$dataset == dataset & q_tab$clock == clock)
     if (!length(idx) || !isTRUE(q_tab$decision[idx] == "significant")) next
     say("H2", dataset, clock)
-    dat <- prepare_score(samples, scores, clock)
-    comp <- composition[match(dat$gsm, rownames(composition)), comp_cols, drop = FALSE]
-    if (anyNA(comp)) stop("composition rows do not match the score samples")
+    used <- finite_score_samples(samples, scores, clock, step, dataset)
+    dat <- prepare_score(used, scores, clock)
+    hit <- match(dat$gsm, rownames(composition))
+    if (anyNA(hit)) stop("composition rows do not match the score samples")
+    comp <- composition[hit, comp_cols, drop = FALSE]
+    bad <- apply(as.matrix(comp), 1, function(x) any(!is.finite(x)))
+    if (any(bad)) record_exclusions(step, dataset, clock, dat$gsm[bad], "non-finite composition")
+    dat <- dat[!bad, , drop = FALSE]
+    comp <- comp[!bad, , drop = FALSE]
+    if (!nrow(dat)) {
+      rows[[clock]] <- data.table(dataset = dataset, clock = clock, n_dropped = sum(bad), n_samples = 0L, decision = "no samples")
+      next
+    }
     for (col in comp_cols) dat[[col]] <- comp[[col]]
     h2 <- h2_l1l2(dat, comp_cols, draws)
     h2$point$dataset <- dataset
     h2$point$clock <- clock
+    h2$point$n_dropped <- sum(bad)
+    h2$point$n_samples <- nrow(dat)
     h2$point$decision <- if (is.finite(h2$point$p_med_p025) && h2$point$p_med_p025 > 0) "supported" else "not supported"
     rows[[clock]] <- h2$point
   }
   if (length(rows)) rbindlist(rows, fill = TRUE) else data.table()
+}
+
+paired_delta_d10 <- function(samples, scores, clock_id, step, dataset) {
+  sc <- scores[clock == clock_id, .(gsm = as.character(gsm), value)]
+  wide <- data.table(subject_id = as.character(samples$subject_id), gsm = as.character(samples$gsm), value = sc$value[match(as.character(samples$gsm), sc$gsm)])
+  bad_subj <- unique(wide$subject_id[!is.finite(wide$value)])
+  if (length(bad_subj)) record_exclusions(step, dataset, clock_id, wide$gsm[!is.finite(wide$value)], "non-finite score")
+  paired_delta(samples[!subject_id %in% bad_subj], scores, clock_id)
 }
 
 paired_composition_delta <- function(samples, composition) {
@@ -392,7 +490,8 @@ run_confirmation <- function() {
   verify_frozen_manifest()
   out_root <- file.path(root, "results", "confirm")
   dir.create(out_root, recursive = TRUE, showWarnings = FALSE)
-  fwrite(data.table(run = "run4", started = format(Sys.time(), "%Y-%m-%d %H:%M:%S %z")), file.path(out_root, "run_id.tsv"), sep = "\t")
+  fwrite(data.table(run = "run5", started = format(Sys.time(), "%Y-%m-%d %H:%M:%S %z")), file.path(out_root, "run_id.tsv"), sep = "\t")
+  init_exclusions(file.path(out_root, "exclusions_runtime.tsv"))
   f1 <- fread(file.path(root, "prereg", "frozen", "F1.tsv"))
   f2 <- fread(file.path(root, "prereg", "frozen", "F2.tsv"))
   f3 <- fread(file.path(root, "prereg", "frozen", "F3.tsv"))
@@ -728,7 +827,11 @@ run_confirmation <- function() {
       ord <- match(comp_delta$subjects, block$subject_id)
       if (anyNA(ord)) stop("L3 composition subjects do not match the clock delta")
       delta <- delta[ord]
-      fit <- h2_l3_bootstrap(delta, comp_delta$delta, 2000, 20261015)
+      comp_m <- as.matrix(comp_delta$delta)
+      ok <- is.finite(delta) & apply(comp_m, 1, function(x) all(is.finite(x)))
+      if (any(!ok)) record_exclusions("H2", "L3", clock_id, comp_delta$subjects[!ok], "non-finite model input")
+      fit <- h2_l3_bootstrap(delta[ok], comp_m[ok, , drop = FALSE], 2000, 20261015)
+      fit$n_dropped <- sum(!ok)
       fit$dataset <- "L3"
       fit$clock <- clock_id
       fit$decision <- if (is.finite(fit$p_med_p025) && fit$p_med_p025 > 0) "supported" else "not supported"
@@ -746,8 +849,12 @@ run_confirmation <- function() {
       block <- l3_deltas[clock == clock_id]
       ord <- match(block$subject_id, cov$subject_id)
       cov_i <- cov[ord]
-      age_fit <- h3_age(block$delta, cov_i$age, cov_i$sex, cov_i$opioid_group)
-      frame <- data.frame(delta = block$delta, age10 = cov_i$age / 10, sex = factor(cov_i$sex), opioid = factor(cov_i$opioid_group))
+      ok_h3 <- is.finite(block$delta) & is.finite(cov_i$age) & !is.na(cov_i$sex) & !is.na(cov_i$opioid_group)
+      if (any(!ok_h3)) record_exclusions("H3", "L3", clock_id, block$subject_id[!ok_h3], "non-finite model input")
+      block_h3 <- block[ok_h3]
+      cov_h3 <- cov_i[ok_h3]
+      age_fit <- h3_age(block_h3$delta, cov_h3$age, cov_h3$sex, cov_h3$opioid_group)
+      frame <- data.frame(delta = block_h3$delta, age10 = cov_h3$age / 10, sex = factor(cov_h3$sex), opioid = factor(cov_h3$opioid_group))
       lm_fit <- lm(delta ~ age10 + sex + opioid, data = frame)
       ci <- confint(lm_fit)["age10", ]
       age_fit$clock <- clock_id
@@ -755,13 +862,17 @@ run_confirmation <- function() {
       age_fit$ci_high <- unname(ci[2])
       age_fit$direction <- if (age_fit$age_coef < 0) "-" else if (age_fit$age_coef > 0) "+" else "0"
       h3_rows[[clock_id]] <- age_fit
+      ok_h5 <- is.finite(block$delta)
+      if (any(!ok_h5)) record_exclusions("H5", "L3", clock_id, block$subject_id[!ok_h5], "non-finite score")
       h5_rows[[clock_id]] <- cbind(
         data.table(clock = clock_id, c = c_text[[clock_id]], c_numeric = c_values[[clock_id]]),
-        h5_transfer(block$delta, c_values[[clock_id]])
+        h5_transfer(block$delta[ok_h5], c_values[[clock_id]])
       )
+      ok_int <- is.finite(block$delta) & !is.na(cov_i$sex) & !is.na(cov_i$opioid_group)
+      if (any(!ok_int)) record_exclusions("sensitivity_intercept", "L3", clock_id, block$subject_id[!ok_int], "non-finite model input")
       intercept_rows[[clock_id]] <- cbind(
         data.table(clock = clock_id),
-        sensitivity_intercept(block$delta, cov_i$sex, cov_i$opioid_group)
+        sensitivity_intercept(block$delta[ok_int], cov_i$sex[ok_int], cov_i$opioid_group[ok_int])
       )
     }
     h3 <- apply_holm(rbindlist(h3_rows)[, p := age_p])
@@ -815,7 +926,7 @@ run_confirmation <- function() {
     rows <- list()
     if (paired) {
       for (clock_id in clocks) {
-        res <- paired_delta(samples, score_dt, clock_id)
+        res <- paired_delta_d10(samples, score_dt, clock_id, "S4", dataset)
         info <- f3[clock == clock_id]
         rows[[clock_id]] <- data.table(
           dataset = dataset, clock = clock_id, in_f3 = clock_id %in% f3$clock,
@@ -826,8 +937,8 @@ run_confirmation <- function() {
       }
     } else {
       for (clock_id in clocks) {
-        dat <- prepare_score(samples, score_dt, clock_id)
-        fit <- model_m(dat)
+        fit <- model_m_d10(samples, score_dt, clock_id, "S4", dataset)
+        if (is.null(fit)) fit <- list(n_subjects = 0L, n_samples = 0L, two_a = NA_real_, peak_h = NA_real_, lrt_stat = NA_real_, lrt_p = NA_real_)
         rows[[clock_id]] <- data.table(
           dataset = dataset, clock = clock_id, in_f3 = clock_id %in% f3$clock,
           n_subjects = fit$n_subjects, n_samples = fit$n_samples,
@@ -874,14 +985,14 @@ run_confirmation <- function() {
   s4_parts <- list()
   if (l1_pass) {
     s4_parts[["L1"]] <- s4_one("L1", day1, rbind(l1_scores[grepl("^TM_", clock)], l1_components, fill = TRUE), FALSE)
-    fwrite(drop_flag_cosinor(day1, l1_scores, l1_flags, primary_clocks), file.path(l1_dir, "sensitivity_drop_flags.tsv"), sep = "\t")
-    fwrite(random_slopes(day1, l1_scores, primary_clocks), file.path(l1_dir, "sensitivity_random_slopes.tsv"), sep = "\t")
+    fwrite(drop_flag_cosinor(day1, l1_scores, l1_flags, primary_clocks, "L1"), file.path(l1_dir, "sensitivity_drop_flags.tsv"), sep = "\t")
+    fwrite(random_slopes(day1, l1_scores, primary_clocks, "L1"), file.path(l1_dir, "sensitivity_random_slopes.tsv"), sep = "\t")
     fwrite(data.table(status = "complete"), file.path(l1_dir, "stopped.tsv"), sep = "\t")
   }
   if (l2_pass) {
     s4_parts[["L2"]] <- s4_one("L2", period1, rbind(l2_scores[grepl("^TM_", clock)], l2_components, fill = TRUE), FALSE)
-    fwrite(drop_flag_cosinor(period1, l2_scores, l2_flags, primary_clocks), file.path(l2_dir, "sensitivity_drop_flags.tsv"), sep = "\t")
-    fwrite(random_slopes(period1, l2_scores, primary_clocks), file.path(l2_dir, "sensitivity_random_slopes.tsv"), sep = "\t")
+    fwrite(drop_flag_cosinor(period1, l2_scores, l2_flags, primary_clocks, "L2"), file.path(l2_dir, "sensitivity_drop_flags.tsv"), sep = "\t")
+    fwrite(random_slopes(period1, l2_scores, primary_clocks, "L2"), file.path(l2_dir, "sensitivity_random_slopes.tsv"), sep = "\t")
     fwrite(data.table(status = "complete"), file.path(l2_dir, "stopped.tsv"), sep = "\t")
   }
   if (l3_pass) {
@@ -891,7 +1002,7 @@ run_confirmation <- function() {
     kept <- l3_primary[!subject_id %in% flagged_subjects]
     drop_rows <- list()
     for (clock in primary_clocks) {
-      res <- paired_delta(kept, l3_scores, clock)
+      res <- paired_delta_d10(kept, l3_scores, clock, "sensitivity_drop_flags", "L3")
       drop_rows[[clock]] <- data.table(
         clock = clock, n_subjects = res$n, mean_delta = res$mean_delta,
         ci_low = res$ci_low, ci_high = res$ci_high, p = res$p
@@ -936,7 +1047,7 @@ run_confirmation <- function() {
     combat_scores <- rbind(scored$scores, ra, fill = TRUE)
     combat_scores[, gsm := as.character(gsm)]
     rows <- lapply(primary_clocks, function(clock) {
-      res <- paired_delta(l3_primary, combat_scores, clock)
+      res <- paired_delta_d10(l3_primary, combat_scores, clock, "sensitivity_combat", "L3")
       data.table(
         clock = clock, n_subjects = res$n, mean_delta = res$mean_delta,
         sd_delta = res$sd_delta, ci_low = res$ci_low, ci_high = res$ci_high,
@@ -955,8 +1066,8 @@ run_confirmation <- function() {
     say("D1 complete-case and D2 sensitivity")
     ra_cc <- fread(file.path(l1_dir, "ra_scores_complete_case.tsv"))
     cc_rows <- lapply(c(primary_clocks[3], secondary_clocks), function(clock_id) {
-      dat <- prepare_score(day1, ra_cc, clock_id)
-      fit <- model_m(dat)
+      fit <- model_m_d10(day1, ra_cc, clock_id, "D1_complete", "L1")
+      if (is.null(fit)) return(data.table(dataset = "L1", clock = clock_id, family = "D1_complete", p = NA_real_, n_samples = 0L))
       point_row("L1", clock_id, "D1_complete", fit)
     })
     fwrite(rbindlist(cc_rows), file.path(l1_dir, "sensitivity_d1_complete_case.tsv"), sep = "\t")
@@ -969,11 +1080,75 @@ run_confirmation <- function() {
     d2_scores[, gsm := as.character(gsm)]
     d2_clocks <- c("TAms_chrono", "TAms_mort", f3$clock)
     d2_rows <- lapply(d2_clocks, function(clock_id) {
-      dat <- prepare_score(day1, d2_scores, clock_id)
-      fit <- model_m(dat)
+      fit <- model_m_d10(day1, d2_scores, clock_id, "D2_imputed", "L1")
+      if (is.null(fit)) return(data.table(dataset = "L1", clock = clock_id, family = "D2_imputed", p = NA_real_, n_samples = 0L))
       point_row("L1", clock_id, "D2_imputed", fit)
     })
     fwrite(rbindlist(d2_rows), file.path(l1_dir, "sensitivity_d2_imputed.tsv"), sep = "\t")
+    say("D9 imputed composition H2")
+    imp <- read_gene_matrix(file.path(l1_dir, "log2_genes_d1_imputed.tsv"))
+    l1_comp_d9 <- composition_matrix(imp, l1_samples)
+    h2_d9 <- h2_after_holm("L1", day1, l1_scores, l1_comp_d9, primary_clocks, family_p, l1_draws, FALSE, "H2_D9")
+    if (nrow(h2_d9)) fwrite(h2_d9, file.path(l1_dir, "sensitivity_d9_imputed_h2.tsv"), sep = "\t")
+    rm(imp)
+    gc()
+    say("D11 participant-mean sensitivity")
+    l1_back <- read_gene_matrix(file.path(l1_dir, "log2_genes.tsv.gz"))
+    l1_ord <- l1_samples$gsm
+    d11 <- d11_participant_mean_matrix(l1_back[, l1_ord, drop = FALSE], l1_samples$subject_id)
+    fwrite(data.table(
+      n_missing = d11$n_missing, n_filled_participant = d11$n_filled_participant,
+      n_filled_gene_mean = d11$n_filled_gene_mean, n_genes_all_missing = d11$n_genes_all_missing,
+      n_nonfinite_after = d11$n_nonfinite_after
+    ), file.path(l1_dir, "d11_impute_audit.tsv"), sep = "\t")
+    d11_path <- file.path(l1_dir, "log2_genes_d11.tsv")
+    write_gene_matrix(d11$matrix, d11_path)
+    ra_d11 <- ra_linear_scores(d11$matrix)
+    fwrite(ra_d11, file.path(l1_dir, "ra_scores_d11.tsv"), sep = "\t")
+    d11_scored <- score_tage(
+      d11_path, file.path(l1_dir, "samples_scoring.tsv"), "array",
+      file.path(l1_dir, "tage_scores_d11.tsv"), file.path(l1_dir, "tage_components_d11.tsv")
+    )
+    d11_scores <- rbind(d11_scored$scores, ra_d11, fill = TRUE)
+    d11_scores[, gsm := as.character(gsm)]
+    d11_rows <- lapply(primary_clocks, function(clock_id) {
+      fit <- model_m_d10(day1, d11_scores, clock_id, "D11", "L1")
+      if (is.null(fit)) return(data.table(dataset = "L1", clock = clock_id, family = "D11", p = NA_real_, n_samples = 0L))
+      point_row("L1", clock_id, "D11", fit)
+    })
+    d11_fit <- rbindlist(d11_rows)
+    fwrite(d11_fit, file.path(l1_dir, "sensitivity_d11_participant_mean.tsv"), sep = "\t")
+    holm_base <- copy(family_p[family == "P"])
+    for (clock_id in primary_clocks) {
+      set(holm_base, i = which(holm_base$dataset == "L1" & holm_base$clock == clock_id), j = "p", value = d11_fit$p[match(clock_id, d11_fit$clock)])
+    }
+    holm_d11 <- apply_holm(holm_base)
+    fwrite(holm_d11, file.path(l1_dir, "sensitivity_d11_holm.tsv"), sep = "\t")
+    rob <- rbindlist(lapply(primary_clocks, function(clock_id) {
+      pri <- family_p[dataset == "L1" & clock == clock_id]
+      alt <- holm_d11[dataset == "L1" & clock == clock_id]
+      label <- if (!is.finite(alt$p)) "D11 p not finite" else if (pri$decision == "significant" && alt$decision == "significant") "robust" else if (pri$decision == "significant" && alt$decision == "not significant") "sensitive" else "primary not significant"
+      data.table(
+        clock = clock_id, primary_p = pri$p, primary_q = pri$q_holm, primary_decision = pri$decision,
+        d11_p = alt$p, d11_q = alt$q_holm, d11_decision = alt$decision, robustness = label
+      )
+    }))
+    fwrite(rob, file.path(out_root, "l1_robustness.tsv"), sep = "\t")
+    count_script <- file.path(root, "scripts", "48_part7c_feature_count.py")
+    for (spec in list(
+      list(version = "frozen", expr = file.path(l1_dir, "log2_genes.tsv.gz")),
+      list(version = "D2_knn", expr = file.path(l1_dir, "log2_genes_d1_imputed.tsv")),
+      list(version = "D11_participant_mean", expr = d11_path)
+    )) {
+      status <- system2(python_bin, c(
+        count_script, "--expr", spec$expr, "--samples", file.path(l1_dir, "samples_scoring.tsv"),
+        "--version", spec$version, "--out", file.path(l1_dir, paste0("tams_features_", spec$version, ".tsv"))
+      ))
+      if (!identical(status, 0L)) stop("TAms feature count failed")
+    }
+    unlink(d11_path)
+    rm(l1_back, d11)
+    gc()
   }
 
   if (l3_pass) {
@@ -1003,7 +1178,7 @@ run_confirmation <- function() {
     comp_scores <- rbind(comp_scored$scores, comp_ra, fill = TRUE)
     comp_scores[, gsm := as.character(gsm)]
     d6_rows <- lapply(primary_clocks, function(clock_id) {
-      res <- paired_delta(l3_primary, comp_scores, clock_id)
+      res <- paired_delta_d10(l3_primary, comp_scores, clock_id, "D6_comprehensive", "L3")
       data.table(
         clock = clock_id, n_subjects = res$n, n_samples = res$n * 2L,
         mean_delta = res$mean_delta, sd_delta = res$sd_delta, d = res$mean_delta / res$sd_delta,
