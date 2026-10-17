@@ -1,0 +1,11 @@
+gene	n_samples	n_subjects	two_a	peak_h	lrt_stat	lrt_p	status	dataset	time_axis	title
+PER1	221	24	0.474871117706392	22.7776132062867	93.6560996668319	4.60083182863588e-21	fit	GSE39445_control	hours_awake	GSE39445 control clock-gene peaks (사후, 관문 실패 자료)
+PER2	221	24	0.290139293377361	20.7330572724929	86.0036631906542	2.1112605191602e-19	fit	GSE39445_control	hours_awake	GSE39445 control clock-gene peaks (사후, 관문 실패 자료)
+PER3	221	24	0.343532957703934	21.9104219255107	33.2679900689422	5.96963454018461e-08	fit	GSE39445_control	hours_awake	GSE39445 control clock-gene peaks (사후, 관문 실패 자료)
+NR1D1	221	24	0.522002483937876	17.7523074513839	130.568198654582	4.44095023099656e-29	fit	GSE39445_control	hours_awake	GSE39445 control clock-gene peaks (사후, 관문 실패 자료)
+NR1D2	221	24	0.452256757088069	19.5452527557332	98.5179385561324	4.04670418283793e-22	fit	GSE39445_control	hours_awake	GSE39445 control clock-gene peaks (사후, 관문 실패 자료)
+ARNTL	221	24	0.0836293206360964	7.37049546630091	3.45755297106392	0.177501452760856	fit	GSE39445_control	hours_awake	GSE39445 control clock-gene peaks (사후, 관문 실패 자료)
+CRY1	221	24	0.230239923705591	20.3669852307156	9.52543771183184	0.00854235237029388	fit	GSE39445_control	hours_awake	GSE39445 control clock-gene peaks (사후, 관문 실패 자료)
+CRY2	221	24	0.127871383949664	18.5308484498846	29.2931074573475	4.35594649651214e-07	fit	GSE39445_control	hours_awake	GSE39445 control clock-gene peaks (사후, 관문 실패 자료)
+DBP	221	24	0.856614939671959	4.06024592076617	36.7375001274313	1.05330272528704e-08	fit	GSE39445_control	hours_awake	GSE39445 control clock-gene peaks (사후, 관문 실패 자료)
+TEF	221	24	0.268487653229361	17.4419627275353	5.83750052387819	0.0540011324177271	fit	GSE39445_control	hours_awake	GSE39445 control clock-gene peaks (사후, 관문 실패 자료)

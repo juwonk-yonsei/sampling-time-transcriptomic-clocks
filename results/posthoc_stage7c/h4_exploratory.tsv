@@ -1,0 +1,4 @@
+lrt_stat	lrt_p	converged	reml_converged	dataset	clock	n_samples	n_period1	n_period2	day_coding	q_bh	label	note	title
+7.86174924045554	0.01962649931083	TRUE	TRUE	L2	TAms_chrono	141	70	71	period1=0, period2=1	0.01962649931083	exploratory	An LRT is invariant to adding a constant to the whole time axis.	H4 exploratory interaction LRT on L2 period 1 and period 2 (사후, 관문 실패 자료)
+17.7191985617284	0.000142011959672442	TRUE	TRUE	L2	TAms_mort	141	70	71	period1=0, period2=1	0.000426035879017326	exploratory	An LRT is invariant to adding a constant to the whole time axis.	H4 exploratory interaction LRT on L2 period 1 and period 2 (사후, 관문 실패 자료)
+10.7842149020831	0.00455236932382411	TRUE	TRUE	L2	RA_default	141	70	71	period1=0, period2=1	0.00682855398573617	exploratory	An LRT is invariant to adding a constant to the whole time axis.	H4 exploratory interaction LRT on L2 period 1 and period 2 (사후, 관문 실패 자료)

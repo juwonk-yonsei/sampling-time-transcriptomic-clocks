@@ -1,0 +1,2 @@
+n_genes	circ_mean_h	circ_sd_h	signed_diff_definition	circ_sd_definition	title
+9	8.621303487796	5.45486042639337	(peak_l2 - peak_gse39445) mod 24, then subtract 24 when the result is greater than 12; range (-12, 12]	sqrt(-2*log(R)) * 24 / (2*pi), R = mean resultant length of the signed differences	circular mean and SD of signed peak differences (사후, 관문 실패 자료)

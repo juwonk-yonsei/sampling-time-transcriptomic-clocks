@@ -1,0 +1,11 @@
+gene	n_samples	n_subjects	two_a	peak_h	lrt_stat	lrt_p	status	dataset	time_axis	title
+PER1	70	11	0.809650349284677	8.62707238405378	22.4495479401546	1.33395937684947e-05	fit	L2_period1	wake_ref_h %% 24	L2 period 1 clock-gene peaks (사후, 관문 실패 자료)
+PER2	70	11	0.533366782630997	6.79757027981186	19.6261418709313	5.47315115180425e-05	fit	L2_period1	wake_ref_h %% 24	L2 period 1 clock-gene peaks (사후, 관문 실패 자료)
+PER3	70	11	0.66124355344713	6.37573752707371	25.7457587642308	2.56672604887414e-06	fit	L2_period1	wake_ref_h %% 24	L2 period 1 clock-gene peaks (사후, 관문 실패 자료)
+NR1D1	70	11	0.465861411644468	2.3535171570863	28.803575469564	5.56394793297222e-07	fit	L2_period1	wake_ref_h %% 24	L2 period 1 clock-gene peaks (사후, 관문 실패 자료)
+NR1D2	70	11	0.417489216065931	4.27036636255108	19.0921169862211	7.14824571359583e-05	fit	L2_period1	wake_ref_h %% 24	L2 period 1 clock-gene peaks (사후, 관문 실패 자료)
+ARNTL	0	0					absent	L2_period1	wake_ref_h %% 24	L2 period 1 clock-gene peaks (사후, 관문 실패 자료)
+CRY1	70	11	0.184039031493968	16.9670687601859	1.83288487842808	0.399939321666838	fit	L2_period1	wake_ref_h %% 24	L2 period 1 clock-gene peaks (사후, 관문 실패 자료)
+CRY2	70	11	0.140881228936998	11.670746575917	3.41507522207448	0.181311703326098	fit	L2_period1	wake_ref_h %% 24	L2 period 1 clock-gene peaks (사후, 관문 실패 자료)
+DBP	70	11	0.259922633874693	3.765806949343	12.4235268044272	0.00200569749239254	fit	L2_period1	wake_ref_h %% 24	L2 period 1 clock-gene peaks (사후, 관문 실패 자료)
+TEF	70	11	0.161663347436396	22.8844839167054	2.75289013883517	0.252474488903239	fit	L2_period1	wake_ref_h %% 24	L2 period 1 clock-gene peaks (사후, 관문 실패 자료)
