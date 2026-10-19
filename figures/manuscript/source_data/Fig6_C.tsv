@@ -1,0 +1,19 @@
+mask	treatment	clock	lrt_p	neg_log10_p	source	x
+random	unmasked	RA_default	0.571779550797631	0.2427713808677755	results/stage7b/d1_development_model_m.tsv	-0.18
+random	unmasked	RA_Peters	0.0822398090507771	1.0849179067180859	results/stage7b/d1_development_model_m.tsv	0.0
+random	unmasked	RA_GTEx	0.643663244864561	0.19134128970317205	results/stage7b/d1_development_model_m.tsv	0.18
+random	kNN	RA_default	0.131795197933585	0.8801004133303167	results/stage7b/d1_development_model_m.tsv	0.8200000000000001
+random	kNN	RA_Peters	0.396462971000013	0.4017973688541554	results/stage7b/d1_development_model_m.tsv	1.0
+random	kNN	RA_GTEx	0.638021860434852	0.19516444086569817	results/stage7b/d1_development_model_m.tsv	1.18
+random	participant mean	RA_default	0.493775609974818	0.30647036583169407	results/stage7c/d11_development_model_m.tsv	1.82
+random	participant mean	RA_Peters	0.233868759239569	0.63102778843466	results/stage7c/d11_development_model_m.tsv	2.0
+random	participant mean	RA_GTEx	0.651673618269485	0.18596986021032139	results/stage7c/d11_development_model_m.tsv	2.18
+low_expression	unmasked	RA_default	0.571779550797631	0.2427713808677755	results/stage7b/d1_development_model_m.tsv	3.2199999999999998
+low_expression	unmasked	RA_Peters	0.0822398090507771	1.0849179067180859	results/stage7b/d1_development_model_m.tsv	3.4
+low_expression	unmasked	RA_GTEx	0.643663244864561	0.19134128970317205	results/stage7b/d1_development_model_m.tsv	3.58
+low_expression	kNN	RA_default	0.0312868740107463	1.5046378266813096	results/stage7b/d1_development_model_m.tsv	4.220000000000001
+low_expression	kNN	RA_Peters	0.175697860237701	0.7552335275918862	results/stage7b/d1_development_model_m.tsv	4.4
+low_expression	kNN	RA_GTEx	0.223295276970678	0.6511204628097312	results/stage7b/d1_development_model_m.tsv	4.58
+low_expression	participant mean	RA_default	0.0125311384531322	1.9020094715873863	results/stage7c/d11_development_model_m.tsv	5.220000000000001
+low_expression	participant mean	RA_Peters	0.0962455882817528	1.0166191686122137	results/stage7c/d11_development_model_m.tsv	5.4
+low_expression	participant mean	RA_GTEx	0.290132197293332	0.5374040728832613	results/stage7c/d11_development_model_m.tsv	5.58

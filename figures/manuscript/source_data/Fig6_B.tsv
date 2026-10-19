@@ -1,0 +1,31 @@
+clock	version	n_entered	n_weight	plotted_x	y
+TAms_chrono	frozen	84	1839	84	9
+TAms_chrono	D2_knn	915	1839	915	9
+TAms_chrono	D11_participant_mean	1173	1839	1173	9
+TAms_mort	frozen	630	10487	630	8
+TAms_mort	D2_knn	6812	10487	6812	8
+TAms_mort	D11_participant_mean	7751	10487	7751	8
+TM_turquoise_mortality	frozen	14		14	7
+TM_turquoise_mortality	D2_knn	200		200	7
+TM_turquoise_mortality	D11_participant_mean	202		202	7
+CMP_TAms_chrono_turquoise	frozen	4		4	6
+CMP_TAms_chrono_turquoise	D2_knn	58		58	6
+CMP_TAms_chrono_turquoise	D11_participant_mean	58		58	6
+CMP_TAms_chrono_yellow	frozen	1		1	5
+CMP_TAms_chrono_yellow	D2_knn	5		5	5
+CMP_TAms_chrono_yellow	D11_participant_mean	7		7	5
+CMP_TAms_chrono_orange	frozen	1		1	4
+CMP_TAms_chrono_orange	D2_knn	4		4	4
+CMP_TAms_chrono_orange	D11_participant_mean	4		4	4
+CMP_TAms_chrono_brown	frozen	0			3
+CMP_TAms_chrono_brown	D2_knn	5		5	3
+CMP_TAms_chrono_brown	D11_participant_mean	6		6	3
+CMP_TAms_chrono_red	frozen	0			2
+CMP_TAms_chrono_red	D2_knn	1		1	2
+CMP_TAms_chrono_red	D11_participant_mean	1		1	2
+CMP_TAms_mort_turquoise	frozen	15		15	1
+CMP_TAms_mort_turquoise	D2_knn	201		201	1
+CMP_TAms_mort_turquoise	D11_participant_mean	204		204	1
+CMP_TAms_mort_darkred	frozen	1		1	0
+CMP_TAms_mort_darkred	D2_knn	15		15	0
+CMP_TAms_mort_darkred	D11_participant_mean	17		17	0

@@ -1,0 +1,15 @@
+item	dataset	n_subjects	n_samples	source	value	gene	lrt_p	peak_h	pass	reason	dataset_pass	mean_delta	p
+sample_size	GSE39445	24	221	results/stage8/effect_summary.tsv									
+sample_size	GSE56931	14	130	results/stage8/effect_summary.tsv									
+sample_size	GSE113883	11	153	results/stage8/effect_summary.tsv									
+sample_size	GSE48113	22	147	results/stage8/effect_summary.tsv									
+sample_size	GSE122725	11	70	results/stage8/effect_summary.tsv									
+sample_size	GSE295758	58	116	results/stage8/effect_summary.tsv									
+manifest_sha256				results/stage7/preunlock_freeze_check.tsv	f19f79c1988d75e7085a3f570b80a96a2e3350b368335ac80b0ae4fb162120ba								
+freeze_commit_time				8a203ffdc5a5f1e933cd4f64154c0d5972480e32	2026-10-16 16:21:17 +0900								
+f3_rows		8		prereg/frozen/F3.tsv	8								
+gate	GSE48113			results/confirm gate GSE48113		PER1	1.35631359279823e-11	7.39244745511937	TRUE		TRUE		
+gate	GSE48113			results/confirm gate GSE48113		PER3	2.79164389620025e-06	4.93116485780503	TRUE		TRUE		
+gate	GSE122725			results/confirm gate GSE122725		PER1	1.33395937684947e-05	8.62707238405378	FALSE		FALSE		
+gate	GSE122725			results/confirm gate GSE122725		PER3	2.56672604887414e-06	6.37573752707371	FALSE		FALSE		
+gate	GSE295758			results/confirm gate GSE295758		PER1			TRUE		TRUE	0.565581638383806	0.00672475968762667

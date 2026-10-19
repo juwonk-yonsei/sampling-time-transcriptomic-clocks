@@ -1,0 +1,37 @@
+clock	scenario	s	n	fpr
+TAms_chrono	lab	3	20	0.0921749689025298
+TAms_chrono	lab	3	50	0.16495475888083
+TAms_chrono	lab	3	100	0.287597392213601
+TAms_chrono	lab	3	200	0.510960785116913
+TAms_chrono	free-living	3	20	0.0744207319485956
+TAms_chrono	free-living	3	50	0.116159241613777
+TAms_chrono	free-living	3	100	0.187568364077656
+TAms_chrono	free-living	3	200	0.329688542370074
+TAms_chrono	free-living upper	3	20	0.267159905250382
+TAms_chrono	free-living upper	3	50	0.587893341892061
+TAms_chrono	free-living upper	3	100	0.876390625189227
+TAms_chrono	free-living upper	3	200	0.993245844484405
+TAms_mort	lab	3	20	0.0996714581243873
+TAms_mort	lab	3	50	0.185540121244118
+TAms_mort	lab	3	100	0.328504596537995
+TAms_mort	lab	3	200	0.576695372362695
+TAms_mort	free-living	3	20	0.0628869446221191
+TAms_mort	free-living	3	50	0.0846704093412028
+TAms_mort	free-living	3	100	0.121801022888275
+TAms_mort	free-living	3	200	0.197756842529212
+TAms_mort	free-living upper	3	20	0.125953412806379
+TAms_mort	free-living upper	3	50	0.256929956150289
+TAms_mort	free-living upper	3	100	0.46211323527659
+TAms_mort	free-living upper	3	200	0.75492949113348
+RA_default	lab	3	20	0.0713412747987299
+RA_default	lab	3	50	0.107723851162107
+RA_default	lab	3	100	0.169984918325999
+RA_default	lab	3	200	0.295189302972448
+RA_default	free-living	3	20	0.0644950743757666
+RA_default	free-living	3	50	0.0890409718198075
+RA_default	free-living	3	100	0.130935658522455
+RA_default	free-living	3	200	0.216485940366855
+RA_default	free-living upper	3	20	0.0979674076985867
+RA_default	free-living upper	3	50	0.180865661810513
+RA_default	free-living upper	3	100	0.319297635687451
+RA_default	free-living upper	3	200	0.562351289582971

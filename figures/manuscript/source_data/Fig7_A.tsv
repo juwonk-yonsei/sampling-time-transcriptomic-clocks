@@ -1,0 +1,75 @@
+clock	scenario	s	b	b_over_total_sd	unit	annotation	record
+TAms_chrono	lab	0	0	0	score		
+TAms_chrono	lab	1	0.000907335652950247	0.0622847505277641	score		
+TAms_chrono	lab	2	0.00145692251692967	0.100011561554082	score		
+TAms_chrono	lab	3	0.00161130715539329	0.110609413254012	score		
+TAms_chrono	lab	4	0.00135996851036251	0.0933560795479825	score		
+TAms_chrono	lab	6	-0.00026488327193883	-0.0181831149895226	score		
+TAms_chrono	lab	8	-0.00298225510708644	-0.204719184957692	score		
+TAms_chrono	lab	12	-0.00868444723489791	-0.596150529011348	score		
+TAms_chrono	free-living	0	0	0	score		
+TAms_chrono	free-living	1	0.00390725675763172	0.0463057202927115	score		
+TAms_chrono	free-living	2	0.00713803558845414	0.084594358625851	score		
+TAms_chrono	free-living	3	0.00947216425426115	0.112256607571981	score		
+TAms_chrono	free-living	4	0.010750575743808	0.127407330579452	score		
+TAms_chrono	free-living	6	0.00986964324880958	0.11696721460026	score		
+TAms_chrono	free-living	8	0.00473128325407997	0.0560714313337856	score		
+TAms_chrono	free-living	12	-0.0120385849794561	-0.142671798491333	score		
+TAms_chrono	free-living upper	0	0	0	score		
+TAms_chrono	free-living upper	1	0.0113992658304002	0.135095093009633	score		
+TAms_chrono	free-living upper	2	0.020824934276642	0.246800668997442	score		
+TAms_chrono	free-living upper	3	0.0276346616107675	0.327504177562048	score		
+TAms_chrono	free-living upper	4	0.0313643761685627	0.37170580796363	score		
+TAms_chrono	free-living upper	6	0.0287942907321473	0.341247185782077	score		
+TAms_chrono	free-living upper	8	0.0138033302845623	0.163586165668895	score		
+TAms_chrono	free-living upper	12	-0.0351220917680009	-0.416239284589468	score		
+TAms_mort	lab	0	0	0	score		
+TAms_mort	lab	1	0.00335461710855195	0.0542110872379599	score		
+TAms_mort	lab	2	0.00572022399001831	0.0924396292360801	score		
+TAms_mort	lab	3	0.00693560844477734	0.112080414032841	score		
+TAms_mort	lab	4	0.006917944030755	0.111794954602276	score		
+TAms_mort	lab	6	0.00327223200453611	0.0528797322974735	score		
+TAms_mort	lab	8	-0.00424004649537656	-0.0685197514398549	score		
+TAms_mort	lab	12	-0.0223159810522631	-0.360629412084262	score		
+TAms_mort	free-living	0	0	0	score		
+TAms_mort	free-living	1	0.015654412084611	0.0403799945604479	score		
+TAms_mort	free-living	2	0.0274234825872286	0.07073788984956	score		
+TAms_mort	free-living	3	0.0345051688024083	0.0890048454721773	score		
+TAms_mort	free-living	4	0.0364168655176252	0.09393599859019	score		
+TAms_mort	free-living	6	0.024570379097766	0.0633784117189089	score		
+TAms_mort	free-living	8	-0.00494172020300127	-0.0127469900394797	score		
+TAms_mort	free-living	12	-0.0827171714412529	-0.213365977259339	score		
+TAms_mort	free-living upper	0	0	0	score		
+TAms_mort	free-living upper	1	0.037495782063044	0.0967190251260775	score		
+TAms_mort	free-living upper	2	0.065685311012813	0.169432904095206	score		
+TAms_mort	free-living upper	3	0.0826475170367793	0.213186306221005	score		
+TAms_mort	free-living upper	4	0.0872264538257805	0.224997509454518	score		
+TAms_mort	free-living upper	6	0.0588514966181245	0.151805324944156	score		
+TAms_mort	free-living upper	8	-0.011836513741096	-0.0305318627040604	score		
+TAms_mort	free-living upper	12	-0.198125935133753	-0.511058744317157	score		
+RA_default	lab	0	0	0	year		
+RA_default	lab	1	0.518690997396996	0.0444194060831294	year		
+RA_default	lab	2	0.891766677500593	0.0763686788050879	year		
+RA_default	lab	3	1.09380254924844	0.0936705280285436	year		
+RA_default	lab	4	1.11103020186099	0.0951458613215758	year		
+RA_default	lab	6	0.599039088799219	0.0513002166580391	year		
+RA_default	lab	8	-0.507019056407903	-0.0434198501063056	year		
+RA_default	lab	12	-3.23609851653779	-0.277131422855763	year		
+RA_default	lab	3	1.09380254924844			1.1 years	annotation
+RA_default	free-living	0	0	0	year		
+RA_default	free-living	1	0.296701192571716	0.0377243684302333	year		
+RA_default	free-living	2	0.495375245305969	0.0629849786014006	year		
+RA_default	free-living	3	0.582482849833315	0.0740603616754689	year		
+RA_default	free-living	4	0.552087766857339	0.0701957485988764	year		
+RA_default	free-living	6	0.154941490303688	0.0197001899947973	year		
+RA_default	free-living	8	-0.589648560275406	-0.0749714530615154	year		
+RA_default	free-living	12	-2.28347265426549	-0.290334403320784	year		
+RA_default	free-living	3	0.582482849833315			0.6 years	annotation
+RA_default	free-living upper	0	0	0	year		
+RA_default	free-living upper	1	0.535490421583496	0.0680854626150313	year		
+RA_default	free-living upper	2	0.894060103539363	0.11367616170447	year		
+RA_default	free-living upper	3	1.05127311460673	0.133665166467563	year		
+RA_default	free-living upper	4	0.99641564788813	0.126690259263099	year		
+RA_default	free-living upper	6	0.2796405475972	0.0355551757448332	year		
+RA_default	free-living upper	8	-1.06420588805574	-0.135309516819466	year		
+RA_default	free-living upper	12	-4.12124307188773	-0.52399955216513	year		

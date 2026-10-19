@@ -1,0 +1,7 @@
+panel	dataset	clock	n_subjects	n_samples	n_bins	p	peak_h	beta_source
+A	GSE113883	TAms_chrono	11	153	12	2.96936394371969e-10	12.188050742382	results/stage5/h1_point_estimates.tsv
+B	GSE113883	TAms_mort	11	153	12	4.44466652817908e-06	10.0600990696032	results/stage5/h1_point_estimates.tsv
+C	GSE113883	RA_default	11	153	12	3.24675832907807e-05	11.8126319723118	results/stage4/rnaseq/h1_point_estimates.tsv
+D	GSE48113	TAms_chrono	22	147	12	2.70474257565244e-08	10.879869555482	results/confirm/family_P.tsv
+E	GSE48113	TAms_mort	22	147	12	2.67642593880552e-05	11.4858304321163	results/confirm/family_P.tsv
+F	GSE48113	RA_default	22	147	12	0.0125285842066838	11.5918483633937	results/confirm/family_P.tsv

@@ -1,0 +1,73 @@
+clock	scenario	s	n	fpr
+TAms_chrono	lab	0	100	0.0500000000000001
+TAms_chrono	lab	1	100	0.123500360802521
+TAms_chrono	lab	2	100	0.243987431390136
+TAms_chrono	lab	3	100	0.287597392213601
+TAms_chrono	lab	4	100	0.218631450792717
+TAms_chrono	lab	6	100	0.0560759033662722
+TAms_chrono	lab	8	100	0.735043683625658
+TAms_chrono	lab	12	100	0.999999987656793
+TAms_chrono	free-living	0	100	0.0500000000000001
+TAms_chrono	free-living	1	100	0.0725369652298078
+TAms_chrono	free-living	2	100	0.126939048781768
+TAms_chrono	free-living	3	100	0.187568364077656
+TAms_chrono	free-living	4	100	0.228207831988373
+TAms_chrono	free-living	6	100	0.199658881346407
+TAms_chrono	free-living	8	100	0.0832195045568319
+TAms_chrono	free-living	12	100	0.274048265998102
+TAms_chrono	free-living upper	0	100	0.0500000000000001
+TAms_chrono	free-living upper	1	100	0.250712329044246
+TAms_chrono	free-living upper	2	100	0.651397825599452
+TAms_chrono	free-living upper	3	100	0.876390625189227
+TAms_chrono	free-living upper	4	100	0.942692064346363
+TAms_chrono	free-living upper	6	100	0.901112965291502
+TAms_chrono	free-living upper	8	100	0.343722539359023
+TAms_chrono	free-living upper	12	100	0.977334953531161
+TAms_mort	lab	0	100	0.0500000000000001
+TAms_mort	lab	1	100	0.113440374094912
+TAms_mort	lab	2	100	0.239434275920206
+TAms_mort	lab	3	100	0.328504596537995
+TAms_mort	lab	4	100	0.327114973390419
+TAms_mort	lab	6	100	0.110291398402535
+TAms_mort	lab	8	100	0.152603308397877
+TAms_mort	lab	12	100	0.998220675887366
+TAms_mort	free-living	0	100	0.0500000000000001
+TAms_mort	free-living	1	100	0.0644105802961965
+TAms_mort	free-living	2	100	0.0948838465904079
+TAms_mort	free-living	3	100	0.121801022888275
+TAms_mort	free-living	4	100	0.13020134817678
+TAms_mort	free-living	6	100	0.0858860579331722
+TAms_mort	free-living	8	100	0.0514253438738309
+TAms_mort	free-living	12	100	0.462736941880292
+TAms_mort	free-living upper	0	100	0.0500000000000001
+TAms_mort	free-living upper	1	100	0.135156371789253
+TAms_mort	free-living upper	2	100	0.316628701375136
+TAms_mort	free-living upper	3	100	0.46211323527659
+TAms_mort	free-living upper	4	100	0.503245123163426
+TAms_mort	free-living upper	6	100	0.264153289481583
+TAms_mort	free-living upper	8	100	0.0582100766069771
+TAms_mort	free-living upper	12	100	0.993959411876006
+RA_default	lab	0	100	0.0500000000000001
+RA_default	lab	1	100	0.0761162164305704
+RA_default	lab	2	100	0.128871735025222
+RA_default	lab	3	100	0.169984918325999
+RA_default	lab	4	100	0.173898595093265
+RA_default	lab	6	100	0.0849831792441364
+RA_default	lab	8	100	0.0749393544150181
+RA_default	lab	12	100	0.840702615659858
+RA_default	free-living	0	100	0.0500000000000001
+RA_default	free-living	1	100	0.0704809122936988
+RA_default	free-living	2	100	0.108069209549194
+RA_default	free-living	3	100	0.130935658522455
+RA_default	free-living	4	100	0.122506852152566
+RA_default	free-living	6	100	0.0555393348148979
+RA_default	free-living	8	100	0.132993192016735
+RA_default	free-living	12	100	0.898886373312157
+RA_default	free-living upper	0	100	0.0500000000000001
+RA_default	free-living upper	1	100	0.118108114779567
+RA_default	free-living upper	2	100	0.244720873466827
+RA_default	free-living upper	3	100	0.319297635687451
+RA_default	free-living upper	4	100	0.292160280086502
+RA_default	free-living upper	6	100	0.0681711836695155
+RA_default	free-living upper	8	100	0.325851194283827
+RA_default	free-living upper	12	100	0.999947442185748
