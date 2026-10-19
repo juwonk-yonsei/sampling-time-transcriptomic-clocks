@@ -1,0 +1,16 @@
+scenario	clock	n	threshold	smallest_s	status	title
+lab	TAms_chrono	100	0.1	1	exceeds	post hoc
+lab	TAms_mort	100	0.1	1	exceeds	post hoc
+lab	RA_default	100	0.1	2	exceeds	post hoc
+lab	RA_Peters	100	0.1	2	exceeds	post hoc
+lab	RA_GTEx	100	0.1	2	exceeds	post hoc
+free-living	TAms_chrono	100	0.1	2	exceeds	post hoc
+free-living	TAms_mort	100	0.1	3	exceeds	post hoc
+free-living	RA_default	100	0.1	2	exceeds	post hoc
+free-living	RA_Peters	100	0.1	4	exceeds	post hoc
+free-living	RA_GTEx	100	0.1	12	exceeds	post hoc
+free-living upper	TAms_chrono	100	0.1	1	exceeds	post hoc
+free-living upper	TAms_mort	100	0.1	1	exceeds	post hoc
+free-living upper	RA_default	100	0.1	1	exceeds	post hoc
+free-living upper	RA_Peters	100	0.1	3	exceeds	post hoc
+free-living upper	RA_GTEx	100	0.1	2	exceeds	post hoc

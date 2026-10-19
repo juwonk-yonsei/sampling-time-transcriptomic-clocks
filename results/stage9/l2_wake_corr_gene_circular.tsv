@@ -1,0 +1,2 @@
+n_genes	circ_mean_h	circ_sd_h	signed_diff_definition	circ_sd_definition	arntl_source	title
+10	1.69765168037113	5.49841394966151	(peak_wake_corr - peak_gse39445_hours_awake) mod 24, then subtract 24 when the result is greater than 12; range (-12, 12]	sqrt(-2*log(R)) * 24 / (2*pi), R = mean resultant length of the signed differences	L2 symbol BMAL1; GSE39445 symbol ARNTL, hours_awake axis, stage 8 table	post hoc

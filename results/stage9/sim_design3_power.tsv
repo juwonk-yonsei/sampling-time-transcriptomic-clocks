@@ -1,0 +1,21 @@
+scenario	clock	W	n	delta	n_rep	n_reject	n_failed	power	mean_estimate	bias	seed	time_draw	effect	title
+lab	TAms_chrono	0	50	0.00342325913173446	2000	1120	0	0.56	0.00346809829972338	4.48391679889163e-05	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc
+lab	TAms_mort	0	50	0.0135988275094574	2000	1092	0	0.546	0.013540425547066	-5.84019623913225e-05	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc
+lab	RA_default	0	50	3.2508327938958	2000	1126	0	0.563	3.28951210614491	0.0386793122491103	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc
+lab	RA_Peters	0	50	3.6615000484052	2000	1097	0	0.5485	3.67906047567822	0.0175604272730201	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc
+lab	RA_GTEx	0	50	11.446527357556	2000	1138	0	0.569	11.699695272672	0.253167915116043	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc
+lab	TAms_chrono	2	50	0.00342325913173446	2000	1072	0	0.536	0.00343495172760903	1.16925958745752e-05	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc
+lab	TAms_mort	2	50	0.0135988275094574	2000	1076	0	0.538	0.0135255901963005	-7.32373131568809e-05	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc
+lab	RA_default	2	50	3.2508327938958	2000	1091	0	0.5455	3.23135312822552	-0.0194796656702789	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc
+lab	RA_Peters	2	50	3.6615000484052	2000	1092	0	0.546	3.61458208162861	-0.0469179667765909	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc
+lab	RA_GTEx	2	50	11.446527357556	2000	1104	0	0.552	11.5982867974976	0.151759439941641	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc
+lab	TAms_chrono	4	50	0.00342325913173446	2000	1041	0	0.5205	0.00337586315070141	-4.73959810330495e-05	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc
+lab	TAms_mort	4	50	0.0135988275094574	2000	1065	0	0.5325	0.0133797359600323	-0.000219091549425118	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc
+lab	RA_default	4	50	3.2508327938958	2000	1072	0	0.536	3.21634535436132	-0.0344874395344781	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc
+lab	RA_Peters	4	50	3.6615000484052	2000	1069	0	0.5345	3.62836081353738	-0.0331392348678246	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc
+lab	RA_GTEx	4	50	11.446527357556	2000	1089	0	0.5445	11.5700792214264	0.123551863870455	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc
+lab	TAms_chrono	8	50	0.00342325913173446	2000	1048	0	0.524	0.00340600792475218	-1.72512069822784e-05	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc
+lab	TAms_mort	8	50	0.0135988275094574	2000	1089	0	0.5445	0.0136335692839545	3.47417744971188e-05	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc
+lab	RA_default	8	50	3.2508327938958	2000	1106	0	0.553	3.28196342198294	0.0311306280871482	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc
+lab	RA_Peters	8	50	3.6615000484052	2000	1034	0	0.517	3.64157541834391	-0.0199246300612885	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc
+lab	RA_GTEx	8	50	11.446527357556	2000	1078	0	0.539	11.2763638696472	-0.170163487908811	20261019	independent Uniform(8, 8+W)	delta added to the post sample	post hoc

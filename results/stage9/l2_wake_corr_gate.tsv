@@ -1,0 +1,3 @@
+gene	n_samples	n_subjects	peak_relclock	peak_wake_corr	in_prereg_window	window_rule	lrt_p_relclock	lrt_p_wake_corr	lrt_stat_relclock	lrt_stat_wake_corr	lrt_p_difference	lrt_p_below_0.01	prereg_gate_pass	title
+PER1	70	11	8.62707238405378	0.627072384054571	TRUE	peak >= 18 or peak <= 2, the preregistered 18-26 h window modulo 24	1.33395937684947e-05	1.33395937684951e-05	22.4495479401546	22.4495479401545	3.79470760369927e-19	TRUE	TRUE	post hoc
+PER3	70	11	6.37573752707371	22.3757375270708	TRUE	peak >= 18 or peak <= 2, the preregistered 18-26 h window modulo 24	2.56672604887414e-06	2.56672604887414e-06	25.7457587642308	25.7457587642308	0	TRUE	TRUE	post hoc
