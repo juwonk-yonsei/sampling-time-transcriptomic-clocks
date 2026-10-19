@@ -1,0 +1,11 @@
+figure	panel	n_subjects	n_samples	role	source
+Fig2	GSE113883 TAms_chrono	11	153	development	results/stage5/clock_scores.tsv; results/stage4/rnaseq/clock_scores.tsv; results/stage3/GSE113883_samples.tsv
+Fig2	GSE113883 TAms_mort	11	153	development	results/stage5/clock_scores.tsv; results/stage4/rnaseq/clock_scores.tsv; results/stage3/GSE113883_samples.tsv
+Fig2	GSE113883 RA_default	11	153	development	results/stage5/clock_scores.tsv; results/stage4/rnaseq/clock_scores.tsv; results/stage3/GSE113883_samples.tsv
+Fig2	L1 Day 1 TAms_chrono	22	147	confirmation	results/confirm/L1/tage_scores.tsv; results/confirm/L1/ra_scores.tsv; results/confirm/L1/samples_scoring.tsv; results/confirm/family_P.tsv
+Fig2	L1 Day 1 TAms_mort	22	147	confirmation	results/confirm/L1/tage_scores.tsv; results/confirm/L1/ra_scores.tsv; results/confirm/L1/samples_scoring.tsv; results/confirm/family_P.tsv
+Fig2	L1 Day 1 RA_default	22	147	confirmation	results/confirm/L1/tage_scores.tsv; results/confirm/L1/ra_scores.tsv; results/confirm/L1/samples_scoring.tsv; results/confirm/family_P.tsv
+Fig3A	2A/sigma and d	GSE39445:24/221; GSE56931:14/130; GSE113883:11/153; L2:11/70; L1:22/147; L3:58/116	subjects/samples in n_subjects	mixed	results/stage8/effect_summary.tsv
+Fig3B	primary peaks, L2 omitted	GSE39445:24/221; GSE56931:14/130; GSE113883:11/153; L1:22/147; L3:58/116	subjects/samples in n_subjects	mixed	prereg/frozen/F1.tsv; results/stage8/effect_summary.tsv
+Fig4	p_med and cell peaks	GSE39445 24/221; GSE56931 14/130; GSE113883 11/153; L1 H2 146 samples	subjects/samples in n_subjects	development and confirmation	results/stage5/projection_ci.tsv; results/stage3/h2/projection_ci.tsv; results/stage4/rnaseq/projection_ci.tsv; results/confirm/h2.tsv; results/stage2/h2_population_cosinor.tsv; results/stage4/rnaseq/h2_population_cosinor.tsv
+Fig5	F3	L1 22; L3 58	L1 147; L3 116	confirmation and post hoc	prereg/frozen/F3.tsv; results/confirm/s4.tsv; results/stage8/l1_f3_d11_model_m.tsv

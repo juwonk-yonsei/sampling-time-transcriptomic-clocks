@@ -1,0 +1,30 @@
+title	block	dataset	gene	lrt_p	peak_h	pass	reason	dataset_pass	mean_delta	p	clock	n_subjects	n_samples	two_a_over_sigma	ratio_p025	ratio_p975	r2_within	r2_p025	r2_p975	peak_center	peak_halfwidth_95	q_holm	decision	ci_low	ci_high	d	n_significant	n_gate_fail	phi_bar	circ_dist	within_3h	predicted_sign	observed_sign	sign_agrees
+Table 2. Confirmation results (post hoc, exploratory)	gate	L1	PER1	1.35631359279823e-11	7.39244745511937	TRUE		TRUE																										
+Table 2. Confirmation results (post hoc, exploratory)	gate	L1	PER3	2.79164389620025e-06	4.93116485780503	TRUE		TRUE																										
+Table 2. Confirmation results (post hoc, exploratory)	gate	L2	PER1	1.33395937684947e-05	8.62707238405378	FALSE		FALSE																										
+Table 2. Confirmation results (post hoc, exploratory)	gate	L2	PER3	2.56672604887414e-06	6.37573752707371	FALSE		FALSE																										
+Table 2. Confirmation results (post hoc, exploratory)	gate	L3	PER1			TRUE		TRUE	0.565581638383806	0.00672475968762667																								
+Table 2. Confirmation results (post hoc, exploratory)	family_P	L1			10.879869555482					2.70474257565244e-08	TAms_chrono	22	147	1.47644030704959	1.03384190558836	2.03769515562535	0.239604998243655	0.133334366044785	0.377239951848059	10.855130663467	1.31149483591321	1.62284554539147e-07	significant											
+Table 2. Confirmation results (post hoc, exploratory)	family_P	L1			11.4858304321163					2.67642593880552e-05	TAms_mort	22	147	1.1381830590621	0.700981308705566	1.76922760462403	0.156244931376745	0.0679705423411425	0.305423320613559	11.4467106578545	2.03534016526948	0.000133821296940276	significant											
+Table 2. Confirmation results (post hoc, exploratory)	family_P	L1			11.5918483633937					0.0125285842066838	RA_default	22	147	0.716426862045517	0.315800747882794	1.31329139603625	0.066357183458594	0.0136587510552551	0.20321009677178	11.5611538419167	2.79211694956184	0.0501143368267352	not significant											
+Table 2. Confirmation results (post hoc, exploratory)	family_P	L2									TAms_chrono												gate fail											
+Table 2. Confirmation results (post hoc, exploratory)	family_P	L2									TAms_mort												gate fail											
+Table 2. Confirmation results (post hoc, exploratory)	family_P	L2									RA_default												gate fail											
+Table 2. Confirmation results (post hoc, exploratory)	family_P	L3							0.0120385849794561	0.300740570646651	TAms_chrono	58	116									0.313371939587432	not significant	-0.0110449218090888	0.0351220917680009	0.137127542568716								
+Table 2. Confirmation results (post hoc, exploratory)	family_P	L3							0.0827171714412529	0.156685969793716	TAms_mort	58	116									0.313371939587432	not significant	-0.0326915922512471	0.198125935133753	0.188455112293294								
+Table 2. Confirmation results (post hoc, exploratory)	family_P	L3							2.28347265426549	0.0157896851797883	RA_default	58	116									0.0501143368267352	not significant	0.445702236643247	4.12124307188773	0.326704860352489								
+Table 2. Confirmation results (post hoc, exploratory)	replication										TAms_chrono												not replicated				1	1						
+Table 2. Confirmation results (post hoc, exploratory)	replication										TAms_mort												not replicated				1	1						
+Table 2. Confirmation results (post hoc, exploratory)	replication										RA_default												not replicated				0	1						
+Table 2. Confirmation results (post hoc, exploratory)	h1_secondary	L1			10.879869555482						TAms_chrono																		12.616768998085	1.736899442603	TRUE			
+Table 2. Confirmation results (post hoc, exploratory)	h1_secondary	L3									TAms_chrono																					+	+	TRUE
+Table 2. Confirmation results (post hoc, exploratory)	h1_secondary	L1			11.4858304321163						TAms_mort																		11.8599407935094	0.374110361393063	TRUE			
+Table 2. Confirmation results (post hoc, exploratory)	h1_secondary	L3									TAms_mort																					+	+	TRUE
+Table 2. Confirmation results (post hoc, exploratory)	h1_secondary	L1			11.5918483633937						RA_default																		11.2423863477089	0.349462015684843	TRUE			
+Table 2. Confirmation results (post hoc, exploratory)	h1_secondary	L3									RA_default																					+	+	TRUE
+Table 2. Confirmation results (post hoc, exploratory)	family_S1	L1			3.52591635753771					0.0131608178088439	RA_Peters	22	147	0.72926928693365	0.282409354356446	1.30560038410114	0.0671837397484756	0.0111381513630943	0.185619898185969	3.66899071507773	2.95933916983926	0.0526432712353756	not significant											
+Table 2. Confirmation results (post hoc, exploratory)	family_S1	L1			16.2142152061473					0.214719525083053	RA_GTEx	22	147	0.422296335991481	0.135450842918859	0.961108073220587	0.0245786114049672	0.0025435807168417	0.115501532769887	16.2659536981038	5.36702827578855	0.429439050166105	not significant											
+Table 2. Confirmation results (post hoc, exploratory)	family_S1	L2									RA_Peters												gate fail											
+Table 2. Confirmation results (post hoc, exploratory)	family_S1	L2									RA_GTEx												gate fail											
+Table 2. Confirmation results (post hoc, exploratory)	family_S1	L3							2.86233409356227	0.047803206296958	RA_Peters	58	116									0.143409618890874	not significant	0.0286509268443877	5.69601726028016	0.265595107143803								
+Table 2. Confirmation results (post hoc, exploratory)	family_S1	L3							0.713702823968326	0.477486960820646	RA_GTEx	58	116									0.477486960820646	not significant	-1.2849450811811	2.71235072911775	0.0938927716485764								

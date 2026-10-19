@@ -1,0 +1,9 @@
+title	dataset	role	description	tissue	n_participants	n_samples	design	time_axis
+Table 1. Datasets (post hoc, exploratory)	GSE39445	development	Agilent microarray, leukocytes, extended wakefulness	leukocytes	24	221	repeated measures	clock_time_h
+Table 1. Datasets (post hoc, exploratory)	GSE56931	development	Affymetrix microarray, whole blood, baseline control	whole blood	14	130	repeated measures	clock_time_h
+Table 1. Datasets (post hoc, exploratory)	GSE113883	development	RNA-seq TPM, whole blood, sampling every 2 h	whole blood	11	153	repeated measures	clock_time_h
+Table 1. Datasets (post hoc, exploratory)	GSE48113	confirmation L1	Microarray GPL15331, forced desynchrony, Day 1	leukocytes	22	147	repeated measures	clock_time_h
+Table 1. Datasets (post hoc, exploratory)	GSE122725	confirmation L2, gate fail	Microarray GPL24324, period 1 day-oriented schedule	PBMC	11	70	repeated measures	wake_ref_h %% 24
+Table 1. Datasets (post hoc, exploratory)	GSE295758	confirmation L3	RNA-seq raw counts, morning and evening	whole blood	58	116	paired	morning 8.0, evening 20.0
+Table 1. Datasets (post hoc, exploratory)	GSE196728	excluded	RNA-seq. Sea-level control subset. Decision 4.3 excludes it from later analyses.	whole blood	8	48	repeated measures	clock_time_h: 2, 6, 10, 14, 18, 22
+Table 1. Datasets (post hoc, exploratory)	GSE150337	held	RNA-seq. Decision 3.2.GSE150337: not opened.	확인 못 함	확인 못 함	확인 못 함	확인 못 함	확인 못 함

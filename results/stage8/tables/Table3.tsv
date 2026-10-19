@@ -1,0 +1,32 @@
+title	block	p_med	lrt_p	two_a	p_med_p025	p_med_p975	dataset	clock	n_dropped	n_samples	decision	age_coef	age_p	n	ci_low	ci_high	direction	p	q_holm	lrt_stat	converged	reml_converged	mean_difference	c	c_numeric	mean_delta	mean_delta_minus_c	ratio	l3_significant	n_subjects	peak_h	confirmed	circ_dist	phi_bar	observed_sign	predicted_sign	d_exp_median	sign_agrees	n_confirmed	n_f3
+Table 3. Secondary hypotheses (post hoc, exploratory)	H2	0.457228366383518	2.41897966602237e-08	0.0120084580513382	0.172340120664341	0.712303720087498	L1	TAms_chrono	1	146	supported																													
+Table 3. Secondary hypotheses (post hoc, exploratory)	H2	1.04559654136252	3.24731259384485e-05	0.0361347645463202	0.646579898044605	1.40568236076452	L1	TAms_mort	1	146	supported																													
+Table 3. Secondary hypotheses (post hoc, exploratory)	H3							TAms_chrono			not significant	-0.00637449895696949	0.450198895779863	58	-0.0231818913377684	0.0104328934238295	-	0.450198895779863	1																					
+Table 3. Secondary hypotheses (post hoc, exploratory)	H3							TAms_mort			not significant	-0.0178521222339094	0.673095298812265	58	-0.102250942349652	0.0665466978818336	-	0.673095298812265	1																					
+Table 3. Secondary hypotheses (post hoc, exploratory)	H3							RA_default			not significant	-0.467466723286264	0.48209655938365	58	-1.7919373596678	0.857003913095277	-	0.48209655938365	1																					
+Table 3. Secondary hypotheses (post hoc, exploratory)	H4		0.0209648522603376				L1	TAms_chrono			not significant							0.0209648522603376	0.0628945567810128	7.72981589070241	TRUE	TRUE	0.000307361838231626																	
+Table 3. Secondary hypotheses (post hoc, exploratory)	H4		0.0583547298006714				L1	TAms_mort			not significant							0.0583547298006714	0.116709459601343	5.68242972879443	TRUE	TRUE	0.00530602444996918																	
+Table 3. Secondary hypotheses (post hoc, exploratory)	H4		0.938612225353535				L1	RA_default			not significant							0.938612225353535	0.938612225353535	0.126705701224637	TRUE	TRUE	1.30859604147651																	
+Table 3. Secondary hypotheses (post hoc, exploratory)	H4						L2	TAms_chrono			gate fail																													
+Table 3. Secondary hypotheses (post hoc, exploratory)	H4						L2	TAms_mort			gate fail																													
+Table 3. Secondary hypotheses (post hoc, exploratory)	H4						L2	RA_default			gate fail																													
+Table 3. Secondary hypotheses (post hoc, exploratory)	H5							TAms_chrono			not calibrated				-0.0301702220073491	0.0159967915697406								0.019125300198260260499475555777287663859727086340733	0.0191253001982603	0.0120385849794561	-0.00708671521880421	0.629458615271887	FALSE											
+Table 3. Secondary hypotheses (post hoc, exploratory)	H5							TAms_mort			not calibrated				-0.120695167603389	0.110122359781611								0.088003575352142004086395806850464311947738779118951	0.088003575352142	0.0827171714412529	-0.00528640391088912	0.939929668882931	FALSE											
+Table 3. Secondary hypotheses (post hoc, exploratory)	H5							RA_default			not calibrated				-3.2227970955387	0.452743739705789								3.6684993321819421764583897146097149703131816543407	3.66849933218194	2.28347265426549	-1.38502667791645	0.622454155636259	FALSE											
+Table 3. Secondary hypotheses (post hoc, exploratory)	S4			0.0390746756069444			L1	TM_turquoise_mortality		147								0.00164866962432351												22	21.7889728924429	FALSE	10.2165716930187	11.5724011994242						
+Table 3. Secondary hypotheses (post hoc, exploratory)	S4			0			L1	CMP_TAms_chrono_brown		147																				22	0	FALSE	1.32505139804729	1.32505139804729						
+Table 3. Secondary hypotheses (post hoc, exploratory)	S4			0.00297698520908832			L1	CMP_TAms_chrono_orange		147								9.888135840689e-09												22	2.77928506086391	TRUE	1.70595743343867	1.07332762742524						
+Table 3. Secondary hypotheses (post hoc, exploratory)	S4			0			L1	CMP_TAms_chrono_red		147																				22	0	FALSE	0.781691026210673	0.781691026210673						
+Table 3. Secondary hypotheses (post hoc, exploratory)	S4			0.000401168491997726			L1	CMP_TAms_chrono_turquoise		147								0.355877614252857												22	20.5994829668058	FALSE	7.31575012524486	13.2837328415609						
+Table 3. Secondary hypotheses (post hoc, exploratory)	S4			0.000158800838647645			L1	CMP_TAms_chrono_yellow		147								8.37244837103072e-07												22	3.03741437413107	FALSE	9.57541254212653	12.6128269162576						
+Table 3. Secondary hypotheses (post hoc, exploratory)	S4			0.000591230920396307			L1	CMP_TAms_mort_darkred		147								0.0400291314216308												22	3.04307785612592	FALSE	11.9235817936314	14.9666596497573						
+Table 3. Secondary hypotheses (post hoc, exploratory)	S4			0.00608539245989998			L1	CMP_TAms_mort_turquoise		147								4.63877250086027e-07												22	0.523167710801014	FALSE	11.519356560875	13.003811149926						
+Table 3. Secondary hypotheses (post hoc, exploratory)	S4						L3	TM_turquoise_mortality										0.0367459632068223								0.18561858764589				58					+	+	0.467000081226947	TRUE		
+Table 3. Secondary hypotheses (post hoc, exploratory)	S4						L3	CMP_TAms_chrono_brown										0.543751743051306								-0.0003247132009814				58					-	-	-0.168830899708354			
+Table 3. Secondary hypotheses (post hoc, exploratory)	S4						L3	CMP_TAms_chrono_orange										0.0383882761729438								-0.000825802934541766				58					-	-	-0.280140424913859	TRUE		
+Table 3. Secondary hypotheses (post hoc, exploratory)	S4						L3	CMP_TAms_chrono_red										0.967330930103839								5.55046917861069e-06				58					+	-	-0.169417336437209			
+Table 3. Secondary hypotheses (post hoc, exploratory)	S4						L3	CMP_TAms_chrono_turquoise										0.0686526251496304								0.00514397164720193				58					+	+	0.20086732450169	TRUE		
+Table 3. Secondary hypotheses (post hoc, exploratory)	S4						L3	CMP_TAms_chrono_yellow										0.953453644653339								-3.30195431830906e-05				58					-	+	0.1496592336641			
+Table 3. Secondary hypotheses (post hoc, exploratory)	S4						L3	CMP_TAms_mort_darkred										0.762045749116664								0.00107588556555147				58					+	-	-0.167328334678284			
+Table 3. Secondary hypotheses (post hoc, exploratory)	S4						L3	CMP_TAms_mort_turquoise										0.647755299503364								0.0040473650870528				58					+	+	0.1888870282562			
+Table 3. Secondary hypotheses (post hoc, exploratory)	S4_L1_count																																						1	8
