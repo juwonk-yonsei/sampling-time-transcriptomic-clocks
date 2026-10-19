@@ -1,0 +1,7 @@
+file	converter	exit_status	pages	note	title
+results/stage8/tables/Table1.docx	LibreOffice 7.3 soffice --headless --convert-to pdf	0	2	PDF written. pdftotext shows the title and dataset ids. Cell text wraps across lines. Warning: failed to launch javaldx.	post hoc
+results/stage8/tables/Table2.docx	LibreOffice 7.3 soffice --headless --convert-to pdf	0	32	PDF written. Warning: failed to launch javaldx.	post hoc
+results/stage8/tables/Table3.docx	LibreOffice 7.3 soffice --headless --convert-to pdf	0	34	PDF written. Warning: failed to launch javaldx.	post hoc
+results/stage8/tables/TableS1.docx	LibreOffice 7.3 soffice --headless --convert-to pdf	0	7	PDF written. Warning: failed to launch javaldx.	post hoc
+results/stage8/tables/TableS2.docx	LibreOffice 7.3 soffice --headless --convert-to pdf	0	36	PDF written. Warning: failed to launch javaldx.	post hoc
+results/stage8/tables/TableS3.docx	LibreOffice 7.3 soffice --headless --convert-to pdf	0	2	PDF written. Warning: failed to launch javaldx.	post hoc
