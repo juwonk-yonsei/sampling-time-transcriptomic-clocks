@@ -1,0 +1,2 @@
+gene	n_samples	n_subjects	peak_h	lrt_p	status	alias_of	title
+BMAL1	70	11	21.3692664519028	0.00925089859203897	fit	ARNTL	L2 BMAL1 used as ARNTL post hoc, exploratory

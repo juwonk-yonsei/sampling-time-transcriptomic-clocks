@@ -1,0 +1,6 @@
+clock	n_pairs	d	d_p025	d_p975	d_exp_median	d_GSE113883	predicted_sign	power_alpha_0.05	power_definition	title
+TAms_chrono	58	0.137127542568716	-0.134951777137601	0.423111690763127	0.208443813199012	0.534281736707176	+	0.176777740279187	paired t, df=n-1, ncp=d*sqrt(n), two-sided alpha=0.05	L3 observed d and development prediction post hoc, exploratory
+TAms_mort	58	0.188455112293294	-0.072646855125881	0.472594447464266	0.291250817026961	0.693084284817919	+	0.291920013796665	paired t, df=n-1, ncp=d*sqrt(n), two-sided alpha=0.05	L3 observed d and development prediction post hoc, exploratory
+RA_default	58	0.326704860352488	0.0837673566577421	0.60081434729321	0.412448894924069	0.412448894924069	+	0.686538271492044	paired t, df=n-1, ncp=d*sqrt(n), two-sided alpha=0.05	L3 observed d and development prediction post hoc, exploratory
+RA_Peters	58	0.265595107143801	0.0142213143420831	0.523158041348489	0.286305297017999	0.197988187071947	+	0.511452502493332	paired t, df=n-1, ncp=d*sqrt(n), two-sided alpha=0.05	L3 observed d and development prediction post hoc, exploratory
+RA_GTEx	58	0.0938927716485769	-0.171819370151669	0.350465488181871	0.0799546478017167	0.308963171982023	+	0.108269826724681	paired t, df=n-1, ncp=d*sqrt(n), two-sided alpha=0.05	L3 observed d and development prediction post hoc, exploratory

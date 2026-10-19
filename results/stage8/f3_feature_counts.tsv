@@ -1,0 +1,25 @@
+version	clock	n_entered	title
+frozen	TM_turquoise_mortality	14	post hoc, exploratory
+frozen	CMP_TAms_chrono_turquoise	4	post hoc, exploratory
+frozen	CMP_TAms_chrono_yellow	1	post hoc, exploratory
+frozen	CMP_TAms_chrono_orange	1	post hoc, exploratory
+frozen	CMP_TAms_chrono_brown	0	post hoc, exploratory
+frozen	CMP_TAms_chrono_red	0	post hoc, exploratory
+frozen	CMP_TAms_mort_turquoise	15	post hoc, exploratory
+frozen	CMP_TAms_mort_darkred	1	post hoc, exploratory
+D2_knn	TM_turquoise_mortality	200	post hoc, exploratory
+D2_knn	CMP_TAms_chrono_turquoise	58	post hoc, exploratory
+D2_knn	CMP_TAms_chrono_yellow	5	post hoc, exploratory
+D2_knn	CMP_TAms_chrono_orange	4	post hoc, exploratory
+D2_knn	CMP_TAms_chrono_brown	5	post hoc, exploratory
+D2_knn	CMP_TAms_chrono_red	1	post hoc, exploratory
+D2_knn	CMP_TAms_mort_turquoise	201	post hoc, exploratory
+D2_knn	CMP_TAms_mort_darkred	15	post hoc, exploratory
+D11_participant_mean	TM_turquoise_mortality	202	post hoc, exploratory
+D11_participant_mean	CMP_TAms_chrono_turquoise	58	post hoc, exploratory
+D11_participant_mean	CMP_TAms_chrono_yellow	7	post hoc, exploratory
+D11_participant_mean	CMP_TAms_chrono_orange	4	post hoc, exploratory
+D11_participant_mean	CMP_TAms_chrono_brown	6	post hoc, exploratory
+D11_participant_mean	CMP_TAms_chrono_red	1	post hoc, exploratory
+D11_participant_mean	CMP_TAms_mort_turquoise	204	post hoc, exploratory
+D11_participant_mean	CMP_TAms_mort_darkred	17	post hoc, exploratory

@@ -1,0 +1,11 @@
+gene	peak_l2	peak_gse39445	signed_diff_h	circ_dist_0_12	status_l2	status_gse39445	title
+PER1	8.62707238405378	22.7776132062867	9.84945917776708	9.84945917776708	fit	fit	clock-gene peaks with BMAL1 alias post hoc, exploratory
+PER2	6.79757027981186	20.7330572724929	10.064513007319	10.064513007319	fit	fit	clock-gene peaks with BMAL1 alias post hoc, exploratory
+PER3	6.37573752707371	21.9104219255107	8.46531560156301	8.46531560156301	fit	fit	clock-gene peaks with BMAL1 alias post hoc, exploratory
+NR1D1	2.3535171570863	17.7523074513839	8.6012097057024	8.6012097057024	fit	fit	clock-gene peaks with BMAL1 alias post hoc, exploratory
+NR1D2	4.27036636255108	19.5452527557332	8.72511360681788	8.72511360681788	fit	fit	clock-gene peaks with BMAL1 alias post hoc, exploratory
+ARNTL	21.3692664519028	7.37049546630091	-10.0012290143981	10.0012290143981	fit	fit	clock-gene peaks with BMAL1 alias post hoc, exploratory
+CRY1	16.9670687601859	20.3669852307156	-3.3999164705297	3.3999164705297	fit	fit	clock-gene peaks with BMAL1 alias post hoc, exploratory
+CRY2	11.670746575917	18.5308484498846	-6.8601018739676	6.8601018739676	fit	fit	clock-gene peaks with BMAL1 alias post hoc, exploratory
+DBP	3.765806949343	4.06024592076617	-0.294438971423169	0.29443897142317	fit	fit	clock-gene peaks with BMAL1 alias post hoc, exploratory
+TEF	22.8844839167054	17.4419627275353	5.4425211891701	5.4425211891701	fit	fit	clock-gene peaks with BMAL1 alias post hoc, exploratory
