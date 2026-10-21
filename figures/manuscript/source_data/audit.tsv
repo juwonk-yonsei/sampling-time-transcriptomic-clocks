@@ -1,12 +1,12 @@
-stem	n_text	text_overlap	outside	leader_text	leader_point	leader_cross	leader_foreign	axes_text	ylabel_gap_mm	leader_cross_detail	leader_foreign_detail	axes_text_detail	line_text	line_text_detail	data_outside	intentional_clip	text_marker	legend_data	min_fontsize	alpha_not_1	text_overlap_detail	outside_detail	leader_text_detail	leader_point_detail	data_outside_detail	text_marker_detail	pdf_clip	pdf_clip_detail
-Fig1_design	15	0	0	0	0	0	0	0					0		0	0	0	0	8.0	0							0	
-Fig2_trajectories	100	0	0	0	0	0	0	0	9.92				0		0	0	0	0	8.0	0							0	
-Fig3_effects	67	0	0	0	0	0	0	0					0		0	0	0	0	8.0	0							0	
-Fig4_composition	43	0	0	0	0	0	0	0					0		0	5	0	0	8.0	0							0	
-Fig5_modules	143	0	0	0	0	0	0	0					0		0	0	0	0	8.0	0							0	
-Fig6_public	86	0	0	0	1	0	0	0	10.08				0		0	0	0	0	8.0	0				286,761			0	
-Fig7_bias	98	0	0	0	0	0	0	0	9.42				0		0	0	0	0	8.0	0							0	
-Fig8_mitigation	96	0	0	0	0	0	0	0	5.60				0		0	0	0	0	8.0	0							0	
-FigS1_effects_secondary	50	0	0	0	0	0	0	0					0		0	0	0	0	8.0	0							0	
-FigS2_bias_secondary	95	0	0	0	0	0	0	0	9.42				0		0	0	0	0	8.0	0							0	
-FigS3_mitigation_secondary	65	0	0	0	0	0	0	0	21.39				0		0	0	0	0	8.0	0							0	
+stem	n_text	text_overlap	outside	leader_text	leader_point	leader_cross	leader_foreign	axes_text	text_geom	text_geom_detail	ylabel_gap_mm	leader_cross_detail	leader_foreign_detail	axes_text_detail	line_text	line_text_detail	data_outside	intentional_clip	text_marker	legend_data	min_fontsize	alpha_not_1	text_overlap_detail	outside_detail	leader_text_detail	leader_point_detail	data_outside_detail	text_marker_detail	pdf_clip	pdf_clip_detail
+Fig1_design	15	0	0	0	0	0	0	0	0						0		0	0	0	0	8.0	0							0	
+Fig2_trajectories	100	0	0	0	0	0	0	0	0		2.58				0		0	0	0	0	8.0	0							0	
+Fig3_effects	67	0	0	0	0	0	0	0	0						0		0	0	0	0	8.0	0							0	
+Fig4_composition	43	0	0	0	0	0	0	0	0						0		0	5	0	0	8.0	0							0	
+Fig5_modules	143	0	0	0	0	0	0	0	0						0		0	0	0	0	8.0	0							0	
+Fig6_public	86	0	0	0	1	0	0	0	0		10.08				0		0	0	0	0	8.0	0				286,761			0	
+Fig7_bias	98	0	0	0	0	0	0	0	0		9.42				0		0	0	0	0	8.0	0							0	
+Fig8_mitigation	96	0	0	0	0	0	0	0	0		5.60				0		0	0	0	0	8.0	0							0	
+FigS1_effects_secondary	50	0	0	0	0	0	0	0	0						0		0	0	0	0	8.0	0							0	
+FigS2_bias_secondary	95	0	0	0	0	0	0	0	0		9.42				0		0	0	0	0	8.0	0							0	
+FigS3_mitigation_secondary	65	0	0	0	0	0	0	0	0		21.39				0		0	0	0	0	8.0	0							0	

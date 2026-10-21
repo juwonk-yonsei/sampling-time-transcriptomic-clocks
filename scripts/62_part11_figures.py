@@ -393,9 +393,9 @@ def fig1():
 
 def fig2():
     letters = ["A", "B", "C", "D", "E", "F"]
-    fig = new_fig(172)
+    fig = new_fig(142)
     axes = fig.subplots(2, 3)
-    fig.subplots_adjust(left=0.16, right=0.97, top=0.84, bottom=0.08, hspace=0.90, wspace=0.85)
+    fig.subplots_adjust(left=0.16, right=0.97, top=0.892, bottom=0.088, hspace=0.38, wspace=0.52)
     summary = []
     for i, letter in enumerate(letters):
         ax = axes.flat[i]
@@ -423,6 +423,8 @@ def fig2():
         ax.text(0.03, 0.97, letter.lower(), transform=ax.transAxes, fontsize=10, fontweight="bold", va="top", ha="left", zorder=6)
         ax.set_xlim(0, 24)
         ax.set_xticks([0, 6, 12, 18, 24])
+        if i == 0:
+            ax.set_yticks([-0.075, -0.050, -0.025, 0.000, 0.025, 0.050, 0.075, 0.100])
         ax.set_ylabel("Centered estimate (years)" if clock == "RA_default" else "Centered score")
         if i >= 3:
             ax.set_xlabel("Clock time (h)")
@@ -434,7 +436,7 @@ def fig2():
         summary.append({"panel": letter, "dataset": dataset, "clock": clock, "n_subjects": whole(ann.n_subjects), "n_samples": whole(ann.n_samples), "n_bins": whole(ann.n_bins), "p": ann.p, "peak_h": ann.peak_h, "beta_source": ann.beta_source})
     for row, text in ((0, "GSE113883 (development)"), (1, "GSE48113 Day 1 (confirmation)")):
         pos = axes[row, 0].get_position()
-        fig.text(pos.x0, pos.y1 + 0.078, text, fontsize=9, fontweight="bold", ha="left", va="bottom")
+        fig.text(pos.x0, pos.y1 + 0.058, text, fontsize=9, fontweight="bold", ha="left", va="bottom")
     write_src(pd.DataFrame(summary), "Fig2_summary.tsv")
     return fig
 
@@ -715,20 +717,18 @@ def fig6():
     grid = np.linspace(lo, hi, 60)
     ax.fill_between(grid, grid - 2, grid + 2, color="#E6E6E6", zorder=0)
     ax.plot(grid, grid, color="black", lw=0.6, zorder=1)
-    # Right-hand names follow the target (publication) y order so leaders do not cross.
-    # PER2 sits just left of PER3, so a right-hand leader crosses PER3; keep that name beside its point.
+    # Right-hand names follow the target y order. PER2 sits between PER1 and PER3.
+    # Its leader goes up, then right, so the horizontal leg clears the PER3 diamond.
     target_y = {row.gene: num(row.y_corrected) for _, row in a.iterrows()}
-    right = ["CRY2", "PER1", "PER3", "NR1D2", "NR1D1", "CRY1"]
-    right = sorted(right, key=lambda gene: -target_y[gene])
     gap = 2.3
-    label_y = {right[0]: target_y[right[0]]}
-    for prev, gene in zip(right, right[1:]):
-        label_y[gene] = min(target_y[gene], label_y[prev] - gap)
-    name_xy = {gene: (28.0, label_y[gene]) for gene in right}
-    name_ha = {gene: "left" for gene in right}
-    per2_x = num(one(a, gene="PER2").x_gse39445)
-    name_xy["PER2"] = (per2_x - 0.4, target_y["PER2"])
-    name_ha["PER2"] = "right"
+    per2_label_y = (target_y["PER3"] + target_y["PER1"]) / 2
+    label_y = {"PER2": per2_label_y, "PER1": per2_label_y + gap, "CRY2": target_y["CRY2"]}
+    y = per2_label_y
+    for gene in ("PER3", "NR1D2", "NR1D1", "CRY1"):
+        y = min(target_y[gene], y - gap)
+        label_y[gene] = y
+    name_xy = {gene: (28.0, label_y[gene]) for gene in label_y}
+    name_ha = {gene: "left" for gene in label_y}
     name_xy["TEF"] = (10.5, 16.6)
     name_xy["ARNTL"] = (10.5, 13.4)
     name_xy["DBP"] = (8.5, -4.2)
@@ -741,7 +741,10 @@ def fig6():
         filled = row.filled == "True"
         ax.plot([x], [y1], linestyle="None", marker="D", ms=4.5, zorder=3, **style_open(not filled, "#CC79A7"))
         lx, ly = name_xy[row.gene]
-        ax.annotate(row.gene, xy=(x, y1), xytext=(lx, ly), fontsize=8, ha=name_ha[row.gene], va="center", arrowprops={"arrowstyle": "-", "color": "0.45", "lw": 0.5})
+        arrowprops = {"arrowstyle": "-", "color": "0.45", "lw": 0.5}
+        if row.gene == "PER2":
+            arrowprops["connectionstyle"] = "angle,angleA=180,angleB=90,rad=0"
+        ax.annotate(row.gene, xy=(x, y1), xytext=(lx, ly), fontsize=8, ha=name_ha[row.gene], va="center", arrowprops=arrowprops)
     ax.set_xlim(min(lo, 0), max(hi, 34))
     ax.set_ylim(lo, hi)
     ax.set_xlabel("Peak, GSE39445 (h since wake)")
@@ -1233,6 +1236,56 @@ def ylabel_neighbor_mm(fig, renderer):
     return best
 
 
+def text_on_line_or_marker(fig, items, points):
+    """Text boxes that meet a connector, leader, diagonal, or marker. Own leader excluded."""
+    own_arrow = {}
+    for ann in fig.findobj(Annotation):
+        patch = ann.arrow_patch
+        if patch is None:
+            continue
+        own_arrow[id(ann)] = patch.get_path().transformed(patch.get_transform()).vertices
+    lines = []
+    for line in fig.findobj(Line2D):
+        if line.axes is None or not line.get_visible() or line.get_transform() is not line.axes.transData:
+            continue
+        if line.get_linestyle() in ("None", "none", None):
+            continue
+        xy = line.get_transform().transform(line.get_xydata())
+        if len(xy) >= 2:
+            lines.append(xy)
+    hits = []
+    for text, ext in items:
+        if ext.width < 1 and ext.height < 1:
+            continue
+        hit = False
+        for xy in lines:
+            for i in range(len(xy) - 1):
+                if segment_hits_box(xy[i], xy[i + 1], ext):
+                    hit = True
+                    break
+            if hit:
+                break
+        if not hit:
+            for ann_id, other in own_arrow.items():
+                if ann_id == id(text) or len(other) < 2:
+                    continue
+                for i in range(len(other) - 1):
+                    if segment_hits_box(other[i], other[i + 1], ext):
+                        hit = True
+                        break
+                if hit:
+                    break
+        if not hit:
+            for x, y, radius, line in points:
+                box = ext.expanded(radius, radius)
+                if box.x0 <= x <= box.x1 and box.y0 <= y <= box.y1:
+                    hit = True
+                    break
+        if hit:
+            hits.append(str(text.get_text()).replace("\n", " ")[:40])
+    return hits
+
+
 def audit_fig(fig, stem):
     items, renderer = text_items(fig)
     text_overlap = []
@@ -1267,6 +1320,7 @@ def audit_fig(fig, stem):
     leader_cross, leader_foreign = leader_geometry(fig, points)
     axes_text = other_axes_text(fig, items, renderer)
     neighbor_mm = ylabel_neighbor_mm(fig, renderer)
+    geom_hits = text_on_line_or_marker(fig, items, points)
     line_text = []
     seen_line_text = set()
     for ax in fig.axes:
@@ -1299,6 +1353,8 @@ def audit_fig(fig, stem):
         "leader_cross": len(leader_cross),
         "leader_foreign": len(leader_foreign),
         "axes_text": len(axes_text),
+        "text_geom": len(geom_hits),
+        "text_geom_detail": " | ".join(geom_hits[:20]),
         "ylabel_gap_mm": "" if neighbor_mm is None else f"{neighbor_mm:.2f}",
         "leader_cross_detail": " | ".join(leader_cross[:12]),
         "leader_foreign_detail": " | ".join(leader_foreign[:12]),
@@ -1385,7 +1441,7 @@ def main():
     merge_review()
     submission_copies()
     write_src(pd.DataFrame(AUDIT), "audit.tsv")
-    cols = ["stem", "pdf_clip", "outside", "text_overlap", "leader_text", "data_outside", "leader_cross", "leader_foreign", "axes_text", "ylabel_gap_mm", "min_fontsize", "alpha_not_1"]
+    cols = ["stem", "pdf_clip", "outside", "text_overlap", "leader_text", "data_outside", "leader_cross", "leader_foreign", "axes_text", "text_geom", "ylabel_gap_mm", "min_fontsize", "alpha_not_1"]
     print(pd.DataFrame(AUDIT)[cols].to_string(index=False))
 
 
