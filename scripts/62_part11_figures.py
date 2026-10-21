@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Manuscript figures for TOD instruction 11. Stored tables only. No new tests."""
+"""Manuscript figures for TOD instructions 11 and 12. Stored tables only. No new tests."""
 
 import math
+import re
 import shutil
 import subprocess
 from pathlib import Path
@@ -15,7 +16,7 @@ import pandas as pd
 from matplotlib import font_manager
 from matplotlib.lines import Line2D
 from matplotlib.patches import Arc, FancyBboxPatch, Rectangle
-from matplotlib.text import Text
+from matplotlib.text import Annotation, Text
 
 ROOT = Path("/HDD8T1/WORK/GeroSci/TOD")
 OUT = ROOT / "figures" / "manuscript"
@@ -95,6 +96,7 @@ POPULATIONS = [
     "B lineage", "Monocytic lineage", "Myeloid dendritic cells", "Neutrophils",
 ]
 SCENARIO_LS = {"lab": "-", "free-living": "--", "free-living upper": ":"}
+PHI = r"$\bar{\mathrm{\varphi}}$"
 SCENARIO_LW = {"lab": 1.0, "free-living": 1.0, "free-living upper": 0.6}
 SCENARIO_NAME = {
     "lab": "Laboratory",
@@ -192,6 +194,9 @@ def draw_interval(ax, y, x, lo, hi, xmin, xmax, color, marker, open_mark=False):
     if show_hi >= show_lo:
         ax.plot([show_lo, show_hi], [y, y], color=color, lw=0.8, zorder=2, solid_capstyle="butt")
     span = xmax - xmin
+    clipped = lo < xmin - 1e-9 or hi > xmax + 1e-9
+    if clipped:
+        ax.figure._tod_clips = getattr(ax.figure, "_tod_clips", 0) + 1
     if lo < xmin - 1e-9:
         ax.annotate("", xy=(xmin, y), xytext=(xmin + 0.04 * span, y), arrowprops={"arrowstyle": "->", "color": color, "lw": 0.6})
     if hi > xmax + 1e-9:
@@ -355,7 +360,7 @@ def fig1():
     arrow(88, 97, 92, 97)
     box(92, 88, 28, 18, "Mixed cosinor\nmodel", "#D9F0E3")
     arrow(120, 97, 124, 97)
-    box(124, 84, 48, 26, f"Frozen predictions:\npeak $\\bar{{\\phi}}$, amplitude,\ncomposition mediation,\nmorning\u2212evening d,\n{nmod} module outcomes", "#D9F0E3")
+    box(124, 84, 48, 26, "Frozen predictions:\npeak " + PHI + f", amplitude,\ncomposition mediation,\nmorning\u2212evening d,\n{nmod} module outcomes", "#D9F0E3")
     arrow(148, 84, 148, 83)
     arrow(148, 83, 36, 83)
     arrow(36, 83, 36, 72)
@@ -388,9 +393,9 @@ def fig1():
 
 def fig2():
     letters = ["A", "B", "C", "D", "E", "F"]
-    fig = new_fig(156)
+    fig = new_fig(172)
     axes = fig.subplots(2, 3)
-    fig.subplots_adjust(left=0.08, right=0.98, top=0.94, bottom=0.07, hspace=0.55, wspace=0.35)
+    fig.subplots_adjust(left=0.16, right=0.97, top=0.84, bottom=0.08, hspace=0.90, wspace=0.42)
     summary = []
     for i, letter in enumerate(letters):
         ax = axes.flat[i]
@@ -414,23 +419,29 @@ def fig2():
         curve = curve.sort_values("_t")
         ax.plot(curve["_t"], curve["curve_y"].map(num), color="black", lw=1.0, zorder=4)
         ann = one(src, record="annotation")
-        day = " Day 1" if dataset == "GSE48113" else ""
-        ax.set_title(f"{dataset}{day} \u00b7 {CLOCK_NAME[clock]}\n{fmt_p(ann.p)}; peak {fmt_peak(ann.peak_h)}", fontsize=8, pad=12)
-        panel(ax, letter.lower())
+        ax.set_title(f"{CLOCK_NAME[clock]}\n{fmt_p(ann.p)}; peak {fmt_peak(ann.peak_h)}", fontsize=8, pad=3)
+        ax.text(0.03, 0.97, letter.lower(), transform=ax.transAxes, fontsize=10, fontweight="bold", va="top", ha="left", zorder=6)
         ax.set_xlim(0, 24)
         ax.set_xticks([0, 6, 12, 18, 24])
         ax.set_ylabel("Centered estimate (years)" if clock == "RA_default" else "Centered score")
         if i >= 3:
             ax.set_xlabel("Clock time (h)")
-        summary.append({"panel": letter, "dataset": dataset, "clock": clock, "n_subjects": ann.n_subjects, "n_samples": ann.n_samples, "n_bins": ann.n_bins, "p": ann.p, "peak_h": ann.peak_h, "beta_source": ann.beta_source})
-        write_src(src, f"Fig2_{letter}.tsv")
+        def whole(value):
+            text = str(value)
+            if text.endswith(".0"):
+                return text[:-2]
+            return text
+        summary.append({"panel": letter, "dataset": dataset, "clock": clock, "n_subjects": whole(ann.n_subjects), "n_samples": whole(ann.n_samples), "n_bins": whole(ann.n_bins), "p": ann.p, "peak_h": ann.peak_h, "beta_source": ann.beta_source})
+    for row, text in ((0, "GSE113883 (development)"), (1, "GSE48113 Day 1 (confirmation)")):
+        pos = axes[row, 0].get_position()
+        fig.text(pos.x0, pos.y1 + 0.078, text, fontsize=9, fontweight="bold", ha="left", va="bottom")
     write_src(pd.DataFrame(summary), "Fig2_summary.tsv")
     return fig
 
 
 def fig3():
     fig = new_fig(228)
-    gs = fig.add_gridspec(3, 1, height_ratios=[1.35, 0.72, 1.25], hspace=0.38, left=0.16, right=0.78, top=0.97, bottom=0.10)
+    gs = fig.add_gridspec(3, 1, height_ratios=[1.35, 0.72, 1.25], hspace=0.38, left=0.16, right=0.56, top=0.97, bottom=0.10)
     axa = fig.add_subplot(gs[0])
     panel(axa, "a")
     write_src(forest_ratio(axa, PRIMARY), "Fig3_A.tsv")
@@ -446,7 +457,7 @@ def fig3():
 
 def figs1():
     fig = new_fig(188)
-    gs = fig.add_gridspec(3, 1, height_ratios=[1.45, 0.7, 0.42], hspace=0.42, left=0.18, right=0.74, top=0.97, bottom=0.12)
+    gs = fig.add_gridspec(3, 1, height_ratios=[1.45, 0.7, 0.42], hspace=0.42, left=0.18, right=0.56, top=0.97, bottom=0.12)
     axa = fig.add_subplot(gs[0])
     panel(axa, "a")
     write_src(forest_ratio(axa, SECONDARY), "FigS1_A.tsv")
@@ -543,7 +554,7 @@ def fig4():
     group_labels(ax, groups)
     write_src(pd.DataFrame(out), "Fig4_A.tsv")
 
-    axb = fig.add_axes([0.28, 0.08, 0.46, 0.40])
+    axb = fig.add_axes([0.30, 0.08, 0.36, 0.40])
     panel(axb, "b")
     peaks = load("results/stage10/fig4b_composition_peaks.tsv")
     datasets = ["GSE39445", "GSE56931", "GSE113883", "GSE48113"]
@@ -598,17 +609,17 @@ def fig5():
         "TM-turquoise": (6.2, 14.6),
         "chrono-turquoise": (17.2, 8.4),
         "chrono-yellow": (16.6, 11.6),
-        "chrono-orange": (5.4, 4.6),
-        "chrono-brown": (5.4, -1.4),
-        "chrono-red": (5.4, 1.6),
+        "chrono-orange": (6.2, 1.0),
+        "chrono-brown": (8.6, -1.6),
+        "chrono-red": (6.2, 5.4),
         "mort-turquoise": (17.2, 14.2),
         "mort-darkred": (18.4, 16.8),
     }
     n_xy = {
         "TM-turquoise": (6.2, 21.8),
         "chrono-turquoise": (17.4, 20.6),
-        "chrono-yellow": (8.2, 3.0),
-        "chrono-orange": (5.4, 6.4),
+        "chrono-yellow": (16.8, -0.6),
+        "chrono-orange": (6.2, 8.2),
         "mort-turquoise": (17.4, 24.6),
         "mort-darkred": (18.4, 4.4),
     }
@@ -629,7 +640,7 @@ def fig5():
             label_rows.append({"clock": row.clock, "kind": "n", "x": phi, "y": fy, "label_x": nx, "label_y": ny, "text": f"n = {row.frozen_n_entered}"})
     ax.set_xlim(lo, hi + 2)
     ax.set_ylim(lo, hi)
-    ax.set_xlabel(r"Predicted peak $\bar{\phi}$ (h)")
+    ax.set_xlabel("Predicted peak " + PHI + " (h)")
     ax.set_ylabel("Observed peak, GSE48113 (h)")
     ax.set_aspect("equal", adjustable="box", anchor="W")
     size_handles = [Line2D([0], [0], marker="o", color="black", linestyle="None", ms=ms_from_area(marker_area(p)), label=lab) for p, lab in ((0.05, r"p = 0.05"), (1e-4, r"p = $10^{-4}$"), (1e-8, r"p = $10^{-8}$"))]
@@ -691,7 +702,7 @@ def fig5():
 def fig6():
     a = load("figures/manuscript/source_data/Fig6_A.tsv")
     fig = new_fig(220)
-    ax = fig.add_axes([0.10, 0.56, 0.52, 0.36])
+    ax = fig.add_axes([0.10, 0.62, 0.52, 0.32])
     panel(ax, "a")
     xs = a["x_gse39445"].map(num)
     ys = list(a["y_geo"].map(num)) + list(a["y_corrected"].map(num))
@@ -727,7 +738,7 @@ def fig6():
     write_src(pd.DataFrame([{"gene": g, "label_x": xy[0], "label_y": xy[1]} for g, xy in name_xy.items()]), "Fig6_A_labels.tsv")
 
     b = load("figures/manuscript/source_data/Fig6_B.tsv")
-    axb = fig.add_axes([0.16, 0.22, 0.30, 0.26])
+    axb = fig.add_axes([0.16, 0.28, 0.28, 0.24])
     panel(axb, "b")
     axb.set_title("GSE48113", fontsize=8, pad=8)
     style = {
@@ -758,51 +769,60 @@ def fig6():
         Line2D([0], [0], marker="o", color="black", linestyle="None", ms=5, label="Preregistered scoring"),
         Line2D([0], [0], marker="s", color="#808080", linestyle="None", ms=5, label="kNN imputation"),
         Line2D([0], [0], marker="D", markerfacecolor="white", markeredgecolor="black", linestyle="None", ms=5, label="Participant-mean imputation"),
-        Line2D([0], [0], color="0.35", lw=1.0, label="Nonzero-weight features of the clock"),
+        Line2D([0], [0], color="0.35", lw=1.0, linestyle="None", marker="|", ms=10, markeredgewidth=1.0, label="Nonzero-weight features of the clock"),
         Line2D([0], [0], color="none", linestyle="None", label="0 = no feature available"),
-    ], frameon=False, loc="lower left", bbox_to_anchor=(0.02, 0.012), bbox_transform=fig.transFigure, ncol=2))
+    ], frameon=False, loc="lower left", bbox_to_anchor=(0.02, 0.012), bbox_transform=fig.transFigure, ncol=1))
     write_src(b, "Fig6_B.tsv")
 
     c = load("figures/manuscript/source_data/Fig6_C.tsv")
-    axc = fig.add_axes([0.68, 0.22, 0.28, 0.28])
+    axc = fig.add_axes([0.56, 0.30, 0.40, 0.20])
     panel(axc, "c")
     axc.set_title("GSE39445, 20% of values masked", fontsize=8, pad=8)
     unmasked = c.loc[(c["treatment"] == "unmasked") & (c["mask"] == "random")]
-    slots = [("unmasked", unmasked, 0)]
-    x = 1.5
-    xpos, ticklabels = [0], ["Unmasked"]
+    x = 2.0
+    xpos = [0]
+    ticklabels = ["Unmasked"]
+    groups = []
     drawn = []
     for _, row in unmasked.iterrows():
-        drawn.append({**row.to_dict(), "x_drawn": 0})
+        drawn.append({**row.to_dict(), "x_slot": 0})
     for mask, label in (("random", "Random masking"), ("low_expression", "Low-expression masking")):
-        for treat, short in (("kNN", "kNN"), ("participant mean", "Participant mean")):
+        start = x
+        for treat, short in (("kNN", "kNN"), ("participant mean", "Participant\nmean")):
             block = c.loc[(c["mask"] == mask) & (c["treatment"] == treat)]
             xpos.append(x)
             ticklabels.append(short)
             for _, row in block.iterrows():
-                drawn.append({**row.to_dict(), "x_drawn": x})
-            x += 1
-        x += 0.6
+                drawn.append({**row.to_dict(), "x_slot": x})
+            x += 1.8
+        groups.append((start, x - 1.8, label))
+        x += 0.8
     markers = {"RA_default": "o", "RA_Peters": "^", "RA_GTEx": "v"}
+    shift = {"RA_default": -0.12, "RA_Peters": 0.0, "RA_GTEx": 0.12}
     for rec in drawn:
-        axc.plot([rec["x_drawn"]], [num(rec["neg_log10_p"])], linestyle="None", marker=markers[rec["clock"]], ms=5, color="#404040")
+        rec["x_drawn"] = rec["x_slot"] + shift[rec["clock"]]
+        axc.plot([rec["x_drawn"]], [num(rec["neg_log10_p"])], linestyle="None", marker=markers[rec["clock"]], ms=5, color="#404040", zorder=3)
     y05 = -math.log10(0.05)
-    axc.axhline(y05, color="0.2", lw=0.6, ls="--")
+    axc.axhline(y05, color="0.2", lw=0.6, ls="--", zorder=1)
     axc.text(max(xpos), y05, "p = 0.05", fontsize=8, va="bottom", ha="right")
     axc.set_xticks(xpos)
-    axc.set_xticklabels(["Unmasked", "Random masking\nkNN", "Random masking\nParticipant mean", "Low-expression\nmasking, kNN", "Low-expression\nmasking, participant mean"], rotation=35, ha="right", fontsize=8)
+    axc.set_xticklabels(ticklabels, fontsize=8)
+    axc.set_xlim(-0.9, max(xpos) + 0.9)
     axc.set_ylabel("\u2212log10 LRT p")
     axc.set_ylim(bottom=0)
-    use_legend(axc.legend(handles=[Line2D([0], [0], marker=markers[ck], color="#404040", linestyle="None", ms=5, label=CLOCK_NAME[ck]) for ck in ("RA_default", "RA_Peters", "RA_GTEx")], frameon=False, loc="lower left", bbox_to_anchor=(0.62, 0.012), bbox_transform=fig.transFigure))
+    trans = axc.get_xaxis_transform()
+    for x0, x1, label in groups:
+        yb = -0.42
+        axc.plot([x0, x0, x1, x1], [yb + 0.08, yb, yb, yb + 0.08], transform=trans, color="0.35", lw=0.5, clip_on=False, solid_capstyle="butt")
+        axc.text((x0 + x1) / 2, yb - 0.02, label, transform=trans, ha="center", va="top", fontsize=8, clip_on=False)
+    use_legend(axc.legend(handles=[Line2D([0], [0], marker=markers[ck], color="#404040", linestyle="None", ms=5, label=CLOCK_NAME[ck]) for ck in ("RA_default", "RA_Peters", "RA_GTEx")], frameon=False, loc="lower left", bbox_to_anchor=(0.62, 0.012), bbox_transform=fig.transFigure, ncol=1))
     write_src(pd.DataFrame(drawn), "Fig6_C.tsv")
     return fig
 
 
 def reference_lines(ax):
-    ax.axhline(0.05, color="0.45", lw=0.6, ls=":")
-    ax.axhline(0.10, color="0.45", lw=0.6, ls="--")
-    ax.text(0.99, 0.05, "0.05", transform=ax.get_yaxis_transform(), fontsize=8, ha="right", va="bottom", color="0.25")
-    ax.text(0.99, 0.10, "0.10", transform=ax.get_yaxis_transform(), fontsize=8, ha="right", va="bottom", color="0.25")
+    ax.axhline(0.05, color="#BFBFBF", lw=0.6, ls="-", zorder=0)
+    ax.axhline(0.10, color="#808080", lw=0.6, ls="-.", zorder=0)
 
 
 def fig7(prefix):
@@ -813,7 +833,7 @@ def fig7(prefix):
     e = load(f"figures/manuscript/source_data/{prefix}_E.tsv")
     clocks = list(dict.fromkeys(a["clock"]))
     fig = new_fig(220)
-    gs = fig.add_gridspec(3, 2, height_ratios=[1.15, 1, 1], hspace=0.52, wspace=0.34, left=0.10, right=0.90, top=0.93, bottom=0.16)
+    gs = fig.add_gridspec(3, 2, height_ratios=[1.15, 1, 1], hspace=0.52, wspace=0.34, left=0.10, right=0.90, top=0.93, bottom=0.20)
     panels = {
         "a": fig.add_subplot(gs[0, :]),
         "b": fig.add_subplot(gs[1, 0]),
@@ -831,7 +851,7 @@ def fig7(prefix):
             block = block.sort_values("_s")
             panels["a"].plot(block["_s"], block["b_over_total_sd"].map(num), color=DATA_COLOR.get(clock, None) if False else {
                 "TAms_chrono": "#0072B2", "TAms_mort": "#E69F00", "RA_default": "#009E73", "RA_Peters": "#CC79A7", "RA_GTEx": "#56B4E9",
-            }[clock], ls=ls, lw=SCENARIO_LW[scenario])
+            }[clock], ls=ls, lw=SCENARIO_LW[scenario], zorder=3)
             if prefix == "Fig7" and clock == "RA_default" and scenario in ("lab", "free-living"):
                 hit = one(block, s="3")
                 panels["a"].plot([3], [num(hit.b_over_total_sd)], linestyle="None", marker="o", ms=4.5, markerfacecolor="white", markeredgecolor={
@@ -841,15 +861,15 @@ def fig7(prefix):
             sub["_s"] = sub["s"].map(num)
             sub = sub.sort_values("_s")
             color = {"TAms_chrono": "#0072B2", "TAms_mort": "#E69F00", "RA_default": "#009E73", "RA_Peters": "#CC79A7", "RA_GTEx": "#56B4E9"}[clock]
-            panels["b"].plot(sub["_s"], sub["fpr"].map(num), color=color, ls=ls, lw=SCENARIO_LW[scenario])
+            panels["b"].plot(sub["_s"], sub["fpr"].map(num), color=color, ls=ls, lw=SCENARIO_LW[scenario], zorder=3)
             sub = c.loc[(c["clock"] == clock) & (c["scenario"] == scenario)].copy()
             sub["_n"] = sub["n"].map(num)
             sub = sub.sort_values("_n")
-            panels["c"].plot(sub["_n"], sub["fpr"].map(num), color=color, ls=ls, lw=SCENARIO_LW[scenario])
+            panels["c"].plot(sub["_n"], sub["fpr"].map(num), color=color, ls=ls, lw=SCENARIO_LW[scenario], zorder=3)
             sub = d.loc[(d["clock"] == clock) & (d["scenario"] == scenario)].copy()
             sub["_n"] = sub["n_per_group"].map(num)
             sub = sub.sort_values("_n")
-            panels["d"].plot(sub["_n"], sub["fpr"].map(num), color=color, ls=ls, lw=SCENARIO_LW[scenario])
+            panels["d"].plot(sub["_n"], sub["fpr"].map(num), color=color, ls=ls, lw=SCENARIO_LW[scenario], zorder=3)
             if scenario == "lab":
                 sub = e.loc[e["clock"] == clock].copy()
                 sub["_w"] = sub["W"].map(num)
@@ -859,13 +879,18 @@ def fig7(prefix):
                 hiw = sub["wilson_high"].map(num).to_numpy()
                 panels["e"].errorbar(sub["_w"], ys, yerr=[ys - lo, hiw - ys], color=color, lw=1.0, marker="o", ms=3.5, capsize=2)
     color = None
-    panels["a"].axhline(0, color="0.65", lw=0.5)
+    panels["a"].axhline(0, color="#BFBFBF", lw=0.5, zorder=1)
     panels["a"].set_xlabel("s (h)")
     panels["a"].set_ylabel("Bias (fraction of total SD)")
     panels["a"].set_xlim(0, 12)
-    panels["a"].set_ylim(bottom=0)
+    ys = []
+    for line in panels["a"].get_lines():
+        ys.extend(float(v) for v in line.get_ydata() if np.isfinite(v))
+    lo, hi = min(ys + [0.0]), max(ys + [0.0])
+    pad = 0.05 * (hi - lo if hi > lo else 1.0)
+    panels["a"].set_ylim(lo - pad, hi + pad)
     if prefix == "Fig7":
-        panels["a"].text(0.02, 0.98, "RNAAgeCalc-DESeq2, s = 3 h:\n1.1 years (laboratory), 0.6 years (free-living)", transform=panels["a"].transAxes, fontsize=8, va="top", ha="left")
+        panels["a"].text(0.03, 0.04, "RNAAgeCalc-DESeq2, s = 3 h:\n1.1 years (laboratory), 0.6 years (free-living)", transform=panels["a"].transAxes, fontsize=8, va="bottom", ha="left")
     for key, text in (("b", "Design 1, n = 100"), ("c", "Design 1, s = 3 h"), ("d", "Design 2, s = 4 h"), ("e", "Design 3, laboratory, n = 50")):
         panels[key].text(0.02, 0.98, text, transform=panels[key].transAxes, fontsize=8, va="top", ha="left")
     for key in ("b", "c", "d"):
@@ -885,7 +910,9 @@ def fig7(prefix):
     clock_color = {"TAms_chrono": "#0072B2", "TAms_mort": "#E69F00", "RA_default": "#009E73", "RA_Peters": "#CC79A7", "RA_GTEx": "#56B4E9"}
     handles = [Line2D([0], [0], color=clock_color[c], lw=1.2, label=CLOCK_NAME[c]) for c in clocks]
     handles += [Line2D([0], [0], color="black", lw=SCENARIO_LW[s], ls=SCENARIO_LS[s], label=SCENARIO_NAME[s]) for s in SCENARIO_LS]
-    use_legend(fig.legend(handles=handles, loc="lower center", ncol=3, frameon=False, bbox_to_anchor=(0.5, 0.005)))
+    handles.append(Line2D([0], [0], color="#BFBFBF", lw=0.6, label="Nominal α = 0.05"))
+    handles.append(Line2D([0], [0], color="#808080", lw=0.6, ls="-.", label="10% false-positive rate"))
+    use_legend(fig.legend(handles=handles, loc="lower center", ncol=4, frameon=False, bbox_to_anchor=(0.5, 0.005)))
     for frame, name in ((a, "A"), (b, "B"), (c, "C"), (d, "D"), (e, "E")):
         write_src(frame, f"{prefix}_{name}.tsv")
     return fig
@@ -913,8 +940,8 @@ def place_ratio_labels(ax, items):
         out[idx] = pos
     for (x, y, text, color), yy in zip(items, out):
         if abs(yy - y) > 0.15 * gap:
-            ax.plot([1.02, 1.18], [y, yy], color="0.55", lw=0.5, zorder=2)
-        ax.text(1.22, yy, text, fontsize=8, va="center", ha="left", color=color)
+            ax.annotate("", xy=(x, y), xytext=(1.28, yy), arrowprops={"arrowstyle": "-", "color": "0.55", "lw": 0.5})
+        ax.text(1.32, yy, text, fontsize=8, va="center", ha="left", color=color, clip_on=False)
 
 
 def fig8(clocks, prefix):
@@ -927,20 +954,29 @@ def fig8(clocks, prefix):
     for i, clock in enumerate(clocks):
         ax = fig.add_subplot(gs[0, i])
         items = []
-        for dataset in datasets:
+        marks = []
+        offsets = (-0.06, -0.02, 0.02, 0.06)
+        for j, dataset in enumerate(datasets):
             row = one(cos, dataset=dataset, clock=clock)
             geo = geo_name(dataset)
+            dx = offsets[j]
             before_open = num(row.lrt_p_before) >= 0.05
             after_open = num(row.lrt_p_after) >= 0.05
             y0, y1 = num(row.two_a_before), num(row.two_a_after)
-            ax.plot([0, 1], [y0, y1], color=DATA_COLOR[geo], lw=0.8, zorder=2)
-            ax.plot([0], [y0], linestyle="None", marker=DATA_MARKER[geo], ms=5, zorder=3, **style_open(before_open, DATA_COLOR[geo]))
-            ax.plot([1], [y1], linestyle="None", marker=DATA_MARKER[geo], ms=5, zorder=3, **style_open(after_open, DATA_COLOR[geo]))
-            items.append((1, y1, f"{num(row.two_a_ratio):.2f}", DATA_COLOR[geo]))
-            arows.append({"clock": clock, "dataset": geo, "two_a_before": row.two_a_before, "two_a_after": row.two_a_after, "two_a_ratio": row.two_a_ratio, "lrt_p_before": row.lrt_p_before, "lrt_p_after": row.lrt_p_after, "open_before": before_open, "open_after": after_open, "source": "results/stage9/composition_cosinor.tsv"})
-        ax.set_xlim(-0.45, 1.85)
+            ax.plot([dx, 1 + dx], [y0, y1], color=DATA_COLOR[geo], lw=0.8, zorder=2)
+            marks.append((dx, y0, DATA_MARKER[geo], DATA_COLOR[geo], before_open))
+            marks.append((1 + dx, y1, DATA_MARKER[geo], DATA_COLOR[geo], after_open))
+            items.append((1 + dx, y1, f"{num(row.two_a_ratio):.2f}", DATA_COLOR[geo]))
+            arows.append({"clock": clock, "dataset": geo, "x_offset": dx, "two_a_before": row.two_a_before, "two_a_after": row.two_a_after, "two_a_ratio": row.two_a_ratio, "lrt_p_before": row.lrt_p_before, "lrt_p_after": row.lrt_p_after, "open_before": before_open, "open_after": after_open, "source": "results/stage9/composition_cosinor.tsv"})
+        for x, y, marker, color, open_mark in marks:
+            if open_mark:
+                ax.plot([x], [y], linestyle="None", marker=marker, ms=5, zorder=3, **style_open(True, color))
+        for x, y, marker, color, open_mark in marks:
+            if not open_mark:
+                ax.plot([x], [y], linestyle="None", marker=marker, ms=5, zorder=4, **style_open(False, color))
+        ax.set_xlim(-0.45, 1.90)
         ax.set_xticks([0, 1])
-        ax.set_xticklabels(["Unadjusted", "Composition-\nadjusted"], rotation=0)
+        ax.set_xticklabels(["Unadjusted", "Composition-adjusted"], rotation=30, ha="right")
         ax.set_ylim(bottom=0)
         ax.set_title(CLOCK_NAME[clock], fontsize=8)
         ax.set_ylabel("2A (years)" if clock.startswith("RA_") else "2A (score)")
@@ -1019,6 +1055,80 @@ def marker_points(fig, renderer):
     return points, legends
 
 
+def boxes_overlap(a, b):
+    return a.x0 < b.x1 - 0.6 and b.x0 < a.x1 - 0.6 and a.y0 < b.y1 - 0.6 and b.y0 < a.y1 - 0.6
+
+
+def segment_hits_box(p0, p1, box):
+    steps = int(max(abs(p1[0] - p0[0]), abs(p1[1] - p0[1]))) + 1
+    for i in range(steps + 1):
+        t = i / steps
+        x = p0[0] + t * (p1[0] - p0[0])
+        y = p0[1] + t * (p1[1] - p0[1])
+        if box.x0 + 0.4 < x < box.x1 - 0.4 and box.y0 + 0.4 < y < box.y1 - 0.4:
+            return True
+    return False
+
+
+def data_outside(fig):
+    hits = []
+    for ax in fig.axes:
+        x0, x1 = ax.get_xlim()
+        y0, y1 = ax.get_ylim()
+        if x0 > x1:
+            x0, x1 = x1, x0
+        if y0 > y1:
+            y0, y1 = y1, y0
+        ex = 1e-6 * (abs(x1 - x0) + 1)
+        ey = 1e-6 * (abs(y1 - y0) + 1)
+        for line in ax.get_lines():
+            if line.axes is None or line.get_visible() is False:
+                continue
+            if line.get_transform() is not ax.transData:
+                continue
+            xy = line.get_xydata()
+            if len(xy) == 0:
+                continue
+            for x, y in xy:
+                if not (np.isfinite(x) and np.isfinite(y)):
+                    continue
+                if x < x0 - ex or x > x1 + ex or y < y0 - ey or y > y1 + ey:
+                    hits.append(f"{ax.get_label() or id(ax)}:{x:.4g},{y:.4g}")
+    return hits
+
+
+def leader_hits(fig, items, points):
+    text_hits = []
+    point_hits = []
+    for ann in fig.findobj(Annotation):
+        patch = ann.arrow_patch
+        if patch is None or not str(ann.get_text()).strip():
+            continue
+        verts = patch.get_path().transformed(patch.get_transform()).vertices
+        if len(verts) < 2:
+            continue
+        own = ann
+        for i in range(len(verts) - 1):
+            p0, p1 = verts[i], verts[i + 1]
+            for text, ext in items:
+                if text is own:
+                    continue
+                if segment_hits_box(p0, p1, ext):
+                    text_hits.append(str(text.get_text()).replace("\n", " ")[:40])
+            for x, y, radius, line in points:
+                if min((verts[0][0] - x) ** 2 + (verts[0][1] - y) ** 2, (verts[-1][0] - x) ** 2 + (verts[-1][1] - y) ** 2) <= (radius + 1.5) ** 2:
+                    continue
+                steps = 12
+                for k in range(steps + 1):
+                    t = k / steps
+                    px = p0[0] + t * (p1[0] - p0[0])
+                    py = p0[1] + t * (p1[1] - p0[1])
+                    if (px - x) ** 2 + (py - y) ** 2 <= (radius + 0.6) ** 2:
+                        point_hits.append(f"{x:.0f},{y:.0f}")
+                        break
+    return text_hits, point_hits
+
+
 def audit_fig(fig, stem):
     items, renderer = text_items(fig)
     text_overlap = []
@@ -1026,9 +1136,7 @@ def audit_fig(fig, stem):
         ti, ei = items[i]
         for j in range(i + 1, len(items)):
             tj, ej = items[j]
-            if same_axis_ticks(fig, ti, tj):
-                continue
-            if ei.x0 < ej.x1 - 0.6 and ej.x0 < ei.x1 - 0.6 and ei.y0 < ej.y1 - 0.6 and ej.y0 < ei.y1 - 0.6:
+            if boxes_overlap(ei, ej):
                 text_overlap.append((str(ti.get_text()).replace("\n", " "), str(tj.get_text()).replace("\n", " ")))
     points, legends = marker_points(fig, renderer)
     text_marker = []
@@ -1048,8 +1156,26 @@ def audit_fig(fig, stem):
     outside = []
     fb = fig.bbox
     for text, ext in items:
-        if ext.x0 < fb.x0 - 0.8 or ext.x1 > fb.x1 + 0.8 or ext.y0 < fb.y0 - 0.8 or ext.y1 > fb.y1 + 0.8:
+        if ext.x0 < fb.x0 or ext.x1 > fb.x1 or ext.y0 < fb.y0 or ext.y1 > fb.y1:
             outside.append(str(text.get_text()).replace("\n", " "))
+    outside_data = data_outside(fig)
+    leader_text, leader_point = leader_hits(fig, items, points)
+    line_text = []
+    seen_line_text = set()
+    for ax in fig.axes:
+        for line in ax.get_lines():
+            if line.get_transform() is not ax.transData or not line.get_visible():
+                continue
+            xy = line.get_transform().transform(line.get_xydata())
+            if len(xy) < 2:
+                continue
+            for i in range(len(xy) - 1):
+                for text, ext in items:
+                    if id(text) in seen_line_text:
+                        continue
+                    if segment_hits_box(xy[i], xy[i + 1], ext):
+                        seen_line_text.add(id(text))
+                        line_text.append(str(text.get_text()).replace("\n", " ")[:50])
     sizes = [t.get_fontsize() for t, _ in items]
     alpha_n = 0
     for artist in fig.findobj():
@@ -1058,16 +1184,40 @@ def audit_fig(fig, stem):
             alpha_n += 1
     AUDIT.append({
         "stem": stem,
+        "n_text": len(items),
         "text_overlap": len(text_overlap),
+        "outside": len(outside),
+        "leader_text": len(leader_text),
+        "leader_point": len(leader_point),
+        "line_text": len(line_text),
+        "line_text_detail": " | ".join(line_text[:15]),
+        "data_outside": len(outside_data),
+        "intentional_clip": int(getattr(fig, "_tod_clips", 0)),
         "text_marker": len(text_marker),
         "legend_data": len(legend_hits),
-        "outside": len(outside),
         "min_fontsize": min(sizes) if sizes else "",
         "alpha_not_1": alpha_n,
-        "text_overlap_detail": " | ".join(f"{a} || {b}" for a, b in text_overlap[:12]),
+        "text_overlap_detail": " | ".join(f"{a} || {b}" for a, b in text_overlap[:20]),
+        "outside_detail": " | ".join(outside[:20]),
+        "leader_text_detail": " | ".join(leader_text[:20]),
+        "leader_point_detail": " | ".join(leader_point[:20]),
+        "data_outside_detail": " | ".join(outside_data[:20]),
         "text_marker_detail": " | ".join(text_marker[:12]),
-        "outside_detail": " | ".join(outside[:12]),
     })
+
+
+def pdf_edge_words(path):
+    raw = subprocess.check_output(["pdftotext", "-bbox", str(path), "-"], text=True, errors="replace")
+    inset = 72 / 25.4
+    hits = []
+    for page in re.finditer(r'<page width="([\d.]+)" height="([\d.]+)"[^>]*>(.*?)</page>', raw, re.S):
+        width, height = float(page.group(1)), float(page.group(2))
+        body = page.group(3)
+        for word in re.finditer(r'<word xMin="([\d.]+)" yMin="([\d.]+)" xMax="([\d.]+)" yMax="([\d.]+)"[^>]*>([^<]*)</word>', body):
+            x0, y0, x1, y1 = (float(word.group(i)) for i in range(1, 5))
+            if x0 < inset or y0 < inset or x1 > width - inset or y1 > height - inset:
+                hits.append(word.group(5))
+    return hits
 
 
 def save_fig(fig, stem):
@@ -1078,6 +1228,9 @@ def save_fig(fig, stem):
     fig.savefig(OUT / f"{stem}.png", dpi=300)
     fig.savefig(OUT / f"{stem}.tiff", dpi=1200, pil_kwargs={"compression": "tiff_lzw"})
     plt.close(fig)
+    hits = pdf_edge_words(OUT / f"{stem}.pdf")
+    AUDIT[-1]["pdf_clip"] = len(hits)
+    AUDIT[-1]["pdf_clip_detail"] = " | ".join(hits[:30])
 
 
 def submission_copies():
@@ -1118,7 +1271,8 @@ def main():
     merge_review()
     submission_copies()
     write_src(pd.DataFrame(AUDIT), "audit.tsv")
-    print(pd.DataFrame(AUDIT)[["stem", "text_overlap", "text_marker", "legend_data", "outside", "min_fontsize", "alpha_not_1"]].to_string(index=False))
+    cols = ["stem", "n_text", "pdf_clip", "outside", "text_overlap", "leader_text", "leader_point", "data_outside", "line_text", "intentional_clip", "min_fontsize", "alpha_not_1", "text_marker", "legend_data"]
+    print(pd.DataFrame(AUDIT)[cols].to_string(index=False))
 
 
 if __name__ == "__main__":
