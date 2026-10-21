@@ -1,5 +1,5 @@
-clock	adjustment	estimate	low	high	time_source
-RA_Peters	before	2.86233409356227	0.0286509268443877	5.69601726028016	H5 c is not defined for this clock
-RA_Peters	composition	2.02172266582033	-1.46068313169132	5.50412846333198	H5 c is not defined for this clock
-RA_GTEx	before	0.713702823968326	-1.2849450811811	2.71235072911775	H5 c is not defined for this clock
-RA_GTEx	composition	0.159401851182051	-2.201328211144	2.5201319135081	H5 c is not defined for this clock
+clock	adjustment	estimate	low	high	time_source	marker	color
+RA_Peters	Unadjusted	2.86233409356227	0.0286509268443877	5.69601726028016	H5 c is not defined for this clock	s	#E69F00
+RA_Peters	Composition- adjusted	2.02172266582033	-1.46068313169132	5.50412846333198	H5 c is not defined for this clock	s	#E69F00
+RA_GTEx	Unadjusted	0.713702823968326	-1.2849450811811	2.71235072911775	H5 c is not defined for this clock	s	#E69F00
+RA_GTEx	Composition- adjusted	0.159401851182051	-2.201328211144	2.5201319135081	H5 c is not defined for this clock	s	#E69F00

@@ -1,0 +1,2 @@
+dataset	clock	p_med	low	high	lrt_p	source	y
+GSE56931	RA_Peters	0.31261747469437	-0.220350765673326	0.956070197020275	0.000105116530090898	results/stage3/h2/projection_ci.tsv	0

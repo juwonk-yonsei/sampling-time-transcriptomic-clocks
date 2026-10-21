@@ -1,0 +1,15 @@
+clock	kind	x	y	label_x	label_y	text
+TM_turquoise_mortality	name	11.5724011994242	13.0160343833073	6.2	14.6	TM-turquoise
+TM_turquoise_mortality	n	11.5724011994242	21.7889728924429	6.2	21.8	n = 14
+CMP_TAms_chrono_turquoise	name	13.2837328415609	9.416476587906738	17.2	8.4	chrono-turquoise
+CMP_TAms_chrono_turquoise	n	13.2837328415609	20.5994829668058	17.4	20.6	n = 4
+CMP_TAms_chrono_yellow	name	12.6128269162576	10.7776829888493	16.6	11.6	chrono-yellow
+CMP_TAms_chrono_yellow	n	12.6128269162576	3.037414374131071	8.2	3.0	n = 1
+CMP_TAms_chrono_orange	name	1.07332762742524	2.62378198893345	5.4	4.6	chrono-orange
+CMP_TAms_chrono_orange	n	1.07332762742524	2.77928506086391	5.4	6.4	n = 1
+CMP_TAms_chrono_brown	name	1.32505139804729	0.04019972350201728	5.4	-1.4	chrono-brown
+CMP_TAms_chrono_red	name	0.781691026210673	2.49280571765594	5.4	1.6	chrono-red
+CMP_TAms_mort_turquoise	name	13.003811149926	13.0566980605596	17.2	14.2	mort-turquoise
+CMP_TAms_mort_turquoise	n	13.003811149926	24.52316771080101	17.4	24.6	n = 15
+CMP_TAms_mort_darkred	name	14.9666596497573	15.4115823911225	18.4	16.8	mort-darkred
+CMP_TAms_mort_darkred	n	14.9666596497573	3.0430778561259206	18.4	4.4	n = 1

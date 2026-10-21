@@ -1,0 +1,12 @@
+stem	text_overlap	text_marker	legend_data	outside	min_fontsize	alpha_not_1	text_overlap_detail	text_marker_detail	outside_detail
+Fig1_design	0	0	0	0	8.0	0			
+Fig2_trajectories	0	0	0	0	8.0	0			
+Fig3_effects	0	0	0	0	8.0	0			
+Fig4_composition	0	0	0	0	8.0	0			
+Fig5_modules	0	0	0	0	8.0	0			
+Fig6_public	0	0	0	0	8.0	0			
+Fig7_bias	0	0	0	0	8.0	0			
+Fig8_mitigation	0	0	0	0	8.0	0			
+FigS1_effects_secondary	0	0	0	0	8.0	0			
+FigS2_bias_secondary	0	0	0	0	8.0	0			
+FigS3_mitigation_secondary	0	0	0	0	8.0	0			
