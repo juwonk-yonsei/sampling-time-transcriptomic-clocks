@@ -213,7 +213,7 @@ def fig1():
     box(0.36, 0.42, 0.28, 0.24, "Opened after freeze\n" + f"GSE48113 {c481[0]}/{c481[1]}\n" + f"GSE122725 {c122[0]}/{c122[1]}\n" + f"GSE295758 {c295[0]} pairs", "#F6D6C9", ec="#D55E00", ls="--")
     arrow(0.64, 0.68, 0.54)
     box(0.68, 0.42, 0.30, 0.24, "Gate\n" + "\n".join(gtxt) + "\nHolm primary family\nReplication: ≥2 datasets", "#F6D6C9")
-    ax.text(0.02, 0.68, "Preregistration and locked confirmation", fontsize=8, fontweight="bold", color="#D55E00")
+    ax.text(0.02, 0.68, "Prespecified plan and locked confirmation", fontsize=8, fontweight="bold", color="#D55E00")
 
     box(0.02, 0.08, 0.22, 0.16, "Time-axis\ncorrection\n(GSE122725)", "#F7D6EA")
     box(0.27, 0.08, 0.22, 0.16, "Missing-value\nsensitivity", "#F7D6EA")

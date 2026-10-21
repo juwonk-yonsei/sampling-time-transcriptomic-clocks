@@ -365,7 +365,7 @@ def fig1():
     arrow(148, 83, 36, 83)
     arrow(36, 83, 36, 72)
 
-    ax.text(50, 77.6, "Preregistration and locked confirmation", fontsize=8, fontweight="bold", color="#D55E00", va="center")
+    ax.text(50, 77.6, "Prespecified plan and locked confirmation", fontsize=8, fontweight="bold", color="#D55E00", va="center")
     box(2, 46, 40, 26, f"Freeze\n{when}\nmanifest SHA-256\n{sha[:8]}\u2026", "#F6D6C9")
     arrow(42, 59, 48, 59)
     c481, c122, c295 = counts["GSE48113"], counts["GSE122725"], counts["GSE295758"]
@@ -653,7 +653,7 @@ def fig5():
     use_legend(fig.legend(handles=[
         Line2D([0], [0], marker="o", color="black", linestyle="None", ms=5, label="Participant-mean imputation (post hoc)"),
         Line2D([0], [0], marker="o", markerfacecolor="white", markeredgecolor="black", linestyle="None", ms=5, label="Open symbols: LRT p \u2265 0.05"),
-        Line2D([0], [0], marker="x", color="0.35", linestyle="None", ms=5, label="Preregistered scoring"),
+        Line2D([0], [0], marker="x", color="0.35", linestyle="None", ms=5, label="Prespecified scoring"),
         *size_handles,
     ], loc="upper left", bbox_to_anchor=(0.58, 0.92), frameon=False))
     write_src(tab, "Fig5_A.tsv")
@@ -667,7 +667,7 @@ def fig5():
     axb.axis("off")
     group_headers = [
         (54, "Development\n\u2212log10 q"),
-        (88, "Preregistered\nscoring"),
+        (88, "Prespecified\nscoring"),
         (112, "Participant-mean\nimputation\n(post hoc)"),
         (144, "GSE295758"),
     ]
@@ -786,7 +786,7 @@ def fig6():
     axb.set_xlim(0.4, 30000)
     axb.set_xlabel("Features used (log scale)")
     use_legend(axb.legend(handles=[
-        Line2D([0], [0], marker="o", color="black", linestyle="None", ms=5, label="Preregistered scoring"),
+        Line2D([0], [0], marker="o", color="black", linestyle="None", ms=5, label="Prespecified scoring"),
         Line2D([0], [0], marker="s", color="#808080", linestyle="None", ms=5, label="kNN imputation"),
         Line2D([0], [0], marker="D", markerfacecolor="white", markeredgecolor="black", linestyle="None", ms=5, label="Participant-mean imputation"),
         Line2D([0], [0], color="0.35", lw=1.0, linestyle="None", marker="|", ms=10, markeredgewidth=1.0, label="Nonzero-weight features of the clock"),
