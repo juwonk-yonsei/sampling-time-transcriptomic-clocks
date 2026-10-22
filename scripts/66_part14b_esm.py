@@ -25,6 +25,10 @@ font_manager.fontManager.addfont(BOLD)
 plt.rcParams["pdf.fonttype"] = 42
 plt.rcParams["font.family"] = "Liberation Sans"
 
+AUTHORS = "Authors: Juwon Kang, Junjeong Choi"
+CORRESPONDING = ("Corresponding author: Junjeong Choi, College of Pharmacy, Yonsei Institute of Pharmaceutical "
+                 "Sciences, Yonsei University, Incheon 21983, Republic of Korea; junjeong@yonsei.ac.kr")
+
 MODULE = {
     "TM_turquoise_mortality": "TM-turquoise",
     "CMP_TAms_chrono_turquoise": "chrono-turquoise",
@@ -204,8 +208,8 @@ def cover_pdf(path, page_width):
     lines = [
         "Title: Time of blood sampling biases transcriptomic aging clocks: development, prespecified confirmation, and practical guidance",
         "Journal: GeroScience",
-        "Authors: [Author names]",
-        "Corresponding author: [Affiliation], [e-mail]",
+        AUTHORS,
+        CORRESPONDING,
     ]
     height = 160 / 25.4 * 72
     fig = plt.figure(figsize=(page_width / 72, height / 72))
@@ -366,8 +370,8 @@ def build_xlsx():
     cover.title = "Cover"
     cover["A1"] = "Title: Time of blood sampling biases transcriptomic aging clocks: development, prespecified confirmation, and practical guidance"
     cover["A2"] = "Journal: GeroScience"
-    cover["A3"] = "Authors: [Author names]"
-    cover["A4"] = "Corresponding author: [Affiliation], [e-mail]"
+    cover["A3"] = AUTHORS
+    cover["A4"] = CORRESPONDING
     info = [("Cover", 1, 4, 1, cover["A1"].value)]
     for name, title, frame, _renames in titles:
         ws = wb.create_sheet(name)
