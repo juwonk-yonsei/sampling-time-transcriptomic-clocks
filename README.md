@@ -2,7 +2,7 @@
 
 Code, frozen analysis plan, decision and deviation logs, result tables and figure source data for the article "Time of blood sampling biases transcriptomic aging clocks: development, prespecified confirmation, and practical guidance". Within-day variation of two tAge models and three RNAAgeCalc signatures was estimated in three public blood time-series datasets (GSE39445, GSE56931, GSE113883). The resulting predictions were frozen together with the analysis plan and code, and then tested in three datasets (GSE48113, GSE122725, GSE295758) whose expression data stayed locked until the freeze. Post hoc analyses cover a time-axis correction for GSE122725, missing-data handling in GSE48113, a bias simulation for common study designs and mitigation by within-person adjustment for blood-cell composition.
 
-- Article: [Authors]. Time of blood sampling biases transcriptomic aging clocks: development, prespecified confirmation, and practical guidance. GeroScience. [Year]. doi:[DOI]
+- Article: Kang J, Choi J. Time of blood sampling biases transcriptomic aging clocks: development, prespecified confirmation, and practical guidance. GeroScience. [Year]. doi:[DOI]
 - This archive: Zenodo doi:[DOI]
 
 The instructions and reports in `audit/` and `reports/` are written in Korean. Everything else is in English.

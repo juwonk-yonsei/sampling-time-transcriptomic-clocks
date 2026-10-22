@@ -3,8 +3,8 @@ message: "If you use this code or these results, please cite the article and thi
 title: "Time of blood sampling biases transcriptomic aging clocks: development, prespecified confirmation, and practical guidance"
 version: 1.0.0
 license: MIT
-date-released: "[YYYY-MM-DD]"
-repository-code: "[https://github.com/OWNER/REPOSITORY]"
+date-released: "2026-10-22"
+repository-code: "https://github.com/juwonk-yonsei/sampling-time-transcriptomic-clocks"
 keywords:
   - transcriptomic aging clock
   - circadian rhythm
@@ -13,7 +13,13 @@ keywords:
   - biomarkers of aging
   - reproducibility
 authors:
-  - family-names: "[Family name]"
-    given-names: "[Given name]"
-    affiliation: "[Affiliation]"
-    orcid: "[https://orcid.org/0000-0000-0000-0000]"
+  - family-names: "Kang"
+    given-names: "Juwon"
+    affiliation: "College of Pharmacy, Yonsei Institute of Pharmaceutical Sciences, Yonsei University, Incheon, Republic of Korea"
+    orcid: "https://orcid.org/0009-0009-2186-0038"
+    email: "juwonk@yonsei.ac.kr"
+  - family-names: "Choi"
+    given-names: "Junjeong"
+    affiliation: "College of Pharmacy, Yonsei Institute of Pharmaceutical Sciences, Yonsei University, Incheon, Republic of Korea"
+    orcid: "https://orcid.org/0000-0003-1339-593X"
+    email: "junjeong@yonsei.ac.kr"
