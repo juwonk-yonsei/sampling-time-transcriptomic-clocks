@@ -1,0 +1,72 @@
+{
+  "upload_type": "software",
+  "title": "Time of blood sampling biases transcriptomic aging clocks: development, prespecified confirmation, and practical guidance",
+  "creators": [
+    {
+      "name": "[Family name, Given name]",
+      "affiliation": "[Affiliation]",
+      "orcid": "[0000-0000-0000-0000]"
+    }
+  ],
+  "description": "Code, frozen analysis plan, decision and deviation logs, result tables and figure source data for the article \"Time of blood sampling biases transcriptomic aging clocks: development, prespecified confirmation, and practical guidance\". Within-day variation of two tAge models and three RNAAgeCalc signatures was estimated in three public blood time-series datasets (GSE39445, GSE56931, GSE113883). The resulting predictions were frozen together with the analysis plan and code, and then tested in three datasets (GSE48113, GSE122725, GSE295758) whose expression data stayed locked until the freeze. Post hoc analyses cover a time-axis correction for GSE122725, missing-data handling in GSE48113, a bias simulation for common study designs and mitigation by within-person adjustment for blood-cell composition.",
+  "license": "MIT",
+  "version": "1.0.0",
+  "keywords": [
+    "transcriptomic aging clock",
+    "circadian rhythm",
+    "time of day",
+    "blood cell composition",
+    "biomarkers of aging",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.22166800",
+      "relation": "requires",
+      "scheme": "doi",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE39445",
+      "relation": "references",
+      "scheme": "url",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE56931",
+      "relation": "references",
+      "scheme": "url",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE113883",
+      "relation": "references",
+      "scheme": "url",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE48113",
+      "relation": "references",
+      "scheme": "url",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE122725",
+      "relation": "references",
+      "scheme": "url",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE295758",
+      "relation": "references",
+      "scheme": "url",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "[Article DOI]",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    }
+  ]
+}

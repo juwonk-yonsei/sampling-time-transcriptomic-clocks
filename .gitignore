@@ -1,2 +1,53 @@
 data/
 results/stage3/expr/
+
+# Raw GEO downloads (fetch with scripts/00_download_data.sh)
+*_series_matrix.txt
+*_series_matrix.txt.gz
+*_RAW.tar
+*.CEL
+*.CEL.gz
+*.cel
+*.cel.gz
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*_rawTranscriptCounts.csv.gz
+*_combatVstTranscriptCounts.csv.gz
+*_TPM_processed_data.txt.gz
+GPL*_platform.txt
+GPL*.annot.gz
+GPL*_family.soft.gz
+
+# tAge model files (Zenodo 10.5281/zenodo.22166800; not redistributed)
+*.pkl
+*module clocks.zip
+*module clocks/
+
+# Download caches and large or partial intermediates
+.cache/
+logs/
+results/stage7c/l1_build/
+results/stage2/partE_search_counts_partial.tsv
+__pycache__/
+*.pyc
+.Rhistory
+.RData
+.Rproj.user/
+.ipynb_checkpoints/
+
+# Editor, Cursor and personal settings
+.vscode/
+.idea/
+.cursor/
+.cursorignore
+.env
+.env.*
+*.swp
+*~
+.DS_Store
+
+# Manuscript drafts and journal submission files are kept outside the public repository
+/manuscript/
+/submission/
