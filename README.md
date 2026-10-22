@@ -2,8 +2,8 @@
 
 Code, frozen analysis plan, decision and deviation logs, result tables and figure source data for the article "Time of blood sampling biases transcriptomic aging clocks: development, prespecified confirmation, and practical guidance". Within-day variation of two tAge models and three RNAAgeCalc signatures was estimated in three public blood time-series datasets (GSE39445, GSE56931, GSE113883). The resulting predictions were frozen together with the analysis plan and code, and then tested in three datasets (GSE48113, GSE122725, GSE295758) whose expression data stayed locked until the freeze. Post hoc analyses cover a time-axis correction for GSE122725, missing-data handling in GSE48113, a bias simulation for common study designs and mitigation by within-person adjustment for blood-cell composition.
 
-- Article: Kang J, Choi J. Time of blood sampling biases transcriptomic aging clocks: development, prespecified confirmation, and practical guidance. GeroScience. [Year]. doi:[DOI]
-- This archive: Zenodo doi:[10.5281/zenodo.23551095](https://doi.org/10.5281/zenodo.23551095) (all versions; v1.0.0 is doi:[10.5281/zenodo.23551096](https://doi.org/10.5281/zenodo.23551096))
+- Article: Kang J, Choi J. Time of blood sampling biases transcriptomic aging clocks: development, prespecified confirmation, and practical guidance. Submitted to GeroScience.
+- This archive: Zenodo doi:[10.5281/zenodo.23551095](https://doi.org/10.5281/zenodo.23551095) (all versions; resolves to the latest)
 
 The instructions and reports in `audit/` and `reports/` are written in Korean. Everything else is in English.
 
@@ -23,7 +23,8 @@ The instructions and reports in `audit/` and `reports/` are written in Korean. E
 | `results/confirm/` | Confirmation run 5, the prespecified confirmatory output |
 | `results/confirm_run2_partial/`, `_run3_partial/`, `_run4_partial/` | Outputs of interrupted confirmation runs 2–4 (see "Processed data included") |
 | `results/posthoc_stage7c/` | Post hoc GSE122725 time-axis analysis |
-| `scripts/` | Numbered analysis scripts, `confirm/` (locked confirmatory pipeline), `00_download_data.sh`, `verify_manifest.py`, `check_lock_order.py` |
+| `scripts/` | Numbered analysis scripts, `confirm/` (locked confirmatory pipeline), `00_download_data.sh`, `verify_manifest.py`, `check_lock_order.py`, `setup_tage_layout.sh`, `verify_scoring.sh` |
+| `third_party/` | Unchanged copies of the clock-scoring packages `clockspec` and `scmodage` (code only), with their source commits and hashes |
 
 ## Record of events
 
@@ -191,7 +192,7 @@ The analyses ran on Ubuntu 22.04.5 LTS (AMD Ryzen 5 3600, 12 threads, 64 GB RAM)
 
 - R 4.5.3 (conda environment `r_env`). Installed packages: `environment/R_packages.tsv`. Main packages: lme4 2.0-6, RNAAgeCalc 1.22.0, MCPcounter 1.2.0, impute 1.84.0, limma 3.66.0, data.table 1.18.6.1, circular 0.5-2, clariomshumanhttranscriptcluster.db 8.8.0, org.Hs.eg.db 3.22.0.
 - Python 3.12.7 for analysis, independent checks and figures: `environment/python_analysis_requirements.txt` (numpy 1.26.4, pandas 2.3.3, scipy 1.13.1, statsmodels 0.14.6, matplotlib 3.9.2, openpyxl 3.1.5, pypdf 6.21.1).
-- Python 3.12.7 for clock scoring (`scripts/confirm/score_clocks.py`): `environment/python_clock_env_requirements.txt` (numpy 1.26.4, pandas 2.2.3, scikit-learn 1.3.2, scipy 1.13.1, joblib 1.6.0). It also needs two packages installed from local repositories: `clockspec` 0.1.0 from clock-specificity commit `9d109499f0bf47a7869cd7b4bcffe311b8be9b75` ([clock-specificity repository URL]) and `scmodage` 0.2.0 from sc-module-aging commit `a0e9d090cbabcdde441a599bb6443ed3f5ba0350` ([sc-module-aging repository URL]).
+- Python 3.12.7 for clock scoring (`scripts/confirm/score_clocks.py`): `environment/python_clock_env_requirements.txt` (numpy 1.26.4, pandas 2.2.3, scikit-learn 1.3.2, scipy 1.13.1, joblib 1.6.0). It also needs two packages from the authors' unpublished repositories: `clockspec` 0.1.0 (clock-specificity commit `9d109499f0bf47a7869cd7b4bcffe311b8be9b75`) and `scmodage` 0.2.0 (sc-module-aging commit `a0e9d090cbabcdde441a599bb6443ed3f5ba0350`). The files used are in `third_party/`, unchanged; put that folder on `PYTHONPATH` (see `third_party/README.md`).
 - The versions frozen before confirmation are in `prereg/frozen/environment.tsv`; the run record is `config/env_versions.txt`. No `renv.lock` or pinned requirements file was used during the analyses; the lists in `environment/` were generated afterwards from the same environments.
 
 Paths: 30 scripts contain absolute paths of the analysis machine (`/HDD8T1/WORK/GeroSci/TOD`, `/HDD8T1/WORK/GeroSci/tod4_clock_env`, `/HDD8T1/WORK/GeroSci/zenodo_22166800_v2`, `/home/jkang/anaconda3/...`), and `config/paths.yaml` points to the tAge files. Recreate these paths (for example with symbolic links) or edit them. The frozen confirmatory scripts were not edited for this release because their hashes are part of the manifest.
@@ -207,6 +208,17 @@ The script downloads the series matrices and supplementary files of the six anal
 ### tAge model files
 
 Download the tAge model files from Zenodo, doi [10.5281/zenodo.22166800](https://doi.org/10.5281/zenodo.22166800), version 2 (2026-08-29; MGB Open Access License 1.0; source code https://github.com/Gladyshev-Lab/tAge). The files used are `EN_Chronoage_Multispecies_Multitissue_scaleddiff.pkl`, `EN_Mortality_Multispecies_Multitissue_scaleddiff.pkl`, `EN_Chronoage_Rodents_Multitissue_scaleddiff.pkl`, `EN_Mortality_Rodents_Multitissue_scaleddiff.pkl`, `EN_NormalizedAge_Rodents_Multitissue_scaleddiff.pkl`, `Multispecies module clocks.zip` and `Rodent module clocks.zip`. Put them in the folder named in `config/paths.yaml` (`module_clock_dir`), unpack each archive into a folder of the same name, and check them with `scripts/verify_manifest.py --tage-dir`.
+
+The scoring packages also read the tAge gene tables and module metadata from `inst/extdata` of the tAge source repository (commit `d048ba6016a7e5a114f45195e0b11071e2b8c424`, release 1.5.0). Link both into `data/external/` and check that scoring reproduces the stored outputs:
+
+```bash
+git clone https://github.com/Gladyshev-Lab/tAge.git /path/to/tAge
+git -C /path/to/tAge checkout d048ba6016a7e5a114f45195e0b11071e2b8c424
+bash scripts/setup_tage_layout.sh /path/to/zenodo_22166800_v2 /path/to/tAge
+PYTHON=/path/to/clock_env/bin/python bash scripts/verify_scoring.sh
+```
+
+`verify_scoring.sh` re-scores the stored GSE48113 and GSE295758 gene matrices and compares the scores and components with `results/confirm/L1/` and `results/confirm/L3/`; on the analysis machine all four files were byte-identical.
 
 ### Run order
 
@@ -276,7 +288,7 @@ Rehearsal inputs (before the freeze): R1 is GSE39445 processed into the GSE48113
 
 From Section 2.11 of the manuscript:
 
-> [Confirm before submission.] An AI coding agent (Grok, xAI, running in the Cursor editor) executed the analyses by following written, versioned instructions prepared by the authors. An AI assistant (Claude, Anthropic) helped with study design, instruction writing, review of analysis reports and drafting of this manuscript. All instructions, reports and decision logs were archived, and the confirmatory statistics were recomputed independently. The authors reviewed all outputs and take full responsibility for the content.
+> An AI coding agent (Grok, xAI, running in the Cursor editor) executed the analyses by following written, versioned instructions prepared by the authors. An AI assistant (Claude, Anthropic) helped with study design, instruction writing, review of analysis reports and drafting of this manuscript. All instructions, reports and decision logs were archived, and the confirmatory statistics were recomputed independently. The authors reviewed all outputs and take full responsibility for the content.
 
 All instructions and reports are in `audit/` (see `audit/INDEX.md`).
 

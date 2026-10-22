@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this code or these results, please cite the article and this archive as below."
 title: "Time of blood sampling biases transcriptomic aging clocks: development, prespecified confirmation, and practical guidance"
-version: 1.0.0
+version: 1.0.1
 license: MIT
 date-released: "2026-10-22"
 doi: "10.5281/zenodo.23551095"
