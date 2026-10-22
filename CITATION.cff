@@ -4,6 +4,7 @@ title: "Time of blood sampling biases transcriptomic aging clocks: development, 
 version: 1.0.0
 license: MIT
 date-released: "2026-10-22"
+doi: "10.5281/zenodo.23551095"
 repository-code: "https://github.com/juwonk-yonsei/sampling-time-transcriptomic-clocks"
 keywords:
   - transcriptomic aging clock
